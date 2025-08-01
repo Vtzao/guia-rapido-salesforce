@@ -20,6 +20,7 @@
             --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
             --header-bg: #144371; /* Azul Organnact */
             --error-color: #dc3545;
+            --success-color: #28a745;
         }
 
         /* --- Estilos Base do Corpo da Página --- */
@@ -106,7 +107,7 @@
             box-shadow: 0 0 0 3px rgba(251, 174, 61, 0.3);
         }
 
-        #login-button {
+        #login-button, #reset-button {
             width: 100%;
             padding: 15px;
             border: none;
@@ -119,15 +120,34 @@
             transition: background-color 0.2s;
         }
 
-        #login-button:hover {
+        #login-button:hover, #reset-button:hover {
             background-color: var(--secondary-color);
         }
-
-        #login-message {
+        
+        #login-message, #reset-message {
             margin-top: 15px;
-            color: var(--error-color);
             font-weight: 500;
             min-height: 20px;
+        }
+
+        #login-message { color: var(--error-color); }
+        #reset-message.success { color: var(--success-color); }
+        #reset-message.error { color: var(--error-color); }
+
+        .form-footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        .form-footer a {
+            color: var(--header-bg);
+            text-decoration: none;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .form-footer a:hover {
+            text-decoration: underline;
         }
         
         /* --- Cabeçalho Principal e Fundo (App Content) --- */
@@ -769,6 +789,7 @@
     </style>
 </head>
 <body>
+    
     <!-- =================================================================
     TELA DE LOGIN
     Fica visível por padrão. É escondida após o login bem-sucedido.
@@ -776,21 +797,35 @@
     <div id="login-page">
         <div class="login-container">
             <div class="login-logos">
-                <img src="img/organnact-logo.png" alt="Logo Organnact" onerror="this.onerror=null;this.src='https://placehold.co/150x40/ffffff/144371?text=Organnact';">
+                <img src="img/organnact-logo-laranja.png" alt="Logo Organnact" onerror="this.onerror=null;this.src='https://placehold.co/150x40/ffffff/144371?text=Organnact';">
                 <img src="img/salesforce-logo.png" alt="Logo Salesforce" onerror="this.onerror=null;this.src='https://placehold.co/150x40/ffffff/144371?text=Salesforce';">
             </div>
             <h1>Acesso ao Guia Rápido</h1>
             <form id="login-form">
                 <div class="input-group">
-                    <label for="email">Email</label>
+                    <label for="email">E-mail</label>
                     <input type="email" id="email" required>
                 </div>
                 <div class="input-group">
-                    <label for="password">Palavra-passe</label>
+                    <label for="password">Senha</label>
                     <input type="password" id="password" required>
                 </div>
                 <button type="submit" id="login-button">Entrar</button>
                 <p id="login-message"></p>
+                <div class="form-footer">
+                    <a id="forgot-password-link">Esqueci a minha senha</a>
+                </div>
+            </form>
+            <form id="reset-form" class="hidden">
+                <div class="input-group">
+                    <label for="reset-email">Email para recuperação</label>
+                    <input type="email" id="reset-email" required>
+                </div>
+                <button type="submit" id="reset-button">Enviar email de recuperação</button>
+                <p id="reset-message"></p>
+                <div class="form-footer">
+                    <a id="back-to-login-link">Voltar ao login</a>
+                </div>
             </form>
         </div>
     </div>
@@ -1046,9 +1081,10 @@
                     <li>Marque se o <strong>coordenador técnico</strong> irá te acompanhar.</li>
                     <li>Clique em <strong>Avançar</strong>. Pronto, sua visita está agendada no seu calendário do Salesforce!</li>
                 </ol>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/5KgTKxJXD8U?si=Ci1YVxEUjjq_ouiO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
+                <video controls poster="img/Thumbnail YouTube Como Criar seu Site Moderno Azul.jpg" style="width:100%; height:100%;">
+                        <source src="videos/Agendamento - Visita Organnact (propagandista) ‐ Feito com o Clipchamp.mp4" type="video/mp4">
+                        O seu navegador não suporta o vídeo.
+                    </video>
                 <p class="image-caption">Vídeo: Como agendar uma visita no Salesforce.</p>
             </section>
 
@@ -1370,10 +1406,12 @@
             </section>
             <section class="step-card">
                 <h3>Vídeo Tutorial</h3>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/bitbBjJ2THg?si=JFktaOZt04smz_xf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-                <p class="image-caption">Assista ao vídeo para ver o passo a passo completo.</p>
+                <p>Para assistir o vídeo tutorial de <strong>Campanhas - Como criar um Café com VET (do início ao fim)</strong>, basta clicar no botão abaixo.</p>
+                <a href="https://escola.organnact.com.br/video/683498ee452ef887a315e08d/688bbf39c217074a6c061077?t=5" alt="Assistir ao vídeo tutorial no VídeoHub." title="Assistir ao vídeo tutorial no VídeoHub." target="_blank" class="community-card">
+                    <div class="icon"><i class="bi bi-play-btn"></i></div>
+                    <h3 style="color: #ffffff; border-bottom:none; align-items:center;" >Tutorial no VídeoHub</h3>
+                </a>
+                <p class="image-caption">Você será redirecionado(a) para a plataforma VideoHub.</p>
             </section>
              <section class="step-card">
                 <h3>Perguntas Frequentes</h3>
@@ -1432,7 +1470,7 @@
     <script type="module">
         // Importar funções do Firebase
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
 
         // =================================================================
         // CONFIGURAÇÃO DO FIREBASE
@@ -1469,6 +1507,12 @@
         const logoutButton = document.getElementById('logout-button');
         const userEmailSpan = document.getElementById('user-email');
         const headerTopBar = document.querySelector('.header-top-bar');
+        const resetForm = document.getElementById('reset-form');
+        const resetEmailInput = document.getElementById('reset-email');
+        const resetMessage = document.getElementById('reset-message');
+        const forgotPasswordLink = document.getElementById('forgot-password-link');
+        const backToLoginLink = document.getElementById('back-to-login-link');
+
 
         // --- LÓGICA DE AUTENTICAÇÃO ---
 
@@ -1529,6 +1573,42 @@
                     });
                 });
             }
+
+            // Lógica para alternar entre formulários de login e reset
+            forgotPasswordLink.addEventListener('click', () => {
+                loginForm.classList.add('hidden');
+                resetForm.classList.remove('hidden');
+            });
+
+            backToLoginLink.addEventListener('click', () => {
+                resetForm.classList.add('hidden');
+                loginForm.classList.remove('hidden');
+            });
+
+            // Lógica para enviar email de recuperação
+            resetForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const email = resetEmailInput.value;
+                resetMessage.textContent = '';
+                resetMessage.className = '';
+
+                try {
+                    await sendPasswordResetEmail(auth, email);
+                    resetMessage.textContent = 'Email de recuperação enviado! Verifique a sua caixa de entrada.';
+                    resetMessage.classList.add('success');
+                } catch (error) {
+                    console.error("Erro ao recuperar senha:", error.code);
+                    resetMessage.classList.add('error');
+                     switch (error.code) {
+                        case 'auth/user-not-found':
+                            resetMessage.textContent = 'Este email não está registado.';
+                            break;
+                        default:
+                            resetMessage.textContent = 'Ocorreu um erro. Tente novamente.';
+                            break;
+                    }
+                }
+            });
         }
 
         // --- LÓGICA DOS TUTORIAIS (só inicia após login ou acesso direto) ---
