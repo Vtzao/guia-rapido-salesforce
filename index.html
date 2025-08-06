@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Guia Rápido Salesforce</title>
-    <!-- Bootstrap Icons CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         /* --- Importação da Fonte e Variáveis Globais --- */
@@ -790,10 +789,6 @@
 </head>
 <body>
     
-    <!-- =================================================================
-    TELA DE LOGIN
-    Fica visível por padrão. É escondida após o login bem-sucedido.
-    ================================================================== -->
     <div id="login-page">
         <div class="login-container">
             <div class="login-logos">
@@ -830,14 +825,9 @@
         </div>
     </div>
 
-    <!-- =================================================================
-    CONTEÚDO PRINCIPAL DA APLICAÇÃO
-    Fica escondido por padrão e só aparece após o login.
-    ================================================================== -->
     <div id="app-content" class="hidden">
         <div class="header-background"></div>
         <div class="container">
-            <!-- PÁGINA INICIAL (HOME) -->
             <div id="home-page">
                 <header>
                     <div class="header-top-bar">
@@ -856,7 +846,6 @@
                 </header>
 
                 <main>
-                    <!-- SEÇÃO DE CATEGORIAS -->
                     <section>
                         <h2 class="section-title">Categorias</h2>
                         <div class="category-grid">
@@ -898,10 +887,14 @@
                                 <h3>Relatórios</h3>
                                 <p>Aprenda a visualizar e entender seus relatórios de desempenho.</p>
                             </div>
+                            <div class="category-card" data-target="tutorial-agd">
+                                <div class="icon"><i class="bi bi-bullseye"></i></div>
+                                <h3>Ação Geradora de Demanda (AGD)</h3>
+                                <p>Descubra como registrar e acompanhar as ações que geram novas oportunidades.</p>
+                            </div>
                         </div>
                     </section>
 
-                    <!-- SEÇÃO DA COMUNIDADE WHATSAPP -->
                     <section>
                          <a href="https://chat.whatsapp.com/JNmqsmTt7SjC21RghCRIta" target="_blank" class="community-card">
                             <div class="icon"><i class="bi bi-whatsapp"></i></div>
@@ -909,9 +902,17 @@
                         </a>
                     </section>
 
-                    <!-- SEÇÃO DE PERGUNTAS FREQUENTES (FAQ) -->
                     <section>
                         <h2 class="section-title">Perguntas Frequentes</h2>
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>Estou a tentar criar uma conta de Veterinário e dá erro no CRMV. O que faço?</span>
+                                <i class="bi bi-chevron-right faq-icon"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Este é um erro comum! O campo <strong>CRMV</strong> precisa de ser preenchido num formato específico: a sigla do estado, um hífen e depois o número. <br><br><strong>Formato correto:</strong> UF-99999<br><strong>Exemplo:</strong> PR-12345</p>
+                            </div>
+                        </div>
                         <div class="faq-item">
                             <button class="faq-question">
                                 <span>Não consigo encontrar um cliente na busca. E agora?</span>
@@ -945,13 +946,7 @@
             
             <div id="search-results" class="hidden"></div>
             
-            <!-- =================================================================
-        PÁGINAS DE TUTORIAIS
-        Cada div abaixo é uma página de tutorial que fica escondida até ser chamada.
-        ================================================================== -->
-
-        <!-- TUTORIAL: CONTAS -->
-        <div id="tutorial-contas" class="tutorial-section">
+            <div id="tutorial-contas" class="tutorial-section">
             <div class="tutorial-header">
                 <h2>Tutorial: Contas</h2>
                 <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
@@ -1001,7 +996,6 @@
             </section>
         </div>
 
-        <!-- TUTORIAL: CONTATOS -->
         <div id="tutorial-contatos" class="tutorial-section">
             <div class="tutorial-header">
                 <h2>Tutorial: Contatos</h2>
@@ -1061,7 +1055,6 @@
             </section>
         </div>
 
-        <!-- TUTORIAL: VISITAS ORG ­ANNACT -->
         <div id="tutorial-visita-propagandista" class="tutorial-section">
             <div class="tutorial-header">
                 <h2>Tutorial: Visitas Organnact</h2>
@@ -1078,14 +1071,16 @@
                     <li>Em <strong>Forma de Contato</strong>, informe se será presencial.</li>
                     <li>Defina a <strong>Data / hora de início</strong> e <strong>Data / hora final</strong> para agendar a visita.</li>
                     <li>Deixe o checkbox <strong>"Visita Realizada?"</strong> desmarcado por enquanto, pois estamos apenas agendando.</li>
-                    <li>Marque se o <strong>coordenador técnico</strong> irá te acompanhar.</li>
+                    <li>Marque se o <strong>Coordenador Técnico</strong> irá te acompanhar.</li>
                     <li>Clique em <strong>Avançar</strong>. Pronto, sua visita está agendada no seu calendário do Salesforce!</li>
                 </ol>
-                <video controls poster="img/Thumbnail YouTube Como Criar seu Site Moderno Azul.jpg" style="width:100%; height:100%;">
-                        <source src="videos/Agendamento - Visita Organnact (propagandista) ‐ Feito com o Clipchamp.mp4" type="video/mp4">
-                        O seu navegador não suporta o vídeo.
-                    </video>
-                <p class="image-caption">Vídeo: Como agendar uma visita no Salesforce.</p>
+                <h3>Vídeo Tutorial</h3>
+                <p>Para assistir o vídeo tutorial de <strong>Visitas Organnact - Como CRIAR/AGENDAR a partir da conta</strong>, basta clicar no botão abaixo.</p>
+                <a href="https://escola.organnact.com.br/video/683498ee452ef887a315e08d/689099bab4228951a070ff7d" alt="Assistir ao vídeo tutorial no VídeoHub." title="Assistir ao vídeo tutorial no VídeoHub." target="_blank" class="community-card">
+                    <div class="icon"><i class="bi bi-play-btn"></i></div>
+                    <h3 style="color: #ffffff; border-bottom:none; align-items:center;" >Tutorial no VídeoHub</h3>
+                </a>
+                <p class="image-caption">Você será redirecionado(a) para a plataforma VideoHub.</p>
             </section>
 
             <section class="step-card">
@@ -1122,7 +1117,6 @@
             </section>
         </div>
 
-        <!-- TUTORIAL: VISITA DN/DNE -->
         <div id="tutorial-visita-dndne" class="tutorial-section">
             <div class="tutorial-header">
                 <h2>Visita Tipo DN/DNE</h2>
@@ -1167,59 +1161,6 @@
             </section>
         </div>
 
-        <!-- TUTORIAL: VISITA AGD -->
-        <div id="tutorial-visita-agd" class="tutorial-section">
-             <div class="tutorial-header">
-                <h2>Visita Tipo AGD</h2>
-                <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
-            </div>
-            <section class="step-card">
-                <h3>🗓️ Agendando a Visita de AGD</h3>
-                <p>Agendar uma Ação Geradora de Demanda (AGD) é simples. O começo é igual a qualquer outra visita, você só precisa indicar que se trata de uma AGD.</p>
-                <ol>
-                    <li>Vá até a <strong>Conta</strong> onde a ação será realizada.</li>
-                    <li>Clique no botão <strong>"⚡Visita Organnact"</strong>.</li>
-                    <li>Na janela de criação, marque a caixinha <strong>"AGD? ✅"</strong>.</li>
-                    <li>Preencha as demais informações, como <strong>Assunto</strong> e <strong>Data</strong>, e salve o agendamento.</li>
-                </ol>
-            </section>
-            <section class="step-card">
-                <h3>✍️ Preenchendo os Detalhes da AGD</h3>
-                <p>Depois de agendar, é hora de detalhar a sua ação. Esta nova tela aparecerá assim que você salvar o agendamento inicial.</p>
-                <ol>
-                    <li>Abra o registro da visita que você acabou de criar (ex: VI-000399345).</li>
-                    <li>Você verá uma nova seção chamada <strong>"AGD"</strong>, como na imagem abaixo.</li>
-                    <li>Preencha os campos importantes como <strong>Motivo da AGD</strong>, <strong>Data de Início e Final</strong>, e os valores de <strong>Investimento</strong>.</li>
-                    <li>Não se esqueça de adicionar os <strong>Produtos</strong> que fazem parte da ação.</li>
-                    <li>Quando terminar, clique em <strong>Salvar</strong>.</li>
-                </ol>
-                <img src="https://i.imgur.com/8Yg0n2D.png" alt="Tela de preenchimento dos detalhes da Ação Geradora de Demanda (AGD)" class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/ffffff?text=Imagem+Indisponível';">
-                <p class="image-caption">Tela para detalhar as informações da sua AGD.</p>
-            </section>
-             <section class="step-card">
-                <h3>Perguntas Frequentes</h3>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>O que devo escrever nas observações de uma AGD?</span>
-                        <i class="bi bi-chevron-right faq-icon"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Seja específico! Descreva a oportunidade identificada, o interesse do cliente, o potencial de compra e quais ações foram combinadas para converter essa demanda em uma venda futura.</p>
-                    </div>
-                </div>
-                 <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Preciso preencher a AGD na hora do agendamento?</span>
-                        <i class="bi bi-chevron-right faq-icon"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Não, a seção da AGD só aparece depois que o agendamento inicial é salvo. Você pode preenchê-la a qualquer momento antes de finalizar a visita, clicando em "Editar" no registro da visita.</p>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- TUTORIAL: VISITA AÇÕES -->
         <div id="tutorial-visita-acoes" class="tutorial-section">
              <div class="tutorial-header">
                 <h2>Visita Tipo Ações</h2>
@@ -1270,7 +1211,6 @@
             </section>
         </div>
 
-        <!-- TUTORIAL: VISITA REDES -->
         <div id="tutorial-visita-redes" class="tutorial-section">
              <div class="tutorial-header">
                 <h2>Visita Tipo Redes</h2>
@@ -1320,7 +1260,6 @@
             </section>
         </div>
 
-        <!-- TUTORIAL: VISITA TRAINING -->
         <div id="tutorial-visita-training" class="tutorial-section">
              <div class="tutorial-header">
                 <h2>Visita Tipo Training</h2>
@@ -1345,7 +1284,6 @@
             </section>
         </div>
 
-        <!-- TUTORIAL: CAFÉ COM VET -->
         <div id="tutorial-cafe-vet" class="tutorial-section">
              <div class="tutorial-header">
                 <h2>Café com VET</h2>
@@ -1453,20 +1391,91 @@
             </section>
         </div>
 
+        <!-- TUTORIAL: AÇÃO GERADORA DE DEMANDA (AGD) -->
+        <div id="tutorial-agd" class="tutorial-section">
+            <div class="tutorial-header">
+                <h2>Tutorial: Ação Geradora de Demanda (AGD)</h2>
+                <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
+            </div>
+            <section class="step-card">
+                <h3>📝 Criando uma Nova AGD</h3>
+                <p>Vamos registrar uma nova Ação Geradora de Demanda para impulsionar os resultados com um veterinário parceiro.</p>
+                <ol>
+                    <li>Primeiro, vá para a aba <strong>"Contas"</strong> e pesquise pela conta do veterinário onde a AGD será criada.</li>
+                    <li>Entre nos detalhes da conta e, na parte superior, clique no botão <strong>"Criar AGD Vet"</strong>.</li>
+                    <li>Agora, preencha os campos iniciais da ação:
+                        <ul>
+                            <br>
+                            <li><strong>Tipo de AGD:</strong> Selecione o tipo de campanha. Ex: <em>MEDVEP2026</em>.</li>
+                            <li><strong>Motivo da AGD:</strong> Escolha a opção que melhor se encaixa. Ex: <em>Aumento de Giro</em>.</li>
+                            <li><strong>Descrição AGD:</strong> Detalhe o que foi combinado com o veterinário. Ex: <em>200 prescrições de produtos da linha saúde intestinal</em>.</li>
+                            <li><strong>Data Início AGD</strong> e <strong>Data Fim AGD:</strong> Defina o período da ação.</li>
+                        </ul>
+                    </li>
+                    <li>Clique em <strong>Avançar</strong>. Pronto, sua AGD foi criada com sucesso!</li>
+                </ol>
+            </section>
+            <section class="step-card">
+                <h3>👀 Conferindo a AGD Criada</h3>
+                <p>Para garantir que tudo foi registrado corretamente, você pode visualizar a AGD dentro da própria conta do cliente.</p>
+                <ol>
+                    <li>Na página da conta, clique na aba <strong>Visão 360</strong>.</li>
+                    <li>Procure pela seção <strong>AGDs</strong>. Ali você encontrará um histórico de todas as ações criadas para aquela conta.</li>
+                </ol>
+                <img src="img/agd-agd.jpg" width="300" alt="Visualização da lista de AGDs na página da conta" class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x300/cccccc/ffffff?text=Imagem+Indisponível';">
+                <p class="image-caption">Encontre todas as AGDs registradas na seção "Visão 360".</p>
+            </section>
+            <section class="step-card">
+                <h3>📈 Fazendo o Acompanhamento da AGD</h3>
+                <p>Lançar a AGD é só o começo. O acompanhamento periódico é a chave para o sucesso!</p>
+                <div class="tip-box">
+                    <p>💡 <strong>Dica:</strong> O ideal é fazer o acompanhamento da AGD a cada <strong>15 dias</strong> para manter os dados sempre atualizados.</p>
+                </div>
+                <ol>
+                    <li>Volte para a página da conta e, ao lado do botão "Criar AGD Vet", clique em <strong>"Acompanhamento AGD"</strong>.</li>
+                    <li>Selecione a AGD que você acabou de criar (normalmente a mais recente da lista) e clique em <strong>Avançar</strong>.</li>
+                    <li>Preencha as informações do período:
+                        <ul>
+                            <br>
+                            <li><strong>Data de Acompanhamento:</strong> Insira a data atual do registro. Ex: <em>01/07/2025</em>.</li>
+                            <li><strong>Total de Prescrições:</strong> Informe o número de prescrições realizadas no período. Ex: <em>30</em>.</li>
+                        </ul>
+                    </li>
+                    <li>Clique em <strong>Avançar</strong> para salvar o registro.</li>
+                </ol>
+            </section>
+            <section class="step-card">
+                <h3>📊 Visualizando o Histórico de Acompanhamento</h3>
+                <p>Todos os seus registros de acompanhamento ficam salvos, criando um histórico claro do desempenho da ação.</p>
+                <ol>
+                    <li>Navegue novamente para <strong>Visão 360 > AGDs</strong> na página da conta.</li>
+                    <li>Clique na AGD que você está acompanhando.</li>
+                    <li>Role a página para baixo e você encontrará a seção <strong>"Acompanhamento Ações"</strong>, com todas as informações que você incluiu anteriormente.</li>
+                </ol>
+                 <img src="img/acompanhamento-agd.jpeg" width="300" alt="Histórico de acompanhamentos da AGD" class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x350/cccccc/ffffff?text=Imagem+Indisponível';">
+                <p class="image-caption">Acompanhe a evolução da sua AGD através do Acompanhamento de Ações.</p>
+            </section>
+            <section class="step-card">
+                <h3>Vídeo Tutorial AGD</h3>
+                <p>Para assistir o vídeo tutorial de <strong>Como Criar uma AGD (Novo método)</strong>, basta clicar no botão abaixo.</p>
+                <a href="https://escola.organnact.com.br/video/683498ee452ef887a315e08d/6891157d1609a127e007f5b8?t=6" alt="Assistir ao vídeo tutorial no VídeoHub." title="Assistir ao vídeo tutorial no VídeoHub." target="_blank" class="community-card">
+                    <div class="icon"><i class="bi bi-play-btn"></i></div>
+                    <h3 style="color: #ffffff; border-bottom:none; align-items:center;" >Tutorial no VídeoHub</h3>
+                </a>
+                <p class="image-caption">Você será redirecionado(a) para a plataforma VideoHub.</p>
+            </section>
+        </div>
 
     </div>
         
-        <!-- Botão Voltar ao Topo -->
         <button id="scrollTopBtn" title="Voltar ao topo"><i class="bi bi-arrow-up"></i></button>
 
-        <!-- Lightbox para Imagens -->
         <div id="lightbox-overlay" class="lightbox-overlay">
             <span id="lightbox-close" class="lightbox-close">&times;</span>
             <img id="lightbox-image" class="lightbox-image" src="" alt="Imagem ampliada">
         </div>
     </div>
 
-    <!-- Scripts do Firebase -->
     <script type="module">
         // Importar funções do Firebase
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
