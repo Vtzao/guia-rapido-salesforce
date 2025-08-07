@@ -1391,7 +1391,6 @@
             </section>
         </div>
 
-        <!-- TUTORIAL: AÇÃO GERADORA DE DEMANDA (AGD) -->
         <div id="tutorial-agd" class="tutorial-section">
             <div class="tutorial-header">
                 <h2>Tutorial: Ação Geradora de Demanda (AGD)</h2>
@@ -1498,8 +1497,7 @@
     // =================================================================
     // CONFIGURAÇÕES DE ACESSO
     // =================================================================
-    const DOMINIO_PERMITIDO = 'force.com'; // Alterado para ser mais flexível
-    const CHAVE_DE_ACESSO_ADMIN = 'OrgannactVendas2024';
+    const DOMINIO_PERMITIDO = 'force.com'; // Domínio para verificar o referrer
     // =================================================================
 
     // Inicializar Firebase
@@ -1528,27 +1526,25 @@
     // =========================================================
     // ✨ INÍCIO DA ALTERAÇÃO ✨
     // =========================================================
-    const urlParams = new URLSearchParams(window.location.search);
-    const chaveDeAcessoURL = urlParams.get('acesso');
     const referrer = document.referrer;
-    const userAgent = navigator.userAgent; // <-- Pega o User-Agent do navegador/app
+    const userAgent = navigator.userAgent;
 
     // Condições de acesso separadas para maior clareza
     const isFromSalesforceWebsite = referrer && referrer.includes(DOMINIO_PERMITIDO);
-    const isFromSalesforceMobile = userAgent && userAgent.includes('SalesforceMobile'); // <-- Verifica se veio do App
-    const isAdmin = chaveDeAcessoURL === CHAVE_DE_ACESSO_ADMIN;
+    const isFromSalesforceMobile = userAgent && userAgent.includes('SalesforceMobile');
 
-    // Verifica se QUALQUER uma das condições é verdadeira
-    if (isFromSalesforceWebsite || isFromSalesforceMobile || isAdmin) {
+    // Verifica se o usuário veio do site do Salesforce OU do App Mobile
+    if (isFromSalesforceWebsite || isFromSalesforceMobile) {
+        // Se a condição for verdadeira, libera o acesso direto e esconde a opção de login/logout.
+        loginPage.classList.add('hidden');
+        appContent.classList.remove('hidden');
+        headerTopBar.classList.add('hidden'); // Oculta a barra com email/botão de sair
+        initializeTutorials();
+    } else {
     // =========================================================
     // ✨ FIM DA ALTERAÇÃO ✨
     // =========================================================
-        loginPage.classList.add('hidden');
-        appContent.classList.remove('hidden');
-        headerTopBar.classList.add('hidden'); // Oculta a barra de logout para acesso direto
-        initializeTutorials();
-    } else {
-        // Fluxo normal de login com Firebase
+        // Se não veio de uma fonte autorizada, executa o fluxo normal de login com Firebase
         onAuthStateChanged(auth, (user) => {
             if (user) {
                 loginPage.classList.add('hidden');
@@ -1556,7 +1552,7 @@
                 if(user.email) {
                     userEmailSpan.textContent = user.email;
                 }
-                headerTopBar.style.display = 'flex';
+                headerTopBar.style.display = 'flex'; // Garante que a barra de logout apareça
                 initializeTutorials(); 
             } else {
                 loginPage.classList.remove('hidden');
