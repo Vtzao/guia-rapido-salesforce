@@ -1477,358 +1477,370 @@
     </div>
 
     <script type="module">
-        // Importar funções do Firebase
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+    // Importar funções do Firebase
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
 
-        // =================================================================
-        // CONFIGURAÇÃO DO FIREBASE
-        // =================================================================
-        const firebaseConfig = {
-            apiKey: "AIzaSyDX6RKJZ6m7PIJEYErAy79Np0CrCXGYYbs",
-            authDomain: "guia-rapido-organnact.firebaseapp.com",
-            projectId: "guia-rapido-organnact",
-            storageBucket: "guia-rapido-organnact.firebasestorage.app",
-            messagingSenderId: "485598244510",
-            appId: "1:485598244510:web:4054a6d7c3d703c6ec558f",
-            measurementId: "G-9H9SK7LD6N"
-        };
-        // =================================================================
+    // =================================================================
+    // CONFIGURAÇÃO DO FIREBASE
+    // =================================================================
+    const firebaseConfig = {
+        apiKey: "AIzaSyDX6RKJZ6m7PIJEYErAy79Np0CrCXGYYbs",
+        authDomain: "guia-rapido-organnact.firebaseapp.com",
+        projectId: "guia-rapido-organnact",
+        storageBucket: "guia-rapido-organnact.firebasestorage.app",
+        messagingSenderId: "485598244510",
+        appId: "1:485598244510:web:4054a6d7c3d703c6ec558f",
+        measurementId: "G-9H9SK7LD6N"
+    };
+    // =================================================================
 
-        // =================================================================
-        // CONFIGURAÇÕES DE ACESSO
-        // =================================================================
-        const DOMINIO_PERMITIDO = 'force.com'; // Alterado para ser mais flexível
-        const CHAVE_DE_ACESSO_ADMIN = 'OrgannactVendas2024';
-        // =================================================================
+    // =================================================================
+    // CONFIGURAÇÕES DE ACESSO
+    // =================================================================
+    const DOMINIO_PERMITIDO = 'force.com'; // Alterado para ser mais flexível
+    const CHAVE_DE_ACESSO_ADMIN = 'OrgannactVendas2024';
+    // =================================================================
 
-        // Inicializar Firebase
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
+    // Inicializar Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
 
-        // Elementos da página
-        const loginPage = document.getElementById('login-page');
-        const appContent = document.getElementById('app-content');
-        const loginForm = document.getElementById('login-form');
-        const emailInput = document.getElementById('email');
-        const passwordInput = document.getElementById('password');
-        const loginMessage = document.getElementById('login-message');
-        const logoutButton = document.getElementById('logout-button');
-        const userEmailSpan = document.getElementById('user-email');
-        const headerTopBar = document.querySelector('.header-top-bar');
-        const resetForm = document.getElementById('reset-form');
-        const resetEmailInput = document.getElementById('reset-email');
-        const resetMessage = document.getElementById('reset-message');
-        const forgotPasswordLink = document.getElementById('forgot-password-link');
-        const backToLoginLink = document.getElementById('back-to-login-link');
+    // Elementos da página
+    const loginPage = document.getElementById('login-page');
+    const appContent = document.getElementById('app-content');
+    const loginForm = document.getElementById('login-form');
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const loginMessage = document.getElementById('login-message');
+    const logoutButton = document.getElementById('logout-button');
+    const userEmailSpan = document.getElementById('user-email');
+    const headerTopBar = document.querySelector('.header-top-bar');
+    const resetForm = document.getElementById('reset-form');
+    const resetEmailInput = document.getElementById('reset-email');
+    const resetMessage = document.getElementById('reset-message');
+    const forgotPasswordLink = document.getElementById('forgot-password-link');
+    const backToLoginLink = document.getElementById('back-to-login-link');
 
 
-        // --- LÓGICA DE AUTENTICAÇÃO ---
+    // --- LÓGICA DE AUTENTICAÇÃO ---
+    
+    // =========================================================
+    // ✨ INÍCIO DA ALTERAÇÃO ✨
+    // =========================================================
+    const urlParams = new URLSearchParams(window.location.search);
+    const chaveDeAcessoURL = urlParams.get('acesso');
+    const referrer = document.referrer;
+    const userAgent = navigator.userAgent; // <-- Pega o User-Agent do navegador/app
 
-        const urlParams = new URLSearchParams(window.location.search);
-        const chaveDeAcessoURL = urlParams.get('acesso');
-        const referrer = document.referrer;
+    // Condições de acesso separadas para maior clareza
+    const isFromSalesforceWebsite = referrer && referrer.includes(DOMINIO_PERMITIDO);
+    const isFromSalesforceMobile = userAgent && userAgent.includes('SalesforceMobile'); // <-- Verifica se veio do App
+    const isAdmin = chaveDeAcessoURL === CHAVE_DE_ACESSO_ADMIN;
 
-        // Verifica se o utilizador veio do domínio permitido OU se tem a chave de acesso de admin
-        if ((referrer && referrer.includes(DOMINIO_PERMITIDO)) || chaveDeAcessoURL === CHAVE_DE_ACESSO_ADMIN) {
-            loginPage.classList.add('hidden');
-            appContent.classList.remove('hidden');
-            headerTopBar.classList.add('hidden');
-            initializeTutorials();
-        } else {
-            // Fluxo normal de login com Firebase
-            onAuthStateChanged(auth, (user) => {
-                if (user) {
-                    loginPage.classList.add('hidden');
-                    appContent.classList.remove('hidden');
-                    if(user.email) {
-                        userEmailSpan.textContent = user.email;
-                    }
-                    headerTopBar.style.display = 'flex';
-                    initializeTutorials(); 
-                } else {
-                    loginPage.classList.remove('hidden');
-                    appContent.classList.add('hidden');
+    // Verifica se QUALQUER uma das condições é verdadeira
+    if (isFromSalesforceWebsite || isFromSalesforceMobile || isAdmin) {
+    // =========================================================
+    // ✨ FIM DA ALTERAÇÃO ✨
+    // =========================================================
+        loginPage.classList.add('hidden');
+        appContent.classList.remove('hidden');
+        headerTopBar.classList.add('hidden'); // Oculta a barra de logout para acesso direto
+        initializeTutorials();
+    } else {
+        // Fluxo normal de login com Firebase
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                loginPage.classList.add('hidden');
+                appContent.classList.remove('hidden');
+                if(user.email) {
+                    userEmailSpan.textContent = user.email;
                 }
-            });
-
-            loginForm.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                const email = emailInput.value;
-                const password = passwordInput.value;
-                loginMessage.textContent = '';
-
-                try {
-                    await signInWithEmailAndPassword(auth, email, password);
-                } catch (error) {
-                    console.error("Erro no login:", error.code);
-                    switch (error.code) {
-                        case 'auth/user-not-found':
-                        case 'auth/wrong-password':
-                        case 'auth/invalid-credential':
-                            loginMessage.textContent = 'Email ou palavra-passe incorretos.';
-                            break;
-                        default:
-                            loginMessage.textContent = 'Ocorreu um erro. Tente novamente.';
-                            break;
-                    }
-                }
-            });
-
-            if(logoutButton) {
-                logoutButton.addEventListener('click', () => {
-                    signOut(auth).catch((error) => {
-                        console.error("Erro ao fazer logoff:", error);
-                    });
-                });
+                headerTopBar.style.display = 'flex';
+                initializeTutorials(); 
+            } else {
+                loginPage.classList.remove('hidden');
+                appContent.classList.add('hidden');
             }
+        });
 
-            // Lógica para alternar entre formulários de login e reset
-            forgotPasswordLink.addEventListener('click', () => {
-                loginForm.classList.add('hidden');
-                resetForm.classList.remove('hidden');
-            });
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = emailInput.value;
+            const password = passwordInput.value;
+            loginMessage.textContent = '';
 
-            backToLoginLink.addEventListener('click', () => {
-                resetForm.classList.add('hidden');
-                loginForm.classList.remove('hidden');
-            });
-
-            // Lógica para enviar email de recuperação
-            resetForm.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                const email = resetEmailInput.value;
-                resetMessage.textContent = '';
-                resetMessage.className = '';
-
-                try {
-                    await sendPasswordResetEmail(auth, email);
-                    resetMessage.textContent = 'Email de recuperação enviado! Verifique a sua caixa de entrada.';
-                    resetMessage.classList.add('success');
-                } catch (error) {
-                    console.error("Erro ao recuperar senha:", error.code);
-                    resetMessage.classList.add('error');
-                     switch (error.code) {
-                        case 'auth/user-not-found':
-                            resetMessage.textContent = 'Este email não está registado.';
-                            break;
-                        default:
-                            resetMessage.textContent = 'Ocorreu um erro. Tente novamente.';
-                            break;
-                    }
+            try {
+                await signInWithEmailAndPassword(auth, email, password);
+            } catch (error) {
+                console.error("Erro no login:", error.code);
+                switch (error.code) {
+                    case 'auth/user-not-found':
+                    case 'auth/wrong-password':
+                    case 'auth/invalid-credential':
+                        loginMessage.textContent = 'Email ou palavra-passe incorretos.';
+                        break;
+                    default:
+                        loginMessage.textContent = 'Ocorreu um erro. Tente novamente.';
+                        break;
                 }
+            }
+        });
+
+        if(logoutButton) {
+            logoutButton.addEventListener('click', () => {
+                signOut(auth).catch((error) => {
+                    console.error("Erro ao fazer logoff:", error);
+                });
             });
         }
 
-        // --- LÓGICA DOS TUTORIAIS (só inicia após login ou acesso direto) ---
-        function initializeTutorials() {
-            const homePage = document.getElementById('home-page');
-            const tutorialSections = document.querySelectorAll('.tutorial-section');
-            const categoryCards = document.querySelectorAll('.category-card:not(.stacked-card)');
-            const backButtons = document.querySelectorAll('.back-button');
-            const scrollTopBtn = document.getElementById('scrollTopBtn');
-            const faqQuestions = document.querySelectorAll('.faq-question');
-            const linkButtons = document.querySelectorAll('.link-button');
-            const visitasDropdownContainer = document.querySelector('.category-dropdown-container');
-            const visitasTrigger = document.getElementById('visitas-trigger');
-            const dropdownItems = document.querySelectorAll('.dropdown-item');
-            const searchInput = document.getElementById('search-input');
-            const searchResultsContainer = document.getElementById('search-results');
-            const mainContent = document.querySelector('#home-page main');
-            const tutorialImages = document.querySelectorAll('.tutorial-image');
-            const lightboxOverlay = document.getElementById('lightbox-overlay');
-            const lightboxImage = document.getElementById('lightbox-image');
-            const lightboxClose = document.getElementById('lightbox-close');
+        // Lógica para alternar entre formulários de login e reset
+        forgotPasswordLink.addEventListener('click', () => {
+            loginForm.classList.add('hidden');
+            resetForm.classList.remove('hidden');
+        });
 
-            let searchableContent = [];
+        backToLoginLink.addEventListener('click', () => {
+            resetForm.classList.add('hidden');
+            loginForm.classList.remove('hidden');
+        });
 
-            const showSection = (targetId) => {
-                homePage.style.display = 'none';
-                searchResultsContainer.classList.add('hidden');
-                mainContent.style.display = 'block';
+        // Lógica para enviar email de recuperação
+        resetForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = resetEmailInput.value;
+            resetMessage.textContent = '';
+            resetMessage.className = '';
 
-                tutorialSections.forEach(section => {
-                    section.style.display = 'none';
-                });
-                const targetSection = document.getElementById(targetId);
-                if (targetSection) {
-                    targetSection.style.display = 'block';
-                    window.scrollTo(0, 0);
+            try {
+                await sendPasswordResetEmail(auth, email);
+                resetMessage.textContent = 'Email de recuperação enviado! Verifique a sua caixa de entrada.';
+                resetMessage.classList.add('success');
+            } catch (error) {
+                console.error("Erro ao recuperar senha:", error.code);
+                resetMessage.classList.add('error');
+                 switch (error.code) {
+                    case 'auth/user-not-found':
+                        resetMessage.textContent = 'Este email não está registado.';
+                        break;
+                    default:
+                        resetMessage.textContent = 'Ocorreu um erro. Tente novamente.';
+                        break;
                 }
-            };
+            }
+        });
+    }
 
-            const showHomePage = () => {
-                homePage.style.display = 'block';
-                searchResultsContainer.classList.add('hidden');
-                mainContent.style.display = 'block';
-                tutorialSections.forEach(section => {
-                    section.style.display = 'none';
-                });
+    // --- LÓGICA DOS TUTORIAIS (só inicia após login ou acesso direto) ---
+    function initializeTutorials() {
+        const homePage = document.getElementById('home-page');
+        const tutorialSections = document.querySelectorAll('.tutorial-section');
+        const categoryCards = document.querySelectorAll('.category-card:not(.stacked-card)');
+        const backButtons = document.querySelectorAll('.back-button');
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        const linkButtons = document.querySelectorAll('.link-button');
+        const visitasDropdownContainer = document.querySelector('.category-dropdown-container');
+        const visitasTrigger = document.getElementById('visitas-trigger');
+        const dropdownItems = document.querySelectorAll('.dropdown-item');
+        const searchInput = document.getElementById('search-input');
+        const searchResultsContainer = document.getElementById('search-results');
+        const mainContent = document.querySelector('#home-page main');
+        const tutorialImages = document.querySelectorAll('.tutorial-image');
+        const lightboxOverlay = document.getElementById('lightbox-overlay');
+        const lightboxImage = document.getElementById('lightbox-image');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        let searchableContent = [];
+
+        const showSection = (targetId) => {
+            homePage.style.display = 'none';
+            searchResultsContainer.classList.add('hidden');
+            mainContent.style.display = 'block';
+
+            tutorialSections.forEach(section => {
+                section.style.display = 'none';
+            });
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.style.display = 'block';
                 window.scrollTo(0, 0);
-            };
+            }
+        };
 
-            const buildSearchIndex = () => {
-                tutorialSections.forEach(section => {
-                    const titleElement = section.querySelector('h2');
-                    if (titleElement) {
-                        searchableContent.push({
-                            id: section.id,
-                            title: titleElement.textContent.trim(),
-                            content: section.innerText
-                        });
-                    }
-                });
+        const showHomePage = () => {
+            homePage.style.display = 'block';
+            searchResultsContainer.classList.add('hidden');
+            mainContent.style.display = 'block';
+            tutorialSections.forEach(section => {
+                section.style.display = 'none';
+            });
+            window.scrollTo(0, 0);
+        };
 
-                document.querySelectorAll('#home-page .faq-item').forEach((item, index) => {
-                    const question = item.querySelector('.faq-question span').textContent.trim();
-                    const answer = item.querySelector('.faq-answer p').textContent.trim();
+        const buildSearchIndex = () => {
+            tutorialSections.forEach(section => {
+                const titleElement = section.querySelector('h2');
+                if (titleElement) {
                     searchableContent.push({
-                        id: `faq-home-${index}`,
-                        title: question,
-                        content: `${question} ${answer}`,
-                        isFaq: true
+                        id: section.id,
+                        title: titleElement.textContent.trim(),
+                        content: section.innerText
                     });
-                });
-            };
-
-            const handleSearch = (event) => {
-                const searchTerm = event.target.value.toLowerCase().trim();
-
-                if (searchTerm.length < 3) {
-                    searchResultsContainer.classList.add('hidden');
-                    mainContent.style.display = 'block';
-                    return;
-                }
-
-                mainContent.style.display = 'none';
-                searchResultsContainer.classList.remove('hidden');
-                searchResultsContainer.innerHTML = '';
-
-                const results = searchableContent.filter(item => 
-                    item.content.toLowerCase().includes(searchTerm)
-                );
-
-                if (results.length > 0) {
-                    results.forEach(result => {
-                        const resultElement = document.createElement('div');
-                        resultElement.className = 'result-item';
-
-                        const title = document.createElement('h3');
-                        title.textContent = result.title;
-                        resultElement.appendChild(title);
-
-                        const snippet = document.createElement('p');
-                        const contentLower = result.content.toLowerCase();
-                        const index = contentLower.indexOf(searchTerm);
-                        
-                        const start = Math.max(0, index - 100);
-                        const end = Math.min(contentLower.length, index + searchTerm.length + 100);
-                        
-                        let text = result.content.substring(start, end);
-                        const regex = new RegExp(searchTerm, 'gi');
-                        text = text.replace(regex, (match) => `<mark>${match}</mark>`);
-
-                        snippet.innerHTML = `...${text}...`;
-                        resultElement.appendChild(snippet);
-
-                        if (!result.isFaq) {
-                            const button = document.createElement('button');
-                            button.textContent = 'Ver tutorial';
-                            button.dataset.target = result.id;
-                            button.addEventListener('click', () => {
-                                showSection(result.id);
-                                searchInput.value = '';
-                            });
-                            resultElement.appendChild(button);
-                        }
-                        
-                        searchResultsContainer.appendChild(resultElement);
-                    });
-                } else {
-                    searchResultsContainer.innerHTML = `<div id="no-results-message"><h3>Nenhum resultado encontrado</h3><p>Tente pesquisar com outros termos.</p></div>`;
-                }
-            };
-
-            categoryCards.forEach(card => {
-                card.addEventListener('click', () => showSection(card.dataset.target));
-            });
-
-            if (visitasTrigger) {
-                visitasTrigger.addEventListener('click', (event) => {
-                    event.stopPropagation();
-                    visitasDropdownContainer.classList.toggle('active');
-                });
-            }
-            
-            document.addEventListener('click', (event) => {
-                if (visitasDropdownContainer && !visitasDropdownContainer.contains(event.target)) {
-                    visitasDropdownContainer.classList.remove('active');
                 }
             });
 
-            dropdownItems.forEach(item => {
-                item.addEventListener('click', (event) => {
-                    event.stopPropagation();
-                    showSection(item.dataset.target);
+            document.querySelectorAll('#home-page .faq-item').forEach((item, index) => {
+                const question = item.querySelector('.faq-question span').textContent.trim();
+                const answer = item.querySelector('.faq-answer p').textContent.trim();
+                searchableContent.push({
+                    id: `faq-home-${index}`,
+                    title: question,
+                    content: `${question} ${answer}`,
+                    isFaq: true
                 });
             });
+        };
 
-            backButtons.forEach(button => {
-                button.addEventListener('click', showHomePage);
-            });
+        const handleSearch = (event) => {
+            const searchTerm = event.target.value.toLowerCase().trim();
 
-            linkButtons.forEach(button => {
-                button.addEventListener('click', () => showSection(button.dataset.target));
-            });
-
-            const handleScroll = () => {
-                if (scrollTopBtn) {
-                    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                        scrollTopBtn.style.display = "block";
-                    } else {
-                        scrollTopBtn.style.display = "none";
-                    }
-                }
-            };
-
-            window.addEventListener('scroll', handleScroll);
-
-            if (scrollTopBtn) {
-                scrollTopBtn.addEventListener('click', () => {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
+            if (searchTerm.length < 3) {
+                searchResultsContainer.classList.add('hidden');
+                mainContent.style.display = 'block';
+                return;
             }
 
-            faqQuestions.forEach(button => {
-                button.addEventListener('click', () => {
-                    const item = button.parentElement;
-                    if (item) {
-                        item.classList.toggle('active');
+            mainContent.style.display = 'none';
+            searchResultsContainer.classList.remove('hidden');
+            searchResultsContainer.innerHTML = '';
+
+            const results = searchableContent.filter(item => 
+                item.content.toLowerCase().includes(searchTerm)
+            );
+
+            if (results.length > 0) {
+                results.forEach(result => {
+                    const resultElement = document.createElement('div');
+                    resultElement.className = 'result-item';
+
+                    const title = document.createElement('h3');
+                    title.textContent = result.title;
+                    resultElement.appendChild(title);
+
+                    const snippet = document.createElement('p');
+                    const contentLower = result.content.toLowerCase();
+                    const index = contentLower.indexOf(searchTerm);
+                    
+                    const start = Math.max(0, index - 100);
+                    const end = Math.min(contentLower.length, index + searchTerm.length + 100);
+                    
+                    let text = result.content.substring(start, end);
+                    const regex = new RegExp(searchTerm, 'gi');
+                    text = text.replace(regex, (match) => `<mark>${match}</mark>`);
+
+                    snippet.innerHTML = `...${text}...`;
+                    resultElement.appendChild(snippet);
+
+                    if (!result.isFaq) {
+                        const button = document.createElement('button');
+                        button.textContent = 'Ver tutorial';
+                        button.dataset.target = result.id;
+                        button.addEventListener('click', () => {
+                            showSection(result.id);
+                            searchInput.value = '';
+                        });
+                        resultElement.appendChild(button);
                     }
+                    
+                    searchResultsContainer.appendChild(resultElement);
                 });
+            } else {
+                searchResultsContainer.innerHTML = `<div id="no-results-message"><h3>Nenhum resultado encontrado</h3><p>Tente pesquisar com outros termos.</p></div>`;
+            }
+        };
+
+        categoryCards.forEach(card => {
+            card.addEventListener('click', () => showSection(card.dataset.target));
+        });
+
+        if (visitasTrigger) {
+            visitasTrigger.addEventListener('click', (event) => {
+                event.stopPropagation();
+                visitasDropdownContainer.classList.toggle('active');
             });
-
-            tutorialImages.forEach(image => {
-                image.addEventListener('click', () => {
-                    lightboxOverlay.style.display = 'flex';
-                    lightboxImage.src = image.src;
-                });
-            });
-
-            const closeLightbox = () => {
-                lightboxOverlay.style.display = 'none';
-            };
-
-            lightboxClose.addEventListener('click', closeLightbox);
-            lightboxOverlay.addEventListener('click', (event) => {
-                if (event.target === lightboxOverlay) {
-                    closeLightbox();
-                }
-            });
-
-            buildSearchIndex();
-            searchInput.addEventListener('input', handleSearch);
         }
-    </script>
+        
+        document.addEventListener('click', (event) => {
+            if (visitasDropdownContainer && !visitasDropdownContainer.contains(event.target)) {
+                visitasDropdownContainer.classList.remove('active');
+            }
+        });
+
+        dropdownItems.forEach(item => {
+            item.addEventListener('click', (event) => {
+                event.stopPropagation();
+                showSection(item.dataset.target);
+            });
+        });
+
+        backButtons.forEach(button => {
+            button.addEventListener('click', showHomePage);
+        });
+
+        linkButtons.forEach(button => {
+            button.addEventListener('click', () => showSection(button.dataset.target));
+        });
+
+        const handleScroll = () => {
+            if (scrollTopBtn) {
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    scrollTopBtn.style.display = "block";
+                } else {
+                    scrollTopBtn.style.display = "none";
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        if (scrollTopBtn) {
+            scrollTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        faqQuestions.forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                if (item) {
+                    item.classList.toggle('active');
+                }
+            });
+        });
+
+        tutorialImages.forEach(image => {
+            image.addEventListener('click', () => {
+                lightboxOverlay.style.display = 'flex';
+                lightboxImage.src = image.src;
+            });
+        });
+
+        const closeLightbox = () => {
+            lightboxOverlay.style.display = 'none';
+        };
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxOverlay.addEventListener('click', (event) => {
+            if (event.target === lightboxOverlay) {
+                closeLightbox();
+            }
+        });
+
+        buildSearchIndex();
+        searchInput.addEventListener('input', handleSearch);
+    }
+</script>
 </body>
 </html>
