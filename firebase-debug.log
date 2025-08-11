@@ -1,0 +1,21 @@
+[debug] [2025-08-07T18:24:47.879Z] ----------------------------------------------------------------------
+[debug] [2025-08-07T18:24:47.883Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\vitor.almeida.ORGANNACT\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-08-07T18:24:47.883Z] CLI Version:   14.12.0
+[debug] [2025-08-07T18:24:47.883Z] Platform:      win32
+[debug] [2025-08-07T18:24:47.884Z] Node Version:  v22.16.0
+[debug] [2025-08-07T18:24:47.884Z] Time:          Thu Aug 07 2025 15:24:47 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2025-08-07T18:24:47.884Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-08-07T18:24:47.893Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-08-07T18:24:47.894Z] > authorizing via signed-in user (contato.vtpereira@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\vitor.almeida.ORGANNACT\Documents\central de ajuda\guia-rapido-salesforce
+

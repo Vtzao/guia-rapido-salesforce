@@ -431,6 +431,21 @@
             margin: 0;
         }
 
+                /* --- Estilo para a Tag "NOVO" --- */
+        .new-tag {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background-color: var(--success-color); /* Verde para destaque */
+            color: white;
+            padding: 4px 10px;
+            border-radius: 50px; /* Formato de pílula */
+            font-size: 0.75em;
+            font-weight: 700;
+            text-transform: uppercase;
+            z-index: 10;
+        }
+
         .step-card {
             background-color: var(--card-background);
             border-radius: 12px;
@@ -871,10 +886,8 @@
                                 <div class="dropdown-content">
                                     <a class="dropdown-item" data-target="tutorial-visita-propagandista">Tutorial Visitas Organnact</a>
                                     <a class="dropdown-item" data-target="tutorial-visita-dndne">Visita Tipo DN/DNE</a>
-                                    <a class="dropdown-item" data-target="tutorial-visita-agd">Visita Tipo AGD</a>
                                     <a class="dropdown-item" data-target="tutorial-visita-acoes">Visita Tipo Ações</a>
                                     <a class="dropdown-item" data-target="tutorial-visita-redes">Visita Tipo Redes</a>
-                                    <a class="dropdown-item" data-target="tutorial-visita-training">Visita Tipo Training</a>
                                 </div>
                             </div>
                              <div class="category-card" data-target="tutorial-cafe-vet">
@@ -891,6 +904,11 @@
                                 <div class="icon"><i class="bi bi-bullseye"></i></div>
                                 <h3>Ação Geradora de Demanda (AGD)</h3>
                                 <p>Descubra como registrar e acompanhar as ações que geram novas oportunidades.</p>
+                            </div>
+                            <div class="category-card" data-target="tutorial-pitch-avaliacao">
+                                <span class="new-tag">Novo</span> <div class="icon"><i class="bi bi-clipboard-check-fill"></i></div>
+                                <h3>Avaliação de Pitch</h3>
+                                <p>Passo a passo para enviar o seu vídeo de avaliação de pitch de vendas.</p>
                             </div>
                         </div>
                     </section>
@@ -1464,6 +1482,63 @@
                 <p class="image-caption">Você será redirecionado(a) para a plataforma VideoHub.</p>
             </section>
         </div>
+
+        <div id="tutorial-pitch-avaliacao" class="tutorial-section">
+    <div class="tutorial-header">
+        <h2>Tutorial: Avaliação de Pitch de Vendas</h2>
+        <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
+    </div>
+    <section class="step-card">
+        <h3>📝 Criando o Registro de Avaliação</h3>
+        <p>O primeiro passo é criar o registro no Salesforce que irá armazenar as informações e o seu vídeo.</p>
+        <ol>
+            <li>No menu superior, navegue até a aba <strong>"Avaliações Propagandistas"</strong>.</li>
+            <li>Na visualização de lista, selecione <strong>"Todas as Listas"</strong> ou <strong>"All"</strong> para garantir que você possa criar um novo registro.</li>
+            <li>Clique no botão <strong>"Criar"</strong> no canto superior direito da tela.</li>
+        </ol>
+    </section>
+    <section class="step-card">
+        <h3>✍️ Preenchendo as Informações</h3>
+        <p>Agora, vamos preencher os detalhes da avaliação para que ela seja corretamente identificada.</p>
+        <ol>
+            <li>Na janela que se abrir, preencha os campos da seção <strong>"O que está sendo avaliado"</strong>:
+                <ul>
+                    <br>
+                    <li><strong>Ciclo do Produto:</strong> Comece a digitar o ano do ciclo (ex: <em>2025</em>). O sistema irá sugerir os ciclos. Selecione o correto, como por exemplo: <strong>"2025- Ciclo 1 - Imunidade"</strong>.</li>
+                    <li><strong>Produto do ciclo:</strong> Comece a digitar <strong>"PC-"</strong>. Uma lista de produtos aparecerá. Clique em <strong>"Exibir mais resultados para PC-"</strong> e selecione o produto exato que você está avaliando.</li>
+                </ul>
+            </li>
+            <li>Após preencher os campos, clique em <strong>"Salvar"</strong>.</li>
+        </ol>
+        <img src="https://i.imgur.com/2Xy1WzE.png" alt="Tela de criação da avaliação com campos de ciclo e produto." class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/ffffff?text=Imagem+Indisponível';">
+        <p class="image-caption">Preencha o ciclo e o produto correspondente à sua avaliação.</p>
+    </section>
+    <section class="step-card">
+        <h3>🎥 Anexando o Vídeo</h3>
+        <p>Com o registro criado, o passo final é carregar o seu vídeo. É mais fácil do que parece!</p>
+        <ol>
+            <li>Após salvar, você será redirecionado para a página da avaliação que acabou de criar (o nome dela será algo como "AP-000XXX").</li>
+            <li>No topo da página, clique no botão <strong>"💾 Incluir Arquivo"</strong>.</li>
+            <li>Na nova janela, clique em <strong>"Carregar o Arquivo"</strong> e selecione o vídeo da sua avaliação no seu computador ou telemóvel.</li>
+            <li>Aguarde o carregamento do arquivo. Quando terminar, clique no botão <strong>"Concluído"</strong> e, em seguida, em <strong>"Concluir"</strong>.</li>
+        </ol>
+        <div class="tip-box">
+            <p>✨ <strong>Pronto!</strong> A sua avaliação de pitch foi enviada com sucesso e já está registada no Salesforce para o seu gestor poder analisar.</p>
+        </div>
+    </section>
+    <section class="step-card">
+        <h3>Perguntas Frequentes</h3>
+        <div class="faq-item">
+            <button class="faq-question">
+                <span>Por que é importante gravar e enviar o pitch?</span>
+                <i class="bi bi-chevron-right faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+                <p>Gravar o seu pitch de vendas é uma ferramenta poderosa de autoavaliação e desenvolvimento. Permite que você e o seu gestor identifiquem pontos fortes e áreas para melhorar, além de ajudar a partilhar as melhores práticas com toda a equipa!</p>
+            </div>
+        </div>
+    </section>
+</div>
 
     </div>
         
