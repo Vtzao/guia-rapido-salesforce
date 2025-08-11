@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9H9SK7LD6N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9H9SK7LD6N');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Guia Rápido Salesforce</title>
@@ -122,7 +131,7 @@
         #login-button:hover, #reset-button:hover {
             background-color: var(--secondary-color);
         }
-        
+
         #login-message, #reset-message {
             margin-top: 15px;
             font-weight: 500;
@@ -148,7 +157,7 @@
         .form-footer a:hover {
             text-decoration: underline;
         }
-        
+
         /* --- Cabeçalho Principal e Fundo (App Content) --- */
         .header-background {
             background-color: #144271d3;
@@ -180,7 +189,7 @@
             padding-top: 10px; /* Ajustado para a barra de logout */
             color: var(--card-background);
         }
-        
+
         .header-top-bar {
             display: flex;
             justify-content: flex-end;
@@ -237,7 +246,7 @@
             justify-content: center;
             gap: 10px;
         }
-        
+
         .search-bar {
             position: relative;
             max-width: 600px;
@@ -548,7 +557,7 @@
             display: block;
             cursor: pointer;
         }
-        
+
         .video-container {
             position: relative;
             overflow: hidden;
@@ -676,7 +685,7 @@
             margin: 0 0 15px 0;
             color: var(--light-text-color);
         }
-        
+
         .result-item mark {
             background-color: #fff3cd;
             color: #856404;
@@ -736,7 +745,7 @@
             font-weight: bold;
             cursor: pointer;
         }
-        
+
         /* --- Estilos para Telas Menores (Responsividade) --- */
         @media (max-width: 768px) {
             .container {
@@ -768,7 +777,7 @@
                 font-size: 1.6em;
                 gap: 10px;
             }
-            
+
             .community-card {
                 flex-direction: column;
                 text-align: center;
@@ -790,20 +799,29 @@
                 font-size: 1em;
                 padding-left: 18px;
             }
-            
-            #scrollTopBtn { 
+
+            #scrollTopBtn {
                 width: 45px;
                 height: 45px;
                 bottom: 15px;
-                right: 15px; 
-                font-size: 16px; 
+                right: 15px;
+                font-size: 16px;
             }
         }
 
     </style>
-</head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    </head>
 <body>
-    
+
     <div id="login-page">
         <div class="login-container">
             <div class="login-logos">
@@ -961,9 +979,9 @@
                     </section>
                 </main>
             </div>
-            
+
             <div id="search-results" class="hidden"></div>
-            
+
             <div id="tutorial-contas" class="tutorial-section">
             <div class="tutorial-header">
                 <h2>Tutorial: Contas</h2>
@@ -1045,14 +1063,14 @@
                                 <em>Ex: Clínica & Petshop Juquinha's</em>
                             </li>
                             <li><strong>Tratamento</strong> Diga qual é o tipo de tratamento desse contato. <br>
-                            <em>Ex: Sr.</em>
+                                <em>Ex: Sr.</em>
                             </li>
                             <li><strong>Nome completo:</strong> Preencha o nome e sobrenome da pessoa. <br>
-                            <em>Ex: Pedro Silva</em>
+                                <em>Ex: Pedro Silva</em>
                             </li>
                             <li><strong>Dados para contato:</strong> Adicione o e-mail e telefone.</li>
                             <li><strong>Função e hierarquia:</strong> Indique o cargo da pessoa.<br>
-                            <em>Ex: Balconista ou Veterinário.</em>
+                                <em>Ex: Balconista ou Veterinário.</em>
                             </li>
                         </ul>
                     </li>
@@ -1391,7 +1409,7 @@
                 </div>
             </section>
         </div>
-        
+
         <div id="tutorial-relatorios" class="tutorial-section">
             <div class="tutorial-header">
                 <h2>Tutorial: Relatórios</h2>
@@ -1470,7 +1488,7 @@
                     <li>Role a página para baixo e você encontrará a seção <strong>"Acompanhamento Ações"</strong>, com todas as informações que você incluiu anteriormente.</li>
                 </ol>
                  <img src="img/acompanhamento-agd.jpeg" width="300" alt="Histórico de acompanhamentos da AGD" class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x350/cccccc/ffffff?text=Imagem+Indisponível';">
-                <p class="image-caption">Acompanhe a evolução da sua AGD através do Acompanhamento de Ações.</p>
+                 <p class="image-caption">Acompanhe a evolução da sua AGD através do Acompanhamento de Ações.</p>
             </section>
             <section class="step-card">
                 <h3>Vídeo Tutorial AGD</h3>
@@ -1541,7 +1559,7 @@
 </div>
 
     </div>
-        
+
         <button id="scrollTopBtn" title="Voltar ao topo"><i class="bi bi-arrow-up"></i></button>
 
         <div id="lightbox-overlay" class="lightbox-overlay">
@@ -1597,7 +1615,7 @@
 
 
     // --- LÓGICA DE AUTENTICAÇÃO ---
-    
+
     // =========================================================
     // ✨ INÍCIO DA ALTERAÇÃO ✨
     // =========================================================
@@ -1628,7 +1646,7 @@
                     userEmailSpan.textContent = user.email;
                 }
                 headerTopBar.style.display = 'flex'; // Garante que a barra de logout apareça
-                initializeTutorials(); 
+                initializeTutorials();
             } else {
                 loginPage.classList.remove('hidden');
                 appContent.classList.add('hidden');
@@ -1725,6 +1743,48 @@
 
         let searchableContent = [];
 
+        // =============================================================
+        // ✨ INÍCIO DA ALTERAÇÃO 2: LÓGICA DE RASTREAMENTO DO GA ✨
+        // =============================================================
+
+        // Função para enviar o evento de visualização de tutorial para o Google Analytics
+        const trackTutorialView = (targetId) => {
+            if (!targetId) return;
+
+            const tutorialSection = document.getElementById(targetId);
+            let tutorialTitle = targetId; // Usa o ID como fallback
+
+            // Tenta pegar um título mais amigável do H2 da seção
+            if (tutorialSection) {
+                const titleElement = tutorialSection.querySelector('h2');
+                if (titleElement) {
+                    tutorialTitle = titleElement.textContent.trim();
+                }
+            }
+
+            // Verifica se a função gtag existe (garante que não dê erro) e envia o evento
+            if (typeof gtag === 'function') {
+                gtag('event', 'view_tutorial', {
+                    'tutorial_id': targetId,
+                    'tutorial_title': tutorialTitle
+                });
+                // A linha abaixo é apenas para você ver no console do navegador se o evento está sendo enviado. Pode remover depois.
+                console.log(`Evento GA enviado: view_tutorial - ${tutorialTitle}`);
+            }
+        };
+
+        // Adiciona o rastreamento aos elementos clicáveis estáticos (cards, dropdowns, links internos)
+        const trackableElements = document.querySelectorAll('.category-card[data-target], .dropdown-item[data-target], .link-button[data-target]');
+        trackableElements.forEach(element => {
+            element.addEventListener('click', () => {
+                trackTutorialView(element.dataset.target);
+            });
+        });
+
+        // =============================================================
+        // ✨ FIM DA ALTERAÇÃO 2 ✨
+        // =============================================================
+
         const showSection = (targetId) => {
             homePage.style.display = 'none';
             searchResultsContainer.classList.add('hidden');
@@ -1787,7 +1847,7 @@
             searchResultsContainer.classList.remove('hidden');
             searchResultsContainer.innerHTML = '';
 
-            const results = searchableContent.filter(item => 
+            const results = searchableContent.filter(item =>
                 item.content.toLowerCase().includes(searchTerm)
             );
 
@@ -1803,10 +1863,10 @@
                     const snippet = document.createElement('p');
                     const contentLower = result.content.toLowerCase();
                     const index = contentLower.indexOf(searchTerm);
-                    
+
                     const start = Math.max(0, index - 100);
                     const end = Math.min(contentLower.length, index + searchTerm.length + 100);
-                    
+
                     let text = result.content.substring(start, end);
                     const regex = new RegExp(searchTerm, 'gi');
                     text = text.replace(regex, (match) => `<mark>${match}</mark>`);
@@ -1819,12 +1879,14 @@
                         button.textContent = 'Ver tutorial';
                         button.dataset.target = result.id;
                         button.addEventListener('click', () => {
+                            // Alteração aqui para incluir o rastreamento nos resultados da busca
+                            trackTutorialView(result.id);
                             showSection(result.id);
                             searchInput.value = '';
                         });
                         resultElement.appendChild(button);
                     }
-                    
+
                     searchResultsContainer.appendChild(resultElement);
                 });
             } else {
@@ -1842,7 +1904,7 @@
                 visitasDropdownContainer.classList.toggle('active');
             });
         }
-        
+
         document.addEventListener('click', (event) => {
             if (visitasDropdownContainer && !visitasDropdownContainer.contains(event.target)) {
                 visitasDropdownContainer.classList.remove('active');
