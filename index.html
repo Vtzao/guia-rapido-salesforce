@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-        <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9H9SK7LD6N"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -913,6 +913,11 @@
                                 <h3>Café com VET</h3>
                                 <p>Aprenda a registrar eventos de relacionamento com veterinários.</p>
                             </div>
+                            <div class="category-card" data-target="tutorial-reunioes">
+                                <span class="new-tag">Novo</span> <div class="icon"></div><div class="icon"><i class="bi bi-calendar2-event"></i></div>
+                                <h3>Reuniões</h3>
+                                <p>Aprenda a registrar atas de reunião e a notificar os participantes.</p>
+                            </div>
                             <div class="category-card" data-target="tutorial-relatorios">
                                 <div class="icon"><i class="bi bi-graph-up"></i></div>
                                 <h3>Relatórios</h3>
@@ -924,7 +929,7 @@
                                 <p>Descubra como registrar e acompanhar as ações que geram novas oportunidades.</p>
                             </div>
                             <div class="category-card" data-target="tutorial-pitch-avaliacao">
-                                <span class="new-tag">Novo</span> <div class="icon"><i class="bi bi-clipboard-check-fill"></i></div>
+                                <div class="icon"><i class="bi bi-clipboard-check-fill"></i></div>
                                 <h3>Avaliação de Pitch</h3>
                                 <p>Passo a passo para enviar o seu vídeo de avaliação de pitch de vendas.</p>
                             </div>
@@ -1032,476 +1037,476 @@
             </section>
         </div>
 
-        <div id="tutorial-contatos" class="tutorial-section">
-            <div class="tutorial-header">
-                <h2>Tutorial: Contatos</h2>
-                <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
-            </div>
-            <section class="step-card">
-                <h3>O que são Contatos?</h3>
-                <p>Pense em <strong>Contas</strong> como as empresas (clínicas, pet shops) e em <strong>Contatos</strong> como as pessoas que trabalham lá. Cada veterinário, comprador ou funcionário importante com quem você fala deve ser um contato dentro da conta da empresa.</p>
-            </section>
-            <section class="step-card">
-                <h3>Visualizando seus Contatos</h3>
-                <ol>
-                    <li>Vá para a aba <strong>"Contatos"</strong>. Por padrão, você verá a lista "Recentes".</li>
-                    <li>Para ver todos os contatos da sua região, clique no nome da lista (ex: "Recentes") e selecione <strong>"Todos os Contatos"</strong>.</li>
-                </ol>
-                <img src="img/contato-lista.png" alt="Tela de Contatos mostrando como alterar a visualização de lista." width="600" class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/ffffff?text=Imagem+Indisponível';">
-                <p class="image-caption">Mude o filtro para "Todos os Contatos" para ver a lista completa.</p>
-            </section>
-            <section class="step-card">
-                <h3>Criando um Novo Contato</h3>
-                <p>Conheceu alguém novo numa visita? Adicione essa pessoa como um contato para não perder nenhuma informação importante!</p>
-                <ol>
-                    <li>Na aba "Contatos", clique no botão <strong>"Criar"</strong>.</li>
-                    <li>Selecione o país do contato (normalmente "Contato (BR)") e avance.</li>
-                    <li>Agora, preencha o MÁXIMO de informações disponíveis. O mais importante é ligar este novo contato a uma conta já existente.
-                        <ul>
-                            <br>
-                            <li><strong>Nome da conta:</strong> Digite o nome da conta de onde é esse contato.<br>
-                                <em>Ex: Clínica & Petshop Juquinha's</em>
-                            </li>
-                            <li><strong>Tratamento</strong> Diga qual é o tipo de tratamento desse contato. <br>
-                                <em>Ex: Sr.</em>
-                            </li>
-                            <li><strong>Nome completo:</strong> Preencha o nome e sobrenome da pessoa. <br>
-                                <em>Ex: Pedro Silva</em>
-                            </li>
-                            <li><strong>Dados para contato:</strong> Adicione o e-mail e telefone.</li>
-                            <li><strong>Função e hierarquia:</strong> Indique o cargo da pessoa.<br>
-                                <em>Ex: Balconista ou Veterinário.</em>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>Clique em <strong>"Salvar"</strong>.</li>
-                </ol>
-            </section>
-            <section class="step-card">
-                <h3>Perguntas Frequentes</h3>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Um veterinário trabalha em duas clínicas. Como eu registro?</span>
-                        <i class="bi bi-chevron-right faq-icon"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Você deve criar o mesmo contato associado às duas contas diferentes. O Salesforce permite essa flexibilidade, mantendo o histórico de relacionamento separado para cada local de trabalho.</p>
+            <div id="tutorial-contatos" class="tutorial-section">
+                <div class="tutorial-header">
+                    <h2>Tutorial: Contatos</h2>
+                    <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
+                </div>
+                <section class="step-card">
+                    <h3>O que são Contatos?</h3>
+                    <p>Pense em <strong>Contas</strong> como as empresas (clínicas, pet shops) e em <strong>Contatos</strong> como as pessoas que trabalham lá. Cada veterinário, comprador ou funcionário importante com quem você fala deve ser um contato dentro da conta da empresa.</p>
+                </section>
+                <section class="step-card">
+                    <h3>Visualizando seus Contatos</h3>
+                    <ol>
+                        <li>Vá para a aba <strong>"Contatos"</strong>. Por padrão, você verá a lista "Recentes".</li>
+                        <li>Para ver todos os contatos da sua região, clique no nome da lista (ex: "Recentes") e selecione <strong>"Todos os Contatos"</strong>.</li>
+                    </ol>
+                    <img src="img/contato-lista.png" alt="Tela de Contatos mostrando como alterar a visualização de lista." width="600" class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/ffffff?text=Imagem+Indisponível';">
+                    <p class="image-caption">Mude o filtro para "Todos os Contatos" para ver a lista completa.</p>
+                </section>
+                <section class="step-card">
+                    <h3>Criando um Novo Contato</h3>
+                    <p>Conheceu alguém novo numa visita? Adicione essa pessoa como um contato para não perder nenhuma informação importante!</p>
+                    <ol>
+                        <li>Na aba "Contatos", clique no botão <strong>"Criar"</strong>.</li>
+                        <li>Selecione o país do contato (normalmente "Contato (BR)") e avance.</li>
+                        <li>Agora, preencha o MÁXIMO de informações disponíveis. O mais importante é ligar este novo contato a uma conta já existente.
+                            <ul>
+                                <br>
+                                <li><strong>Nome da conta:</strong> Digite o nome da conta de onde é esse contato.<br>
+                                    <em>Ex: Clínica & Petshop Juquinha's</em>
+                                </li>
+                                <li><strong>Tratamento</strong> Diga qual é o tipo de tratamento desse contato. <br>
+                                    <em>Ex: Sr.</em>
+                                </li>
+                                <li><strong>Nome completo:</strong> Preencha o nome e sobrenome da pessoa. <br>
+                                    <em>Ex: Pedro Silva</em>
+                                </li>
+                                <li><strong>Dados para contato:</strong> Adicione o e-mail e telefone.</li>
+                                <li><strong>Função e hierarquia:</strong> Indique o cargo da pessoa.<br>
+                                    <em>Ex: Balconista ou Veterinário.</em>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Clique em <strong>"Salvar"</strong>.</li>
+                    </ol>
+                </section>
+                <section class="step-card">
+                    <h3>Perguntas Frequentes</h3>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Um veterinário trabalha em duas clínicas. Como eu registro?</span>
+                            <i class="bi bi-chevron-right faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Você deve criar o mesmo contato associado às duas contas diferentes. O Salesforce permite essa flexibilidade, mantendo o histórico de relacionamento separado para cada local de trabalho.</p>
+                        </div>
                     </div>
-                </div>
-            </section>
-        </div>
-
-        <div id="tutorial-visita-propagandista" class="tutorial-section">
-            <div class="tutorial-header">
-                <h2>Tutorial: Visitas Organnact</h2>
-                <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
+                </section>
             </div>
-            <section class="step-card">
-                <h3>Agendando uma Visita</h3>
-                <p>Este é o registro padrão para a maioria das suas interações. Use-o para planejar e documentar suas visitas de rotina aos clientes.</p>
-                <ol>
-                    <li>Acesse <strong>Contas</strong> e pesquise pela Conta que deseja visitar (ex: PDV, Veterinário, Clínica).</li>
-                    <li>Clique no botão superior <strong>"⚡Visita Organnact"</strong>.</li>
-                    <li>Na janela de criação, marque as caixinhas relacionadas à sua visita (ex: "Propagandista? ✅").</li>
-                    <li>Preencha o campo de <strong>Assunto</strong>.</li>
-                    <li>Em <strong>Forma de Contato</strong>, informe se será presencial.</li>
-                    <li>Defina a <strong>Data / hora de início</strong> e <strong>Data / hora final</strong> para agendar a visita.</li>
-                    <li>Deixe o checkbox <strong>"Visita Realizada?"</strong> desmarcado por enquanto, pois estamos apenas agendando.</li>
-                    <li>Marque se o <strong>Coordenador Técnico</strong> irá te acompanhar.</li>
-                    <li>Clique em <strong>Avançar</strong>. Pronto, sua visita está agendada no seu calendário do Salesforce!</li>
-                </ol>
-                <h3>Vídeo Tutorial</h3>
-                <p>Para assistir o vídeo tutorial de <strong>Visitas Organnact - Como CRIAR/AGENDAR a partir da conta</strong>, basta clicar no botão abaixo.</p>
-                <a href="https://escola.organnact.com.br/video/683498ee452ef887a315e08d/689099bab4228951a070ff7d" alt="Assistir ao vídeo tutorial no VídeoHub." title="Assistir ao vídeo tutorial no VídeoHub." target="_blank" class="community-card">
-                    <div class="icon"><i class="bi bi-play-btn"></i></div>
-                    <h3 style="color: #ffffff; border-bottom:none; align-items:center;" >Tutorial no VídeoHub</h3>
-                </a>
-                <p class="image-caption">Você será redirecionado(a) para a plataforma VideoHub.</p>
-            </section>
 
-            <section class="step-card">
-                <h3>Durante a Visita</h3>
-                <p>É fundamental registrar as novas pessoas com quem você conversou. Fazer isso na hora garante que nenhuma informação se perca!</p>
-                <ol>
-                    <li>Na página da Conta que está sendo visitada, vá em <strong>Visão 360 > Contatos Relacionados</strong>.</li>
-                    <li>Clique em <strong>Novo Contato</strong> para cadastrar as pessoas com quem conversou. (Atenção: O sistema não deixa cadastrar a mesma pessoa várias vezes!)</li>
-                    <li>Na mesma tela, você pode clicar em <strong>Adicionar Relacionamento</strong> para vincular um contato já existente a esta conta.</li>
-                </ol>
-            </section>
-
-            <section class="step-card">
-                <h3>Finalizando a Visita</h3>
-                <p>Após o encontro, é hora de finalizar o registro para que ele conste em seus relatórios e conte para seus KPIs.</p>
-                <ol>
-                    <li>Dentro do módulo <strong>Visitas Organnact</strong>, clique na Visita que deseja finalizar.</li>
-                    <li>Clique em <strong>Editar</strong>.</li>
-                    <li>Preencha os <strong>Resultados da Visita</strong> e marque o checkbox de <strong>"Visita Realizada?"</strong>.</li>
-                    <li>Depois de salvar, volte para a página da Visita e clique em <strong>"Relacionado"</strong>.</li>
-                    <li>Em "Pessoas da Visita", clique em <strong>"Criar"</strong> e adicione o nome do contato que você criou ou conversou durante a visita.</li>
-                </ol>
-                <div class="tip-box">
-                    <p>💡 <strong>Dica de Ouro:</strong> Se a conta que você está visitando for do tipo "Veterinário", o sistema é inteligente! Ele já adiciona o nome do próprio veterinário como <strong>Pessoa da Visita</strong> para você. Um passo a menos no seu dia a dia!</p>
+            <div id="tutorial-visita-propagandista" class="tutorial-section">
+                <div class="tutorial-header">
+                    <h2>Tutorial: Visitas Organnact</h2>
+                    <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
                 </div>
-                 <img src="img/print-visao-360.jpeg" alt="Editando a visita para marcar como realizada" class="tutorial-image" width="400" onerror="this.onerror=null;this.src='https://placehold.co/400x220/cccccc/ffffff?text=Imagem+Indisponível';">
-                 <p class="image-caption">Editando a visita para registrar sua conclusão.</p>
+                <section class="step-card">
+                    <h3>Agendando uma Visita</h3>
+                    <p>Este é o registro padrão para a maioria das suas interações. Use-o para planejar e documentar suas visitas de rotina aos clientes.</p>
+                    <ol>
+                        <li>Acesse <strong>Contas</strong> e pesquise pela Conta que deseja visitar (ex: PDV, Veterinário, Clínica).</li>
+                        <li>Clique no botão superior <strong>"⚡Visita Organnact"</strong>.</li>
+                        <li>Na janela de criação, marque as caixinhas relacionadas à sua visita (ex: "Propagandista? ✅").</li>
+                        <li>Preencha o campo de <strong>Assunto</strong>.</li>
+                        <li>Em <strong>Forma de Contato</strong>, informe se será presencial.</li>
+                        <li>Defina a <strong>Data / hora de início</strong> e <strong>Data / hora final</strong> para agendar a visita.</li>
+                        <li>Deixe o checkbox <strong>"Visita Realizada?"</strong> desmarcado por enquanto, pois estamos apenas agendando.</li>
+                        <li>Marque se o <strong>Coordenador Técnico</strong> irá te acompanhar.</li>
+                        <li>Clique em <strong>Avançar</strong>. Pronto, sua visita está agendada no seu calendário do Salesforce!</li>
+                    </ol>
+                    <h3>Vídeo Tutorial</h3>
+                    <p>Para assistir o vídeo tutorial de <strong>Visitas Organnact - Como CRIAR/AGENDAR a partir da conta</strong>, basta clicar no botão abaixo.</p>
+                    <a href="https://escola.organnact.com.br/video/683498ee452ef887a315e08d/689099bab4228951a070ff7d" alt="Assistir ao vídeo tutorial no VídeoHub." title="Assistir ao vídeo tutorial no VídeoHub." target="_blank" class="community-card">
+                        <div class="icon"><i class="bi bi-play-btn"></i></div>
+                        <h3 style="color: #ffffff; border-bottom:none; align-items:center;" >Tutorial no VídeoHub</h3>
+                    </a>
+                    <p class="image-caption">Você será redirecionado(a) para a plataforma VideoHub.</p>
+                </section>
 
-                <div class="faq-item" style="background-color: #f8f9fa; margin-top: 20px;">
-                    <div class="faq-answer" style="max-height: 200px; background-color: transparent;">
-                        <p style="border-top: none;"><strong>Lembrete:</strong> Antes de adicionar "Pessoas da Visita", o contato (ex: balconista, auxiliar, tosador, etc) já deve estar criado e relacionado a esta Conta. Se precisar de ajuda, <button class="link-button" data-target="tutorial-contatos">clique aqui</button> para ver o tutorial de como criar um contato.</p>
+                <section class="step-card">
+                    <h3>Durante a Visita</h3>
+                    <p>É fundamental registrar as novas pessoas com quem você conversou. Fazer isso na hora garante que nenhuma informação se perca!</p>
+                    <ol>
+                        <li>Na página da Conta que está sendo visitada, vá em <strong>Visão 360 > Contatos Relacionados</strong>.</li>
+                        <li>Clique em <strong>Novo Contato</strong> para cadastrar as pessoas com quem conversou. (Atenção: O sistema não deixa cadastrar a mesma pessoa várias vezes!)</li>
+                        <li>Na mesma tela, você pode clicar em <strong>Adicionar Relacionamento</strong> para vincular um contato já existente a esta conta.</li>
+                    </ol>
+                </section>
+
+                <section class="step-card">
+                    <h3>Finalizando a Visita</h3>
+                    <p>Após o encontro, é hora de finalizar o registro para que ele conste em seus relatórios e conte para seus KPIs.</p>
+                    <ol>
+                        <li>Dentro do módulo <strong>Visitas Organnact</strong>, clique na Visita que deseja finalizar.</li>
+                        <li>Clique em <strong>Editar</strong>.</li>
+                        <li>Preencha os <strong>Resultados da Visita</strong> e marque o checkbox de <strong>"Visita Realizada?"</strong>.</li>
+                        <li>Depois de salvar, volte para a página da Visita e clique em <strong>"Relacionado"</strong>.</li>
+                        <li>Em "Pessoas da Visita", clique em <strong>"Criar"</strong> e adicione o nome do contato que você criou ou conversou durante a visita.</li>
+                    </ol>
+                    <div class="tip-box">
+                        <p>💡 <strong>Dica de Ouro:</strong> Se a conta que você está visitando for do tipo "Veterinário", o sistema é inteligente! Ele já adiciona o nome do próprio veterinário como <strong>Pessoa da Visita</strong> para você. Um passo a menos no seu dia a dia!</p>
                     </div>
-                </div>
-            </section>
-        </div>
+                     <img src="img/print-visao-360.jpeg" alt="Editando a visita para marcar como realizada" class="tutorial-image" width="400" onerror="this.onerror=null;this.src='https://placehold.co/400x220/cccccc/ffffff?text=Imagem+Indisponível';">
+                     <p class="image-caption">Editando a visita para registrar sua conclusão.</p>
 
-        <div id="tutorial-visita-dndne" class="tutorial-section">
-            <div class="tutorial-header">
-                <h2>Visita Tipo DN/DNE</h2>
-                <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
+                    <div class="faq-item" style="background-color: #f8f9fa; margin-top: 20px;">
+                        <div class="faq-answer" style="max-height: 200px; background-color: transparent;">
+                            <p style="border-top: none;"><strong>Lembrete:</strong> Antes de adicionar "Pessoas da Visita", o contato (ex: balconista, auxiliar, tosador, etc) já deve estar criado e relacionado a esta Conta. Se precisar de ajuda, <button class="link-button" data-target="tutorial-contatos">clique aqui</button> para ver o tutorial de como criar um contato.</p>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <section class="step-card">
-                <h3>🗓️ Agendando a Visita DN/DNE</h3>
-                <p>O processo para agendar uma visita a um Distribuidor (DN/DNE) é muito parecido com o de uma visita de propagandista. A única diferença é o tipo de visita que você vai selecionar.</p>
-                <ol>
-                    <li>Vá até a <strong>Conta</strong> do distribuidor que você irá visitar.</li>
-                    <li>Clique no botão <strong>"⚡Visita Organnact"</strong>.</li>
-                    <li>Na janela que abrir, marque a caixinha <strong>"DN/DNE? ✅"</strong>.</li>
-                    <li>Preencha os outros campos como <strong>Assunto</strong>, <strong>Data e Hora</strong>, e clique em <strong>Avançar</strong>.</li>
-                </ol>
-                <p>Pronto! A sua visita ao distribuidor já está agendada no seu calendário.</p>
-            </section>
-            <section class="step-card">
-                <h3>✅ Finalizando e Adicionando Produtos</h3>
-                <p>Ao finalizar a visita, o sistema cria automaticamente um <strong>Pedido DN/DNE</strong>. Agora, você precisa adicionar os produtos que foram negociados.</p>
-                <ol>
-                    <li>Abra a visita que você acabou de realizar.</li>
-                    <li>Clique em <strong>Editar</strong> para marcar a visita como <strong>"Realizada"</strong> e preencher os resultados.</li>
-                    <li>Após salvar, você verá um campo chamado <strong>"Negociação"</strong> com um número de pedido (ex: PED-00123). <strong>Clique nesse número</strong>.</li>
-                     <img src="https://placehold.co/800x250/007bff/ffffff?text=Campo+de+Negociação+com+o+Pedido" alt="Campo de Negociação mostrando o número do Pedido DN/DNE" class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x250/cccccc/ffffff?text=Imagem+Indisponível';">
-                     <p class="image-caption">Localize o campo "Negociação" e clique no número do pedido.</p>
-                    <li>Você será levado para a página do Pedido. Vá até a seção <strong>"Produtos Solicitados"</strong>.</li>
-                    <li>Clique em <strong>Adicionar Produtos</strong>, pesquise pelos itens negociados, defina as quantidades e salve.</li>
-                </ol>
-                <p>Missão cumprida! Sua visita e o pedido correspondente estão registrados corretamente no sistema.</p>
-            </section>
-             <section class="step-card">
-                <h3>Perguntas Frequentes</h3>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>O pedido não foi criado automaticamente. O que eu faço?</span>
-                        <i class="bi bi-chevron-right faq-icon"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Primeiro, confirme se você marcou a caixinha "DN/DNE? ✅" ao criar a visita. Se sim, e mesmo assim o pedido não apareceu, entre em contato com o suporte através da nossa <a href="https://chat.whatsapp.com/JNmqsmTt7SjC21RghCRIta" target="_blank">comunidade no WhatsApp</a> para verificarmos o que aconteceu.</p>
-                    </div>
-                </div>
-            </section>
-        </div>
 
-        <div id="tutorial-visita-acoes" class="tutorial-section">
-             <div class="tutorial-header">
-                <h2>Visita Tipo Ações</h2>
-                <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
+            <div id="tutorial-visita-dndne" class="tutorial-section">
+                <div class="tutorial-header">
+                    <h2>Visita Tipo DN/DNE</h2>
+                    <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
+                </div>
+                <section class="step-card">
+                    <h3>🗓️ Agendando a Visita DN/DNE</h3>
+                    <p>O processo para agendar uma visita a um Distribuidor (DN/DNE) é muito parecido com o de uma visita de propagandista. A única diferença é o tipo de visita que você vai selecionar.</p>
+                    <ol>
+                        <li>Vá até a <strong>Conta</strong> do distribuidor que você irá visitar.</li>
+                        <li>Clique no botão <strong>"⚡Visita Organnact"</strong>.</li>
+                        <li>Na janela que abrir, marque a caixinha <strong>"DN/DNE? ✅"</strong>.</li>
+                        <li>Preencha os outros campos como <strong>Assunto</strong>, <strong>Data e Hora</strong>, e clique em <strong>Avançar</strong>.</li>
+                    </ol>
+                    <p>Pronto! A sua visita ao distribuidor já está agendada no seu calendário.</p>
+                </section>
+                <section class="step-card">
+                    <h3>✅ Finalizando e Adicionando Produtos</h3>
+                    <p>Ao finalizar a visita, o sistema cria automaticamente um <strong>Pedido DN/DNE</strong>. Agora, você precisa adicionar os produtos que foram negociados.</p>
+                    <ol>
+                        <li>Abra a visita que você acabou de realizar.</li>
+                        <li>Clique em <strong>Editar</strong> para marcar a visita como <strong>"Realizada"</strong> e preencher os resultados.</li>
+                        <li>Após salvar, você verá um campo chamado <strong>"Negociação"</strong> com um número de pedido (ex: PED-00123). <strong>Clique nesse número</strong>.</li>
+                         <img src="https://placehold.co/800x250/007bff/ffffff?text=Campo+de+Negociação+com+o+Pedido" alt="Campo de Negociação mostrando o número do Pedido DN/DNE" class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x250/cccccc/ffffff?text=Imagem+Indisponível';">
+                         <p class="image-caption">Localize o campo "Negociação" e clique no número do pedido.</p>
+                        <li>Você será levado para a página do Pedido. Vá até a seção <strong>"Produtos Solicitados"</strong>.</li>
+                        <li>Clique em <strong>Adicionar Produtos</strong>, pesquise pelos itens negociados, defina as quantidades e salve.</li>
+                    </ol>
+                    <p>Missão cumprida! Sua visita e o pedido correspondente estão registrados corretamente no sistema.</p>
+                </section>
+                 <section class="step-card">
+                    <h3>Perguntas Frequentes</h3>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>O pedido não foi criado automaticamente. O que eu faço?</span>
+                            <i class="bi bi-chevron-right faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Primeiro, confirme se você marcou a caixinha "DN/DNE? ✅" ao criar a visita. Se sim, e mesmo assim o pedido não apareceu, entre em contato com o suporte através da nossa <a href="https://chat.whatsapp.com/JNmqsmTt7SjC21RghCRIta" target="_blank">comunidade no WhatsApp</a> para verificarmos o que aconteceu.</p>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <section class="step-card">
-                <h3>🗓️ Agendando a Visita de Ações</h3>
-                <p>Para registrar uma visita de acompanhamento de ações, como a campanha "Vá de Bike 2.0", o processo de agendamento é o mesmo, mas você deve marcar o tipo de visita correto.</p>
-                <ol>
-                    <li>Na página da <strong>Conta</strong> que possui a ação, clique em <strong>"⚡Visita Organnact"</strong>.</li>
-                    <li>Na janela de criação, marque a caixinha <strong>"Ações? ✅"</strong>.</li>
-                    <li>Preencha o <strong>Assunto</strong> e a <strong>Data/Hora</strong> da sua visita e salve.</li>
-                </ol>
-            </section>
-            <section class="step-card">
-                <h3>📋 Verificando a Ação no Local</h3>
-                <p>Ao chegar no local, seu objetivo é verificar o andamento da campanha. O Salesforce te ajuda com um checklist simples para garantir que nada seja esquecido.</p>
-                <ol>
-                    <li>Abra o registro da visita que você agendou (ex: VI-000399345).</li>
-                    <li>Você verá a seção <strong>"Ações"</strong>, como na imagem abaixo.</li>
-                    <li>Marque os checkboxes para confirmar se os <strong>materiais estão bem expostos</strong>, se a <strong>bike está funcionando</strong>, etc.</li>
-                    <li>Na seção <strong>"Vendas da Visita"</strong>, você pode registrar os SKUs e valores vendidos durante sua presença no local.</li>
-                    <li>Quando terminar, não se esqueça de marcar a visita como <strong>"Realizada"</strong> e clicar em <strong>Salvar</strong>.</li>
-                </ol>
-                <img src="https://i.imgur.com/K0Yq17j.png" alt="Tela de checklist para a Visita de Ações" class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/ffffff?text=Imagem+Indisponível';">
-                <p class="image-caption">Checklist para verificar o andamento da campanha durante a visita.</p>
-            </section>
-             <section class="step-card">
-                <h3>Perguntas Frequentes</h3>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Preciso adicionar fotos nesta visita?</span>
-                        <i class="bi bi-chevron-right faq-icon"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Sim, é altamente recomendado! Adicionar fotos do "antes e depois" de uma gôndola, da exposição dos materiais ou do evento acontecendo enriquece muito o registro e comprova a execução da ação.</p>
-                    </div>
-                </div>
-                 <div class="faq-item">
-                    <button class="faq-question">
-                        <span>E se a campanha não estiver ativa na conta que visitei?</span>
-                        <i class="bi bi-chevron-right faq-icon"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Se não houver uma campanha ativa vinculada àquela conta, a seção "Ações" não aparecerá no registro da visita. Ela só é exibida quando necessário para a conta específica.</p>
-                    </div>
-                </div>
-            </section>
-        </div>
 
-        <div id="tutorial-visita-redes" class="tutorial-section">
-             <div class="tutorial-header">
-                <h2>Visita Tipo Redes</h2>
-                <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
+            <div id="tutorial-visita-acoes" class="tutorial-section">
+                 <div class="tutorial-header">
+                    <h2>Visita Tipo Ações</h2>
+                    <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
+                </div>
+                <section class="step-card">
+                    <h3>🗓️ Agendando a Visita de Ações</h3>
+                    <p>Para registrar uma visita de acompanhamento de ações, como a campanha "Vá de Bike 2.0", o processo de agendamento é o mesmo, mas você deve marcar o tipo de visita correto.</p>
+                    <ol>
+                        <li>Na página da <strong>Conta</strong> que possui a ação, clique em <strong>"⚡Visita Organnact"</strong>.</li>
+                        <li>Na janela de criação, marque a caixinha <strong>"Ações? ✅"</strong>.</li>
+                        <li>Preencha o <strong>Assunto</strong> e a <strong>Data/Hora</strong> da sua visita e salve.</li>
+                    </ol>
+                </section>
+                <section class="step-card">
+                    <h3>📋 Verificando a Ação no Local</h3>
+                    <p>Ao chegar no local, seu objetivo é verificar o andamento da campanha. O Salesforce te ajuda com um checklist simples para garantir que nada seja esquecido.</p>
+                    <ol>
+                        <li>Abra o registro da visita que você agendou (ex: VI-000399345).</li>
+                        <li>Você verá a seção <strong>"Ações"</strong>, como na imagem abaixo.</li>
+                        <li>Marque os checkboxes para confirmar se os <strong>materiais estão bem expostos</strong>, se a <strong>bike está funcionando</strong>, etc.</li>
+                        <li>Na seção <strong>"Vendas da Visita"</strong>, você pode registrar os SKUs e valores vendidos durante sua presença no local.</li>
+                        <li>Quando terminar, não se esqueça de marcar a visita como <strong>"Realizada"</strong> e clicar em <strong>Salvar</strong>.</li>
+                    </ol>
+                    <img src="https://i.imgur.com/K0Yq17j.png" alt="Tela de checklist para a Visita de Ações" class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/ffffff?text=Imagem+Indisponível';">
+                    <p class="image-caption">Checklist para verificar o andamento da campanha durante a visita.</p>
+                </section>
+                 <section class="step-card">
+                    <h3>Perguntas Frequentes</h3>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Preciso adicionar fotos nesta visita?</span>
+                            <i class="bi bi-chevron-right faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sim, é altamente recomendado! Adicionar fotos do "antes e depois" de uma gôndola, da exposição dos materiais ou do evento acontecendo enriquece muito o registro e comprova a execução da ação.</p>
+                        </div>
+                    </div>
+                     <div class="faq-item">
+                        <button class="faq-question">
+                            <span>E se a campanha não estiver ativa na conta que visitei?</span>
+                            <i class="bi bi-chevron-right faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Se não houver uma campanha ativa vinculada àquela conta, a seção "Ações" não aparecerá no registro da visita. Ela só é exibida quando necessário para a conta específica.</p>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <section class="step-card">
-                <h3>🗓️ Agendando a Visita de Redes</h3>
-                <p>O agendamento de uma visita para uma conta do tipo "Rede" segue o mesmo padrão das outras visitas. A principal diferença está na seleção do tipo correto.</p>
-                <ol>
-                    <li>Vá até a <strong>Conta</strong> da rede que irá visitar.</li>
-                    <li>Clique no botão <strong>"⚡Visita Organnact"</strong>.</li>
-                    <li>Na janela de criação, marque a caixinha <strong>"Redes? ✅"</strong>.</li>
-                    <li>Preencha o <strong>Assunto</strong>, <strong>Data/Hora</strong> e salve.</li>
-                </ol>
-            </section>
-            <section class="step-card">
-                <h3>✍️ Preenchendo a Avaliação da Rede</h3>
-                <p>Após agendar a visita, ao abri-la para finalizar, você verá secções especiais para avaliar os treinamentos realizados na rede, tanto para o PDV quanto para os veterinários.</p>
-                <ol>
-                    <li>Abra o registro da visita que você agendou.</li>
-                    <li>Encontre as seções <strong>"Rede PDV"</strong> e <strong>"Rede Veterinário"</strong>.</li>
-                    <li>Preencha os campos de <strong>Avaliação</strong> e <strong>Feedback</strong> para cada um. Por exemplo:
-                        <ul>
-                            <br>
-                            <li><strong>Avaliação Treinamento PDV:</strong> <em>Bom</em></li>
-                            <li><strong>Feedback Treinamento PDV:</strong> <em>Os integrantes demonstraram muito interesse e tiraram diversas dúvidas durante o treinamento.</em></li>
-                            <li><strong>Avaliação Treinamento Veterinário:</strong> <em>Médio</em></li>
-                            <li><strong>Feedback Treinamento Veterinário:</strong> <em>O veterinário não apresentou conhecimentos sobre os produtos, porém demonstrou interesse em aprender.</em></li>
-                        </ul>
-                    </li>
-                    <li>Quando terminar, marque a visita como <strong>"Realizada"</strong> e clique em <strong>Salvar</strong>.</li>
-                </ol>
-                <img src="img/rede-visita.jpg" alt="Tela de preenchimento da avaliação da visita de Redes" class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/ffffff?text=Imagem+Indisponível';">
-                <p class="image-caption">Preencha as avaliações e feedbacks dos treinamentos.</p>
-            </section>
-             <section class="step-card">
-                <h3>Perguntas Frequentes</h3>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Esses campos de avaliação aparecem para todas as visitas?</span>
-                        <i class="bi bi-chevron-right faq-icon"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Não, os campos de "Rede PDV" e "Rede Veterinário" só aparecem quando você marca o checkbox "Redes? ✅" ao criar a visita. O sistema mostra apenas os campos relevantes para cada tipo de visita.</p>
+
+            <div id="tutorial-visita-redes" class="tutorial-section">
+                 <div class="tutorial-header">
+                    <h2>Visita Tipo Redes</h2>
+                    <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
+                </div>
+                <section class="step-card">
+                    <h3>🗓️ Agendando a Visita de Redes</h3>
+                    <p>O agendamento de uma visita para uma conta do tipo "Rede" segue o mesmo padrão das outras visitas. A principal diferença está na seleção do tipo correto.</p>
+                    <ol>
+                        <li>Vá até a <strong>Conta</strong> da rede que irá visitar.</li>
+                        <li>Clique no botão <strong>"⚡Visita Organnact"</strong>.</li>
+                        <li>Na janela de criação, marque a caixinha <strong>"Redes? ✅"</strong>.</li>
+                        <li>Preencha o <strong>Assunto</strong>, <strong>Data/Hora</strong> e salve.</li>
+                    </ol>
+                </section>
+                <section class="step-card">
+                    <h3>✍️ Preenchendo a Avaliação da Rede</h3>
+                    <p>Após agendar a visita, ao abri-la para finalizar, você verá secções especiais para avaliar os treinamentos realizados na rede, tanto para o PDV quanto para os veterinários.</p>
+                    <ol>
+                        <li>Abra o registro da visita que você agendou.</li>
+                        <li>Encontre as seções <strong>"Rede PDV"</strong> e <strong>"Rede Veterinário"</strong>.</li>
+                        <li>Preencha os campos de <strong>Avaliação</strong> e <strong>Feedback</strong> para cada um. Por exemplo:
+                            <ul>
+                                <br>
+                                <li><strong>Avaliação Treinamento PDV:</strong> <em>Bom</em></li>
+                                <li><strong>Feedback Treinamento PDV:</strong> <em>Os integrantes demonstraram muito interesse e tiraram diversas dúvidas durante o treinamento.</em></li>
+                                <li><strong>Avaliação Treinamento Veterinário:</strong> <em>Médio</em></li>
+                                <li><strong>Feedback Treinamento Veterinário:</strong> <em>O veterinário não apresentou conhecimentos sobre os produtos, porém demonstrou interesse em aprender.</em></li>
+                            </ul>
+                        </li>
+                        <li>Quando terminar, marque a visita como <strong>"Realizada"</strong> e clique em <strong>Salvar</strong>.</li>
+                    </ol>
+                    <img src="img/rede-visita.jpg" alt="Tela de preenchimento da avaliação da visita de Redes" class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/ffffff?text=Imagem+Indisponível';">
+                    <p class="image-caption">Preencha as avaliações e feedbacks dos treinamentos.</p>
+                </section>
+                 <section class="step-card">
+                    <h3>Perguntas Frequentes</h3>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Esses campos de avaliação aparecem para todas as visitas?</span>
+                            <i class="bi bi-chevron-right faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Não, os campos de "Rede PDV" e "Rede Veterinário" só aparecem quando você marca o checkbox "Redes? ✅" ao criar a visita. O sistema mostra apenas os campos relevantes para cada tipo de visita.</p>
+                        </div>
                     </div>
-                </div>
-            </section>
-        </div>
-
-        <div id="tutorial-visita-training" class="tutorial-section">
-             <div class="tutorial-header">
-                <h2>Visita Tipo Training</h2>
-                <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
+                </section>
             </div>
-            <section class="step-card">
-                <div class="coming-soon">
-                    <div class="icon"><i class="bi bi-tools"></i></div>
-                    <h3>Em Breve</h3>
-                    <p>Este tutorial está sendo preparado com muito carinho e estará disponível em breve!</p>
+
+            <div id="tutorial-visita-training" class="tutorial-section">
+                 <div class="tutorial-header">
+                    <h2>Visita Tipo Training</h2>
+                    <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
                 </div>
-                 <h3>Perguntas Frequentes</h3>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Qual a diferença entre "Training" e "Café com VET"?</span>
-                        <i class="bi bi-chevron-right faq-icon"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Um "Training" pode ser mais rápido e focado em um produto específico para uma equipe de vendas, enquanto o "Café com VET" é um evento mais longo, de relacionamento e aprofundamento técnico com veterinários.</p>
+                <section class="step-card">
+                    <div class="coming-soon">
+                        <div class="icon"><i class="bi bi-tools"></i></div>
+                        <h3>Em Breve</h3>
+                        <p>Este tutorial está sendo preparado com muito carinho e estará disponível em breve!</p>
                     </div>
-                </div>
-            </section>
-        </div>
-
-        <div id="tutorial-cafe-vet" class="tutorial-section">
-             <div class="tutorial-header">
-                <h2>Café com VET</h2>
-                <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
-            </div>
-            <section class="step-card">
-                <h3>Clone uma Campanha Existente</h3>
-                <p>A maneira mais fácil e rápida de criar sua campanha "Café com VET" é clonando nosso modelo. Isso já traz todas as configurações que você precisa!</p>
-                <ol>
-                    <li>No menu superior, vá para a aba <strong>"Campanhas"</strong>.</li>
-                    <li>Na visualização de lista, selecione o filtro <strong>"Café com VET - Exemplo"</strong> para encontrar o modelo facilmente.</li>
-                    <li>Clique no nome da campanha <strong>"Café com VET - Exemplo"</strong> para abri-la.
-                        <img src="img/cafe-com-vet-1.jpg" alt="Lista de Campanhas com o modelo 'Café com VET - Exemplo' destacado." class="tutorial-image" width="400" onerror="this.onerror=null;this.src='https://placehold.co/400x150/cccccc/ffffff?text=Imagem+Indisponível';">
-                        <p class="image-caption">Localize a campanha modelo para iniciar a clonagem.</p>
-                    </li>
-                    <li>Dentro da página da campanha, clique na setinha para baixo (▼) no canto superior direito e selecione a opção <strong>"Clonar com relacionado"</strong>.
-                        <img src="img/cafe-com-vet-2.jpg" alt="Menu de opções da campanha mostrando a opção 'Clonar com relacionado'." class="tutorial-image" width="400" onerror="this.onerror=null;this.src='https://placehold.co/400x200/cccccc/ffffff?text=Imagem+Indisponível';">
-                        <p class="image-caption">Use a opção "Clonar com relacionado" para copiar a campanha.</p>
-                    </li>
-                    <li>Na tela seguinte, marque a caixinha <strong>"Status do membro da campanha"</strong> e clique em <strong>Avançar</strong>.</li>
-                </ol>
-            </section>
-            <section class="step-card">
-                <h3>Personalize sua Campanha</h3>
-                <p>Agora é só ajustar os detalhes para que a campanha seja sua!</p>
-                <ol>
-                    <li>Altere o <strong>Nome da Campanha</strong> para um formato claro, como por exemplo: "Café com VET - Seu Nome / Cidade".</li>
-                    <li>Preencha todas as outras informações importantes, como datas, orçamentos e metas.</li>
-                    <li>Clique em <strong>Salvar</strong>.</li>
-                </ol>
-                <p>Prontinho! Sua campanha está criada.</p>
-            </section>
-            <section class="step-card">
-                <h3>Adicionando os Convidados</h3>
-                <p>Com a campanha criada, o próximo passo é convidar os veterinários. Você fará isso adicionando as contas deles como membros da campanha.</p>
-                <ol>
-                    <li>Dentro da sua nova campanha, vá para a aba <strong>"Relacionado"</strong>.</li>
-                    <li>Encontre a seção <strong>"Membros da campanha"</strong> e clique no botão <strong>"Adicionar contas"</strong>.</li>
-                    <img src="img/adicionando-convidado-cafe.jpg" alt="Botão para adicionar contas como membros da campanha." class="tutorial-image" width="600" onerror="this.onerror=null;this.src='https://placehold.co/400x200/cccccc/ffffff?text=Imagem+Indisponível';">
-                    <p class="image-caption">Adicione os veterinários que serão convidados para o evento.</p>
-                    <li>Pesquise e selecione as contas dos veterinários que deseja convidar. Se uma conta não existir, você precisará <button class="link-button" data-target="tutorial-contas">criá-la primeiro</button>.</li>
-                    <li>Depois de adicionar, você pode clicar em cada membro para atualizar o <strong>Status</strong> dele, como "Convidado", "Confirmado", "Compareceu", etc.</li>
-                </ol>
-            </section>
-             <section class="step-card">
-                <h3>📊 Atualizando o Status da Campanha (Muito Importante!)</h3>
-                <p>Manter o status da sua campanha atualizado é essencial para a organização e para os relatórios. Pense no status como a "fase" em que o seu evento se encontra. Não se esqueça de o alterar à medida que a campanha avança!</p>
-                <p>Para alterar o status, basta entrar na sua campanha e clicar em <strong>Editar</strong>.</p>
-                <ul>
-                    <li><strong>Planejando:</strong> 🗓️ É a fase inicial. Você está a organizar o local, a data e a lista de convidados.</li>
-                    <li><strong>Em Progresso:</strong> 🚀 A campanha está a acontecer! Use este status durante o período do evento.</li>
-                    <li><strong>Finalizada:</strong> ✅ O evento já terminou. Este é o passo mais importante! Marcar como "Finalizada" garante que os seus resultados são contabilizados corretamente nos seus KPIs.</li>
-                    <li><strong>Abortada:</strong> ❌ Imprevistos acontecem. Se a campanha foi cancelada, use este status.</li>
-                </ul>
-                <div class="tip-box">
-                    <p><strong>Atenção:</strong> Nunca se esqueça de marcar a sua campanha como <strong>Finalizada</strong> assim que ela terminar. É fundamental para que o seu trabalho seja registado nos relatórios!</p>
-                </div>
-            </section>
-            <section class="step-card">
-                <h3>Vídeo Tutorial</h3>
-                <p>Para assistir o vídeo tutorial de <strong>Campanhas - Como criar um Café com VET (do início ao fim)</strong>, basta clicar no botão abaixo.</p>
-                <a href="https://escola.organnact.com.br/video/683498ee452ef887a315e08d/688bbf39c217074a6c061077?t=5" alt="Assistir ao vídeo tutorial no VídeoHub." title="Assistir ao vídeo tutorial no VídeoHub." target="_blank" class="community-card">
-                    <div class="icon"><i class="bi bi-play-btn"></i></div>
-                    <h3 style="color: #ffffff; border-bottom:none; align-items:center;" >Tutorial no VídeoHub</h3>
-                </a>
-                <p class="image-caption">Você será redirecionado(a) para a plataforma VideoHub.</p>
-            </section>
-             <section class="step-card">
-                <h3>Perguntas Frequentes</h3>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Por que registrar como "Evento" e não como "Visita"?</span>
-                        <i class="bi bi-chevron-right faq-icon"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Registrar como "Evento" bloqueia um tempo maior no seu calendário e sinaliza que foi uma interação mais profunda e focada em relacionamento e educação, e não apenas uma visita de propaganda rápida.</p>
+                     <h3>Perguntas Frequentes</h3>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Qual a diferença entre "Training" e "Café com VET"?</span>
+                            <i class="bi bi-chevron-right faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Um "Training" pode ser mais rápido e focado em um produto específico para uma equipe de vendas, enquanto o "Café com VET" é um evento mais longo, de relacionamento e aprofundamento técnico com veterinários.</p>
+                        </div>
                     </div>
+                </section>
+            </div>
+
+            <div id="tutorial-cafe-vet" class="tutorial-section">
+                 <div class="tutorial-header">
+                    <h2>Café com VET</h2>
+                    <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
                 </div>
-                 <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Posso adicionar os veterinários convidados depois?</span>
-                        <i class="bi bi-chevron-right faq-icon"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Sim! Depois de criar a campanha, você pode entrar nela a qualquer momento e ir na seção "Membros da Campanha" para adicionar ou remover os contatos (veterinários) que participarão do evento.</p>
+                <section class="step-card">
+                    <h3>Clone uma Campanha Existente</h3>
+                    <p>A maneira mais fácil e rápida de criar sua campanha "Café com VET" é clonando nosso modelo. Isso já traz todas as configurações que você precisa!</p>
+                    <ol>
+                        <li>No menu superior, vá para a aba <strong>"Campanhas"</strong>.</li>
+                        <li>Na visualização de lista, selecione o filtro <strong>"Café com VET - Exemplo"</strong> para encontrar o modelo facilmente.</li>
+                        <li>Clique no nome da campanha <strong>"Café com VET - Exemplo"</strong> para abri-la.
+                            <img src="img/cafe-com-vet-1.jpg" alt="Lista de Campanhas com o modelo 'Café com VET - Exemplo' destacado." class="tutorial-image" width="400" onerror="this.onerror=null;this.src='https://placehold.co/400x150/cccccc/ffffff?text=Imagem+Indisponível';">
+                            <p class="image-caption">Localize a campanha modelo para iniciar a clonagem.</p>
+                        </li>
+                        <li>Dentro da página da campanha, clique na setinha para baixo (▼) no canto superior direito e selecione a opção <strong>"Clonar com relacionado"</strong>.
+                            <img src="img/cafe-com-vet-2.jpg" alt="Menu de opções da campanha mostrando a opção 'Clonar com relacionado'." class="tutorial-image" width="400" onerror="this.onerror=null;this.src='https://placehold.co/400x200/cccccc/ffffff?text=Imagem+Indisponível';">
+                            <p class="image-caption">Use a opção "Clonar com relacionado" para copiar a campanha.</p>
+                        </li>
+                        <li>Na tela seguinte, marque a caixinha <strong>"Status do membro da campanha"</strong> e clique em <strong>Avançar</strong>.</li>
+                    </ol>
+                </section>
+                <section class="step-card">
+                    <h3>Personalize sua Campanha</h3>
+                    <p>Agora é só ajustar os detalhes para que a campanha seja sua!</p>
+                    <ol>
+                        <li>Altere o <strong>Nome da Campanha</strong> para um formato claro, como por exemplo: "Café com VET - Seu Nome / Cidade".</li>
+                        <li>Preencha todas as outras informações importantes, como datas, orçamentos e metas.</li>
+                        <li>Clique em <strong>Salvar</strong>.</li>
+                    </ol>
+                    <p>Prontinho! Sua campanha está criada.</p>
+                </section>
+                <section class="step-card">
+                    <h3>Adicionando os Convidados</h3>
+                    <p>Com a campanha criada, o próximo passo é convidar os veterinários. Você fará isso adicionando as contas deles como membros da campanha.</p>
+                    <ol>
+                        <li>Dentro da sua nova campanha, vá para a aba <strong>"Relacionado"</strong>.</li>
+                        <li>Encontre a seção <strong>"Membros da campanha"</strong> e clique no botão <strong>"Adicionar contas"</strong>.</li>
+                        <img src="img/adicionando-convidado-cafe.jpg" alt="Botão para adicionar contas como membros da campanha." class="tutorial-image" width="600" onerror="this.onerror=null;this.src='https://placehold.co/400x200/cccccc/ffffff?text=Imagem+Indisponível';">
+                        <p class="image-caption">Adicione os veterinários que serão convidados para o evento.</p>
+                        <li>Pesquise e selecione as contas dos veterinários que deseja convidar. Se uma conta não existir, você precisará <button class="link-button" data-target="tutorial-contas">criá-la primeiro</button>.</li>
+                        <li>Depois de adicionar, você pode clicar em cada membro para atualizar o <strong>Status</strong> dele, como "Convidado", "Confirmado", "Compareceu", etc.</li>
+                    </ol>
+                </section>
+                 <section class="step-card">
+                    <h3>📊 Atualizando o Status da Campanha (Muito Importante!)</h3>
+                    <p>Manter o status da sua campanha atualizado é essencial para a organização e para os relatórios. Pense no status como a "fase" em que o seu evento se encontra. Não se esqueça de o alterar à medida que a campanha avança!</p>
+                    <p>Para alterar o status, basta entrar na sua campanha e clicar em <strong>Editar</strong>.</p>
+                    <ul>
+                        <li><strong>Planejando:</strong> 🗓️ É a fase inicial. Você está a organizar o local, a data e a lista de convidados.</li>
+                        <li><strong>Em Progresso:</strong> 🚀 A campanha está a acontecer! Use este status durante o período do evento.</li>
+                        <li><strong>Finalizada:</strong> ✅ O evento já terminou. Este é o passo mais importante! Marcar como "Finalizada" garante que os seus resultados são contabilizados corretamente nos seus KPIs.</li>
+                        <li><strong>Abortada:</strong> ❌ Imprevistos acontecem. Se a campanha foi cancelada, use este status.</li>
+                    </ul>
+                    <div class="tip-box">
+                        <p><strong>Atenção:</strong> Nunca se esqueça de marcar a sua campanha como <strong>Finalizada</strong> assim que ela terminar. É fundamental para que o seu trabalho seja registado nos relatórios!</p>
                     </div>
-                </div>
-            </section>
-        </div>
-
-        <div id="tutorial-relatorios" class="tutorial-section">
-            <div class="tutorial-header">
-                <h2>Tutorial: Relatórios</h2>
-                <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
+                </section>
+                <section class="step-card">
+                    <h3>Vídeo Tutorial</h3>
+                    <p>Para assistir o vídeo tutorial de <strong>Campanhas - Como criar um Café com VET (do início ao fim)</strong>, basta clicar no botão abaixo.</p>
+                    <a href="https://escola.organnact.com.br/video/683498ee452ef887a315e08d/688bbf39c217074a6c061077?t=5" alt="Assistir ao vídeo tutorial no VídeoHub." title="Assistir ao vídeo tutorial no VídeoHub." target="_blank" class="community-card">
+                        <div class="icon"><i class="bi bi-play-btn"></i></div>
+                        <h3 style="color: #ffffff; border-bottom:none; align-items:center;" >Tutorial no VídeoHub</h3>
+                    </a>
+                    <p class="image-caption">Você será redirecionado(a) para a plataforma VideoHub.</p>
+                </section>
+                 <section class="step-card">
+                    <h3>Perguntas Frequentes</h3>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Por que registrar como "Evento" e não como "Visita"?</span>
+                            <i class="bi bi-chevron-right faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Registrar como "Evento" bloqueia um tempo maior no seu calendário e sinaliza que foi uma interação mais profunda e focada em relacionamento e educação, e não apenas uma visita de propaganda rápida.</p>
+                        </div>
+                    </div>
+                     <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Posso adicionar os veterinários convidados depois?</span>
+                            <i class="bi bi-chevron-right faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sim! Depois de criar a campanha, você pode entrar nela a qualquer momento e ir na seção "Membros da Campanha" para adicionar ou remover os contatos (veterinários) que participarão do evento.</p>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <section class="step-card">
-                <h3>Visualizando seus Relatórios</h3>
-                <p>Os relatórios são essenciais para acompanhar seu desempenho e os seus KPIs. Veja como é simples aceder a eles.</p>
-                <ol>
-                    <li>No menu superior, clique na aba <strong>"Relatórios"</strong>.</li>
-                    <li>Na página de relatórios, clique em <strong>"Todos os Relatórios"</strong> para ver a lista completa.</li>
-                    <li>Use a barra de pesquisa para encontrar o relatório que precisa. Por exemplo, digite <strong>"Lista KPIs para Conferência"</strong> para ver o seu desempenho.</li>
-                    <li>Clique no nome do relatório para o abrir e ver todos os detalhes.</li>
-                </ol>
-            </section>
-        </div>
 
-        <div id="tutorial-agd" class="tutorial-section">
-            <div class="tutorial-header">
-                <h2>Tutorial: Ação Geradora de Demanda (AGD)</h2>
-                <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
-            </div>
-            <section class="step-card">
-                <h3>📝 Criando uma Nova AGD</h3>
-                <p>Vamos registrar uma nova Ação Geradora de Demanda para impulsionar os resultados com um veterinário parceiro.</p>
-                <ol>
-                    <li>Primeiro, vá para a aba <strong>"Contas"</strong> e pesquise pela conta do veterinário onde a AGD será criada.</li>
-                    <li>Entre nos detalhes da conta e, na parte superior, clique no botão <strong>"Criar AGD Vet"</strong>.</li>
-                    <li>Agora, preencha os campos iniciais da ação:
-                        <ul>
-                            <br>
-                            <li><strong>Tipo de AGD:</strong> Selecione o tipo de campanha. Ex: <em>MEDVEP2026</em>.</li>
-                            <li><strong>Motivo da AGD:</strong> Escolha a opção que melhor se encaixa. Ex: <em>Aumento de Giro</em>.</li>
-                            <li><strong>Descrição AGD:</strong> Detalhe o que foi combinado com o veterinário. Ex: <em>200 prescrições de produtos da linha saúde intestinal</em>.</li>
-                            <li><strong>Data Início AGD</strong> e <strong>Data Fim AGD:</strong> Defina o período da ação.</li>
-                        </ul>
-                    </li>
-                    <li>Clique em <strong>Avançar</strong>. Pronto, sua AGD foi criada com sucesso!</li>
-                </ol>
-            </section>
-            <section class="step-card">
-                <h3>👀 Conferindo a AGD Criada</h3>
-                <p>Para garantir que tudo foi registrado corretamente, você pode visualizar a AGD dentro da própria conta do cliente.</p>
-                <ol>
-                    <li>Na página da conta, clique na aba <strong>Visão 360</strong>.</li>
-                    <li>Procure pela seção <strong>AGDs</strong>. Ali você encontrará um histórico de todas as ações criadas para aquela conta.</li>
-                </ol>
-                <img src="img/agd-agd.jpg" width="300" alt="Visualização da lista de AGDs na página da conta" class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x300/cccccc/ffffff?text=Imagem+Indisponível';">
-                <p class="image-caption">Encontre todas as AGDs registradas na seção "Visão 360".</p>
-            </section>
-            <section class="step-card">
-                <h3>📈 Fazendo o Acompanhamento da AGD</h3>
-                <p>Lançar a AGD é só o começo. O acompanhamento periódico é a chave para o sucesso!</p>
-                <div class="tip-box">
-                    <p>💡 <strong>Dica:</strong> O ideal é fazer o acompanhamento da AGD a cada <strong>15 dias</strong> para manter os dados sempre atualizados.</p>
+            <div id="tutorial-relatorios" class="tutorial-section">
+                <div class="tutorial-header">
+                    <h2>Tutorial: Relatórios</h2>
+                    <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
                 </div>
-                <ol>
-                    <li>Volte para a página da conta e, ao lado do botão "Criar AGD Vet", clique em <strong>"Acompanhamento AGD"</strong>.</li>
-                    <li>Selecione a AGD que você acabou de criar (normalmente a mais recente da lista) e clique em <strong>Avançar</strong>.</li>
-                    <li>Preencha as informações do período:
-                        <ul>
-                            <br>
-                            <li><strong>Data de Acompanhamento:</strong> Insira a data atual do registro. Ex: <em>01/07/2025</em>.</li>
-                            <li><strong>Total de Prescrições:</strong> Informe o número de prescrições realizadas no período. Ex: <em>30</em>.</li>
-                        </ul>
-                    </li>
-                    <li>Clique em <strong>Avançar</strong> para salvar o registro.</li>
-                </ol>
-            </section>
-            <section class="step-card">
-                <h3>📊 Visualizando o Histórico de Acompanhamento</h3>
-                <p>Todos os seus registros de acompanhamento ficam salvos, criando um histórico claro do desempenho da ação.</p>
-                <ol>
-                    <li>Navegue novamente para <strong>Visão 360 > AGDs</strong> na página da conta.</li>
-                    <li>Clique na AGD que você está acompanhando.</li>
-                    <li>Role a página para baixo e você encontrará a seção <strong>"Acompanhamento Ações"</strong>, com todas as informações que você incluiu anteriormente.</li>
-                </ol>
-                 <img src="img/acompanhamento-agd.jpeg" width="300" alt="Histórico de acompanhamentos da AGD" class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x350/cccccc/ffffff?text=Imagem+Indisponível';">
-                 <p class="image-caption">Acompanhe a evolução da sua AGD através do Acompanhamento de Ações.</p>
-            </section>
-            <section class="step-card">
-                <h3>Vídeo Tutorial AGD</h3>
-                <p>Para assistir o vídeo tutorial de <strong>Como Criar uma AGD (Novo método)</strong>, basta clicar no botão abaixo.</p>
-                <a href="https://escola.organnact.com.br/video/683498ee452ef887a315e08d/6891157d1609a127e007f5b8?t=6" alt="Assistir ao vídeo tutorial no VídeoHub." title="Assistir ao vídeo tutorial no VídeoHub." target="_blank" class="community-card">
-                    <div class="icon"><i class="bi bi-play-btn"></i></div>
-                    <h3 style="color: #ffffff; border-bottom:none; align-items:center;" >Tutorial no VídeoHub</h3>
-                </a>
-                <p class="image-caption">Você será redirecionado(a) para a plataforma VideoHub.</p>
-            </section>
-        </div>
+                <section class="step-card">
+                    <h3>Visualizando seus Relatórios</h3>
+                    <p>Os relatórios são essenciais para acompanhar seu desempenho e os seus KPIs. Veja como é simples aceder a eles.</p>
+                    <ol>
+                        <li>No menu superior, clique na aba <strong>"Relatórios"</strong>.</li>
+                        <li>Na página de relatórios, clique em <strong>"Todos os Relatórios"</strong> para ver a lista completa.</li>
+                        <li>Use a barra de pesquisa para encontrar o relatório que precisa. Por exemplo, digite <strong>"Lista KPIs para Conferência"</strong> para ver o seu desempenho.</li>
+                        <li>Clique no nome do relatório para o abrir e ver todos os detalhes.</li>
+                    </ol>
+                </section>
+            </div>
 
-        <div id="tutorial-pitch-avaliacao" class="tutorial-section">
+            <div id="tutorial-agd" class="tutorial-section">
+                <div class="tutorial-header">
+                    <h2>Tutorial: Ação Geradora de Demanda (AGD)</h2>
+                    <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
+                </div>
+                <section class="step-card">
+                    <h3>📝 Criando uma Nova AGD</h3>
+                    <p>Vamos registrar uma nova Ação Geradora de Demanda para impulsionar os resultados com um veterinário parceiro.</p>
+                    <ol>
+                        <li>Primeiro, vá para a aba <strong>"Contas"</strong> e pesquise pela conta do veterinário onde a AGD será criada.</li>
+                        <li>Entre nos detalhes da conta e, na parte superior, clique no botão <strong>"Criar AGD Vet"</strong>.</li>
+                        <li>Agora, preencha os campos iniciais da ação:
+                            <ul>
+                                <br>
+                                <li><strong>Tipo de AGD:</strong> Selecione o tipo de campanha. Ex: <em>MEDVEP2026</em>.</li>
+                                <li><strong>Motivo da AGD:</strong> Escolha a opção que melhor se encaixa. Ex: <em>Aumento de Giro</em>.</li>
+                                <li><strong>Descrição AGD:</strong> Detalhe o que foi combinado com o veterinário. Ex: <em>200 prescrições de produtos da linha saúde intestinal</em>.</li>
+                                <li><strong>Data Início AGD</strong> e <strong>Data Fim AGD:</strong> Defina o período da ação.</li>
+                            </ul>
+                        </li>
+                        <li>Clique em <strong>Avançar</strong>. Pronto, sua AGD foi criada com sucesso!</li>
+                    </ol>
+                </section>
+                <section class="step-card">
+                    <h3>👀 Conferindo a AGD Criada</h3>
+                    <p>Para garantir que tudo foi registrado corretamente, você pode visualizar a AGD dentro da própria conta do cliente.</p>
+                    <ol>
+                        <li>Na página da conta, clique na aba <strong>Visão 360</strong>.</li>
+                        <li>Procure pela seção <strong>AGDs</strong>. Ali você encontrará um histórico de todas as ações criadas para aquela conta.</li>
+                    </ol>
+                    <img src="img/agd-agd.jpg" width="300" alt="Visualização da lista de AGDs na página da conta" class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x300/cccccc/ffffff?text=Imagem+Indisponível';">
+                    <p class="image-caption">Encontre todas as AGDs registradas na seção "Visão 360".</p>
+                </section>
+                <section class="step-card">
+                    <h3>📈 Fazendo o Acompanhamento da AGD</h3>
+                    <p>Lançar a AGD é só o começo. O acompanhamento periódico é a chave para o sucesso!</p>
+                    <div class="tip-box">
+                        <p>💡 <strong>Dica:</strong> O ideal é fazer o acompanhamento da AGD a cada <strong>15 dias</strong> para manter os dados sempre atualizados.</p>
+                    </div>
+                    <ol>
+                        <li>Volte para a página da conta e, ao lado do botão "Criar AGD Vet", clique em <strong>"Acompanhamento AGD"</strong>.</li>
+                        <li>Selecione a AGD que você acabou de criar (normalmente a mais recente da lista) e clique em <strong>Avançar</strong>.</li>
+                        <li>Preencha as informações do período:
+                            <ul>
+                                <br>
+                                <li><strong>Data de Acompanhamento:</strong> Insira a data atual do registro. Ex: <em>01/07/2025</em>.</li>
+                                <li><strong>Total de Prescrições:</strong> Informe o número de prescrições realizadas no período. Ex: <em>30</em>.</li>
+                            </ul>
+                        </li>
+                        <li>Clique em <strong>Avançar</strong> para salvar o registro.</li>
+                    </ol>
+                </section>
+                <section class="step-card">
+                    <h3>📊 Visualizando o Histórico de Acompanhamento</h3>
+                    <p>Todos os seus registros de acompanhamento ficam salvos, criando um histórico claro do desempenho da ação.</p>
+                    <ol>
+                        <li>Navegue novamente para <strong>Visão 360 > AGDs</strong> na página da conta.</li>
+                        <li>Clique na AGD que você está acompanhando.</li>
+                        <li>Role a página para baixo e você encontrará a seção <strong>"Acompanhamento Ações"</strong>, com todas as informações que você incluiu anteriormente.</li>
+                    </ol>
+                     <img src="img/acompanhamento-agd.jpeg" width="300" alt="Histórico de acompanhamentos da AGD" class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x350/cccccc/ffffff?text=Imagem+Indisponível';">
+                     <p class="image-caption">Acompanhe a evolução da sua AGD através do Acompanhamento de Ações.</p>
+                </section>
+                <section class="step-card">
+                    <h3>Vídeo Tutorial AGD</h3>
+                    <p>Para assistir o vídeo tutorial de <strong>Como Criar uma AGD (Novo método)</strong>, basta clicar no botão abaixo.</p>
+                    <a href="https://escola.organnact.com.br/video/683498ee452ef887a315e08d/6891157d1609a127e007f5b8?t=6" alt="Assistir ao vídeo tutorial no VídeoHub." title="Assistir ao vídeo tutorial no VídeoHub." target="_blank" class="community-card">
+                        <div class="icon"><i class="bi bi-play-btn"></i></div>
+                        <h3 style="color: #ffffff; border-bottom:none; align-items:center;" >Tutorial no VídeoHub</h3>
+                    </a>
+                    <p class="image-caption">Você será redirecionado(a) para a plataforma VideoHub.</p>
+                </section>
+            </div>
+
+            <div id="tutorial-pitch-avaliacao" class="tutorial-section">
     <div class="tutorial-header">
         <h2>Tutorial: Avaliação de Pitch de Vendas</h2>
         <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
@@ -1545,23 +1550,23 @@
         </div>
     </section>
     <section class="step-card">
-                <h3>Vídeo Tutorial de Como Postar um Pitch de Vendas</h3>
-                <p>Para assistir o vídeo tutorial de <strong>Como Postar um Pitch de Vendas no Salesforce</strong>, basta clicar no botão abaixo.</p>
-                <a href="https://escola.organnact.com.br/video/683498ee452ef887a315e08d/689346d12acca5d97d4113bb" alt="Assistir ao vídeo tutorial no VídeoHub." title="Assistir ao vídeo tutorial no VídeoHub." target="_blank" class="community-card">
-                    <div class="icon"><i class="bi bi-play-btn"></i></div>
-                    <h3 style="color: #ffffff; border-bottom:none; align-items:center;" >Assistir Tutorial no VídeoHub</h3>
-                </a>
-                <p class="image-caption">Você será redirecionado(a) para a plataforma VideoHub.</p>
-            </section>
-            <section class="step-card">
-                <h3>Vídeo Modelo de Avaliação Pitch de Vendas</h3>
-                <p>Para assistir o vídeo <strong>Modelo de Avaliação Pitch de Vendas</strong>, basta clicar no botão abaixo.</p>
-                <a href="https://escola.organnact.com.br/video/683498ee452ef887a315e08d/689346d12acca5d97d4113bb" alt="Assistir ao vídeo tutorial no VídeoHub." title="Assistir ao vídeo tutorial no VídeoHub." target="_blank" class="community-card">
-                    <div class="icon"><i class="bi bi-play-btn"></i></div>
-                    <h3 style="color: #ffffff; border-bottom:none; align-items:center;" >Assistir Modelo no VídeoHub</h3>
-                </a>
-                <p class="image-caption">Você será redirecionado(a) para a plataforma VideoHub.</p>
-            </section>
+            <h3>Vídeo Tutorial de Como Postar um Pitch de Vendas</h3>
+            <p>Para assistir o vídeo tutorial de <strong>Como Postar um Pitch de Vendas no Salesforce</strong>, basta clicar no botão abaixo.</p>
+            <a href="https://escola.organnact.com.br/video/683498ee452ef887a315e08d/689346d12acca5d97d4113bb" alt="Assistir ao vídeo tutorial no VídeoHub." title="Assistir ao vídeo tutorial no VídeoHub." target="_blank" class="community-card">
+                <div class="icon"><i class="bi bi-play-btn"></i></div>
+                <h3 style="color: #ffffff; border-bottom:none; align-items:center;" >Assistir Tutorial no VídeoHub</h3>
+            </a>
+            <p class="image-caption">Você será redirecionado(a) para a plataforma VideoHub.</p>
+        </section>
+        <section class="step-card">
+            <h3>Vídeo Modelo de Avaliação Pitch de Vendas</h3>
+            <p>Para assistir o vídeo <strong>Modelo de Avaliação Pitch de Vendas</strong>, basta clicar no botão abaixo.</p>
+            <a href="https://escola.organnact.com.br/video/683498ee452ef887a315e08d/689346d12acca5d97d4113bb" alt="Assistir ao vídeo tutorial no VídeoHub." title="Assistir ao vídeo tutorial no VídeoHub." target="_blank" class="community-card">
+                <div class="icon"><i class="bi bi-play-btn"></i></div>
+                <h3 style="color: #ffffff; border-bottom:none; align-items:center;" >Assistir Modelo no VídeoHub</h3>
+            </a>
+            <p class="image-caption">Você será redirecionado(a) para a plataforma VideoHub.</p>
+        </section>
     <section class="step-card">
         <h3>Perguntas Frequentes</h3>
         <div class="faq-item">
@@ -1576,7 +1581,63 @@
     </section>
 </div>
 
-    </div>
+            <div id="tutorial-reunioes" class="tutorial-section">
+                <div class="tutorial-header">
+                    <h2>Tutorial: Atas de Reunião</h2>
+                    <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
+                </div>
+                <section class="step-card">
+                    <h3>📝 Criando o Registro da Reunião</h3>
+                    <p>Registrar uma ata de reunião é fundamental para manter todos alinhados. O processo começa na página da conta onde a reunião aconteceu.</p>
+                    <ol>
+                        <li>Dentro da página de uma conta (ex: Distribuidor, PDV), localize a seção <strong>"Reuniões"</strong> e clique no botão <strong>"Criar"</strong>.</li>
+                        <img src="img/reunioes-criar.jpg" alt="Seção de Reuniões na página da Conta." class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x300/cccccc/ffffff?text=Imagem+Indisponível';">
+                        <p class="image-caption">Clique em "Criar" na seção de Reuniões.</p>
+                        <li>Preencha as informações da reunião, como <strong>Data</strong>, <strong>Objetivo</strong> e <strong>Modelo da Reunião</strong>. Descreva os pontos discutidos no campo <strong>Ata</strong>.</li>
+                        <img src="img/cria-reunião.jpg" alt="Formulário de criação de uma nova reunião." class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/ffffff?text=Imagem+Indisponível';">
+                        <p class="image-caption">Preencha os detalhes e a pauta da reunião.</p>
+                        <li>Clique em <strong>"Salvar"</strong>.</li>
+                    </ol>
+                </section>
+                 <section class="step-card">
+                    <h3>👥 Adicionando Participantes e Arquivos</h3>
+                    <p>Com a reunião criada, o próximo passo é adicionar quem participou e qualquer documento relevante.</p>
+                    <ol>
+                        <li>Na página da conta, na mesma seção de "Reuniões", clique no código da reunião que você acabou de criar (ex: <strong>R-000004</strong>).</li>
+                        <img src="img/reuniao-r-.jpg" alt="Lista de reuniões na conta." class="tutorial-image" width="800" onerror="this.onerror=null;this.src='https://placehold.co/600x150/cccccc/ffffff?text=Imagem+Indisponível';">
+                        <p class="image-caption">Reunião criada.</p>
+                        <li>Dentro da página da Reunião, clique no botão <strong>"Inclui Pessoas na Reunião"</strong>.</li>
+                         <img src="img/inclui-pessoas-reuniao.jpg" alt="Botão para incluir pessoas na reunião." class="tutorial-image" width="800" onerror="this.onerror=null;this.src='https://placehold.co/800x200/cccccc/ffffff?text=Imagem+Indisponível';">
+                            <p class="image-caption">Botão "Inclui Pessoas na Reunião", localizado na página de detalhes da Reunião.</p>
+                         <li>Em <strong>Usuários Salesforce</strong>, adicione colaboradores da Organnact. Em <strong>Contatos</strong>, adicione as pessoas da conta que participaram.</li>
+                        <div class="faq-item" style="background-color: #f8f9fa; margin-top: 20px;">
+                            <div class="faq-answer" style="max-height: 200px; background-color: transparent;">
+                                <p style="border-top: none;"><strong>Lembrete:</strong> Para adicionar um contato, ele já deve estar cadastrado na conta. Se precisar, <button class="link-button" data-target="tutorial-contatos">veja aqui o tutorial</button> de como criar contatos.</p>
+                            </div>
+                        </div>
+                        <li>Mais abaixo na tela, na seção <strong>"Arquivos"</strong>, você pode anexar PDFs, slides, planilhas ou imagens discutidas.</li>
+                    </ol>
+                    <div class="tip-box">
+                        <p>⚠️ <strong>Atenção:</strong> O tamanho máximo para cada arquivo anexado é de <strong>3MB</strong>.</p>
+                    </div>
+                    <img src="img/anexar-arquivos.png" alt="Tela de envio da ata de reunião por e-mail." class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x500/cccccc/ffffff?text=Imagem+Indisponível';">
+                    <p class="image-caption">Faça upload de arquivos do seu computador, referentes a reunião.</p>
+                </section>
+                <section class="step-card">
+                    <h3>📧 Enviando a Ata por E-mail</h3>
+                    <p>Depois de tudo documentado, você pode enviar a ata para os participantes diretamente pelo Salesforce.</p>
+                     <ol>
+                        <li>Na página da Reunião, clique no botão <strong>"Envia Ata Reunião"</strong>.</li>
+                        <li>Selecione os participantes que devem receber o e-mail. Se precisar enviar para alguém que não participou, adicione o e-mail no campo <strong>"Não Participantes da Reunião"</strong>.</li>
+                        <li>Escolha quais dos arquivos anexados você quer incluir no e-mail.</li>
+                    <img src="img/ata-envio.jpg" alt="Tela de envio da ata de reunião por e-mail." class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x500/cccccc/ffffff?text=Imagem+Indisponível';">
+                    <p class="image-caption">Selecione os destinatários e anexos para o envio da ata.</p>
+                        <li>Clique em <strong>Avançar</strong>. E pronto, a ata foi enviada!</li>
+                    </ol>
+                </section>
+            </div>
+
+        </div>
 
         <button id="scrollTopBtn" title="Voltar ao topo"><i class="bi bi-arrow-up"></i></button>
 
@@ -1995,3 +2056,4 @@
 </script>
 </body>
 </html>
+
