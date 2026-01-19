@@ -926,15 +926,20 @@
                     <section>
                         <h2 class="section-title">Categorias</h2>
                         <div class="category-grid">
-                            <div class="category-card" data-target="tutorial-contas">
-                                <div class="icon"><i class="bi bi-person-vcard"></i></div>
-                                <h3>Contas</h3>
-                                <p>Aprenda a criar e gerenciar as contas dos seus clientes.</p>
-                            </div>
-                            <div class="category-card" data-target="tutorial-contatos">
-                                <div class="icon"><i class="bi bi-people"></i></div>
-                                <h3>Contatos</h3>
-                                <p>Saiba como adicionar e organizar os contatos de cada conta.</p>
+                            <div class="category-dropdown-container">
+                                <div class="category-card stacked-card" id="reports-comuns">
+                                    <div>
+                                        <div class="icon"><i class="bi bi-clipboard-data"></i></div>
+                                        <h3>Principais Relatórios</h3>
+                                        <p>Saiba quais são os principais relatórios para cada perfil de usuário no Salesforce.</p>
+                                    </div>
+                                    <i class="bi bi-chevron-down dropdown-icon"></i>
+                                </div>
+                                <div class="dropdown-content">
+                                    <a class="dropdown-item" data-target="reports-propagandistas">Propagandistas</a>
+                                    <a class="dropdown-item" data-target="reports-coordenadores">Coordenadores</a>
+                                    <a class="dropdown-item" data-target="reports-coordenadores">Gestores</a>
+                                </div>
                             </div>
                             <div class="category-dropdown-container">
                                 <div class="category-card stacked-card" id="visitas-trigger">
@@ -951,6 +956,16 @@
                                     <a class="dropdown-item" data-target="tutorial-visita-acoes">Visita Tipo Ações</a>
                                     <a class="dropdown-item" data-target="tutorial-visita-redes">Visita Tipo Redes</a>
                                 </div>
+                            </div>
+                            <div class="category-card" data-target="tutorial-contas">
+                                <div class="icon"><i class="bi bi-person-vcard"></i></div>
+                                <h3>Contas</h3>
+                                <p>Aprenda a criar e gerenciar as contas dos seus clientes.</p>
+                            </div>
+                            <div class="category-card" data-target="tutorial-contatos">
+                                <div class="icon"><i class="bi bi-people"></i></div>
+                                <h3>Contatos</h3>
+                                <p>Saiba como adicionar e organizar os contatos de cada conta.</p>
                             </div>
                              <div class="category-card" data-target="tutorial-cafe-vet">
                                 <div class="icon"><i class="bi bi-cup-hot"></i></div>
@@ -1040,6 +1055,176 @@
             </div>
 
             <div id="search-results" class="hidden"></div>
+
+            <div id="reports-propagandistas" class="tutorial-section">
+    
+                <div class="tutorial-header">
+                    <h2><i class="bi bi-clipboard-data-fill"></i> Relatórios: Propagandistas</h2>
+                    <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
+                </div>
+
+                <section class="step-card">
+                    <h3>Painéis Principais (Dashboards)</h3>
+                    <p style="margin-bottom: 25px;">Acesse rapidamente os painéis que resumem suas atividades e resultados diários.</p>
+
+                    <a href="https://organnact-crm.lightning.force.com/lightning/r/Dashboard/01ZbJ000001DZk9UAG/view?queryScope=userFolders" target="_blank" class="community-card" style="margin-bottom: 15px;">
+                        <div class="icon"><i class="bi bi-calendar-check"></i></div>
+                        <h3 style="color: #ffffff; border-bottom: none; margin: 0;">Dashboard de Visitas</h3>
+                    </a>
+
+                    <a href="https://organnact-crm.lightning.force.com/lightning/r/Dashboard/01ZbJ000000oJ2fUAE/view?queryScope=userFolders" target="_blank" class="community-card" style="margin-bottom: 15px;">
+                        <div class="icon"><i class="bi bi-cup-hot"></i></div>
+                        <h3 style="color: #ffffff; border-bottom: none; margin: 0;">Dashboard Café com VET</h3>
+                    </a>
+
+                </section>
+
+                <section class="step-card">
+                    <h3>Relatórios Principais</h3>
+                    <p style="margin-bottom: 25px;">Veja relatórios detalhados para análises mais profundas.</p>
+
+                    <a href="URL_DO_SEU_RELATORIO_CAFE_STATUS" target="_blank" class="community-card">
+                        <div class="icon"><i class="bi bi-filter-circle"></i></div>
+                        <h3 style="color: #ffffff; border-bottom: none; margin: 0;">Café com VET - por Status</h3>
+                    </a>
+                    
+                    <p class="image-caption" style="margin-top: 20px;">
+                        <strong>Legenda:</strong> Este relatório mostra todos os eventos "Café com VET" e seus status (Planejado, Em Progresso, Finalizado).
+                    </p>
+
+                    </section>
+            </div>
+            <div id="reports-coordenadores" class="tutorial-section">
+                <div class="tutorial-header">
+                    <h2>Principais Relatórios para Coordenadores</h2>
+                    <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
+                </div>
+                <section class="step-card">
+                    <h3>EM BREVE...</h3>
+                </section>
+            </div>
+            <div id="reports-gestores" class="tutorial-section">
+                <div class="tutorial-header">
+                    <h2>Principais Relatórios para Gestores</h2>
+                    <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
+                </div>
+                <section class="step-card">
+                    <h3>EM BREVE...</h3>
+                </section>
+            </div>
+
+            <div id="tutorial-visita-acoes" class="tutorial-section">
+                 <div class="tutorial-header">
+                    <h2>Visita Tipo Ações</h2>
+                    <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
+                </div>
+                <section class="step-card">
+                    <h3>🗓️ Agendando a Visita de Ações</h3>
+                    <p>Para registrar uma visita de acompanhamento de ações, como a campanha "Vá de Bike 2.0", o processo de agendamento é o mesmo, mas você deve marcar o tipo de visita correto.</p>
+                    <ol>
+                        <li>Na página da <strong>Conta</strong> que possui a ação, clique em <strong>"⚡Visita Organnact"</strong>.</li>
+                        <li>Na janela de criação, marque a caixinha <strong>"Ações? ✅"</strong>.</li>
+                        <li>Preencha o <strong>Assunto</strong> e a <strong>Data/Hora</strong> da sua visita e salve.</li>
+                    </ol>
+                </section>
+                <section class="step-card">
+                    <h3>📋 Verificando a Ação no Local</h3>
+                    <p>Ao chegar no local, seu objetivo é verificar o andamento da campanha. O Salesforce te ajuda com um checklist simples para garantir que nada seja esquecido.</p>
+                    <ol>
+                        <li>Abra o registro da visita que você agendou (ex: VI-000399345).</li>
+                        <li>Você verá a seção <strong>"Ações"</strong>, como na imagem abaixo.</li>
+                        <li>Marque os checkboxes para confirmar se os <strong>materiais estão bem expostos</strong>, se a <strong>bike está funcionando</strong>, etc.</li>
+                        <li>Na seção <strong>"Vendas da Visita"</strong>, você pode registrar os SKUs e valores vendidos durante sua presença no local.</li>
+                        <li>Quando terminar, não se esqueça de marcar a visita como <strong>"Realizada"</strong> e clicar em <strong>Salvar</strong>.</li>
+                    </ol>
+                    <img src="https://i.imgur.com/K0Yq17j.png" alt="Tela de checklist para a Visita de Ações" class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/ffffff?text=Imagem+Indisponível';">
+                    <p class="image-caption">Checklist para verificar o andamento da campanha durante a visita.</p>
+                </section>
+                 <section class="step-card">
+                    <h3>Perguntas Frequentes</h3>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Preciso adicionar fotos nesta visita?</span>
+                            <i class="bi bi-chevron-right faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sim, é altamente recomendado! Adicionar fotos do "antes e depois" de uma gôndola, da exposição dos materiais ou do evento acontecendo enriquece muito o registro e comprova a execução da ação.</p>
+                        </div>
+                    </div>
+                     <div class="faq-item">
+                        <button class="faq-question">
+                            <span>E se a campanha não estiver ativa na conta que visitei?</span>
+                            <i class="bi bi-chevron-right faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Se não houver uma campanha ativa vinculada àquela conta, a seção "Ações" não aparecerá no registro da visita. Ela só é exibida quando necessário para a conta específica.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div id="tutorial-visita-redes" class="tutorial-section">
+             <div class="tutorial-header">
+                <h2>Visita Tipo Redes</h2>
+                <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
+            </div>
+            <section class="step-card">
+                <h3>🗓️ Agendando a Visita de Redes</h3>
+                <p>O agendamento de uma visita para uma conta do tipo "Rede" segue o mesmo padrão das outras visitas. A principal diferença está na seleção do tipo correto.</p>
+                <ol>
+                    <li>Vá até a <strong>Conta</strong> da rede que irá visitar.</li>
+                    <li>Clique no botão <strong>"⚡Visita Organnact"</strong>.</li>
+                    <li>Na janela de criação, marque a caixinha <strong>"Redes? ✅"</strong>.</li>
+                    <li>Preencha o <strong>Assunto</strong>, <strong>Data/Hora</strong> e salve.</li>
+                </ol>
+            </section>
+            <section class="step-card">
+                <h3>✏️Editando e finalizando a Visita Redes</h3>
+                <p>Após visitar a sua a conta, você precisa marcar que realizou a visita, você verá secções especiais para avaliar os treinamentos realizados na rede.</p>
+                <ol>
+                    <li>Abra o registro da visita que você agendou. (Exemplo: "VI-00063802)</li>
+                    <li>Preencha as <strong>"Observações da visita"</strong>.</li>
+                    <li>Preencha os <strong>Compromissos da Visita</strong>. (Exemplo: Levar duas amostras de PDB na próxima visita.)</li>
+                    <li>Caso precise deixar algum aviso para o seu gestor, marque a caixinha <strong>"Feedback para Gestão Organnact?"</strong>, e depois digite a mensagem que deseja deixar. Assim, o seu gestor receberá por   e-mail esse aviso sobre essa visita.</li>
+                </ol>
+                <img src="img/VI-0006.png" alt="Tela de preenchimento da Resultado da Visita de Redes" class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/ffffff?text=Imagem+Indisponível';">
+                <p class="image-caption">Seção "Resultado da Visita" preenchido de exemplo.</p>
+            </section>
+            <section class="step-card">
+                <h3>✍️ Avaliando a Rede PDV</h3>
+                <p>Ainda editando a sua Visita, mais abaixo você verá o campo <strong>Rede PDV</strong> e preencherá com as seguintes informações...</p>
+                <ol>
+                    <li>Ainda no registro da visita que você agendou.</li>
+                    <li>Encontre as seções <strong>"Rede PDV"</strong> e <strong>"Rede Veterinário"</strong>.</li>
+                    <li>Preencha os campos de <strong>Avaliação</strong> e <strong>Feedback</strong> para cada um. Por exemplo:
+                        <ul>
+                            <br>
+                            <li><strong>Avaliação Treinamento PDV:</strong> <em>Bom</em></li>
+                            <li><strong>Feedback Treinamento PDV:</strong> <em>Os integrantes demonstraram muito interesse e tiraram diversas dúvidas durante o treinamento.</em></li>
+                            <li><strong>Avaliação Treinamento Veterinário:</strong> <em>Médio</em></li>
+                            <li><strong>Feedback Treinamento Veterinário:</strong> <em>O veterinário não apresentou conhecimentos sobre os produtos, porém demonstrou interesse em aprender.</em></li>
+                        </ul>
+                    </li>
+                    <li>Quando terminar, marque a visita como <strong>"Realizada"</strong> e clique em <strong>Salvar</strong>.</li>
+                </ol>
+                <img src="img/rede-visita.jpg" alt="Tela de preenchimento da avaliação da visita de Redes" class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/ffffff?text=Imagem+Indisponível';">
+                <p class="image-caption">Preencha as avaliações e feedbacks dos treinamentos.</p>
+            </section>
+             <section class="step-card">
+                <h3>Perguntas Frequentes</h3>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Esses campos de avaliação aparecem para todas as visitas?</span>
+                        <i class="bi bi-chevron-right faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Não, os campos de "Rede PDV" e "Rede Veterinário" só aparecem quando você marca o checkbox "Redes? ✅" ao criar a visita. O sistema mostra apenas os campos relevantes para cada tipo de visita.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- FIM PRINCIPAIS RELATORIOS -->
+
 
             <div id="tutorial-contas" class="tutorial-section">
             <div class="tutorial-header">
@@ -1307,53 +1492,66 @@
             </div>
 
             <div id="tutorial-visita-redes" class="tutorial-section">
-                 <div class="tutorial-header">
-                    <h2>Visita Tipo Redes</h2>
-                    <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
-                </div>
-                <section class="step-card">
-                    <h3>🗓️ Agendando a Visita de Redes</h3>
-                    <p>O agendamento de uma visita para uma conta do tipo "Rede" segue o mesmo padrão das outras visitas. A principal diferença está na seleção do tipo correto.</p>
-                    <ol>
-                        <li>Vá até a <strong>Conta</strong> da rede que irá visitar.</li>
-                        <li>Clique no botão <strong>"⚡Visita Organnact"</strong>.</li>
-                        <li>Na janela de criação, marque a caixinha <strong>"Redes? ✅"</strong>.</li>
-                        <li>Preencha o <strong>Assunto</strong>, <strong>Data/Hora</strong> e salve.</li>
-                    </ol>
-                </section>
-                <section class="step-card">
-                    <h3>✍️ Preenchendo a Avaliação da Rede</h3>
-                    <p>Após agendar a visita, ao abri-la para finalizar, você verá secções especiais para avaliar os treinamentos realizados na rede, tanto para o PDV quanto para os veterinários.</p>
-                    <ol>
-                        <li>Abra o registro da visita que você agendou.</li>
-                        <li>Encontre as seções <strong>"Rede PDV"</strong> e <strong>"Rede Veterinário"</strong>.</li>
-                        <li>Preencha os campos de <strong>Avaliação</strong> e <strong>Feedback</strong> para cada um. Por exemplo:
-                            <ul>
-                                <br>
-                                <li><strong>Avaliação Treinamento PDV:</strong> <em>Bom</em></li>
-                                <li><strong>Feedback Treinamento PDV:</strong> <em>Os integrantes demonstraram muito interesse e tiraram diversas dúvidas durante o treinamento.</em></li>
-                                <li><strong>Avaliação Treinamento Veterinário:</strong> <em>Médio</em></li>
-                                <li><strong>Feedback Treinamento Veterinário:</strong> <em>O veterinário não apresentou conhecimentos sobre os produtos, porém demonstrou interesse em aprender.</em></li>
-                            </ul>
-                        </li>
-                        <li>Quando terminar, marque a visita como <strong>"Realizada"</strong> e clique em <strong>Salvar</strong>.</li>
-                    </ol>
-                    <img src="img/rede-visita.jpg" alt="Tela de preenchimento da avaliação da visita de Redes" class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/ffffff?text=Imagem+Indisponível';">
-                    <p class="image-caption">Preencha as avaliações e feedbacks dos treinamentos.</p>
-                </section>
-                 <section class="step-card">
-                    <h3>Perguntas Frequentes</h3>
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Esses campos de avaliação aparecem para todas as visitas?</span>
-                            <i class="bi bi-chevron-right faq-icon"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Não, os campos de "Rede PDV" e "Rede Veterinário" só aparecem quando você marca o checkbox "Redes? ✅" ao criar a visita. O sistema mostra apenas os campos relevantes para cada tipo de visita.</p>
-                        </div>
-                    </div>
-                </section>
+             <div class="tutorial-header">
+                <h2>Visita Tipo Redes</h2>
+                <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
             </div>
+            <section class="step-card">
+                <h3>🗓️ Agendando a Visita de Redes</h3>
+                <p>O agendamento de uma visita para uma conta do tipo "Rede" segue o mesmo padrão das outras visitas. A principal diferença está na seleção do tipo correto.</p>
+                <ol>
+                    <li>Vá até a <strong>Conta</strong> da rede que irá visitar.</li>
+                    <li>Clique no botão <strong>"⚡Visita Organnact"</strong>.</li>
+                    <li>Na janela de criação, marque a caixinha <strong>"Redes? ✅"</strong>.</li>
+                    <li>Preencha o <strong>Assunto</strong>, <strong>Data/Hora</strong> e salve.</li>
+                </ol>
+            </section>
+            <section class="step-card">
+                <h3>✏️Editando e finalizando a Visita Redes</h3>
+                <p>Após visitar a sua a conta, você precisa marcar que realizou a visita, você verá secções especiais para avaliar os treinamentos realizados na rede.</p>
+                <ol>
+                    <li>Abra o registro da visita que você agendou. (Exemplo: "VI-00063802)</li>
+                    <li>Preencha as <strong>"Observações da visita"</strong>.</li>
+                    <li>Preencha os <strong>Compromissos da Visita</strong>. (Exemplo: Levar duas amostras de PDB na próxima visita.)</li>
+                    <li>Caso precise deixar algum aviso para o seu gestor, marque a caixinha <strong>"Feedback para Gestão Organnact?"</strong>, e depois digite a mensagem que deseja deixar. Assim, o seu gestor receberá por   e-mail esse aviso sobre essa visita.</li>
+                </ol>
+                <img src="img/VI-0006.png" alt="Tela de preenchimento da Resultado da Visita de Redes" class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/ffffff?text=Imagem+Indisponível';">
+                <p class="image-caption">Seção "Resultado da Visita" preenchido de exemplo.</p>
+            </section>
+            <section class="step-card">
+                <h3>✍️ Avaliando a Rede PDV</h3>
+                <p>Ainda editando a sua Visita, mais abaixo você verá o campo <strong>Rede PDV</strong> e preencherá com as seguintes informações...</p>
+                <ol>
+                    <li>Ainda no registro da visita que você agendou.</li>
+                    <li>Encontre as seções <strong>"Rede PDV"</strong> e <strong>"Rede Veterinário"</strong>.</li>
+                    <li>Preencha os campos de <strong>Avaliação</strong> e <strong>Feedback</strong> para cada um. Por exemplo:
+                        <ul>
+                            <br>
+                            <li><strong>Avaliação Treinamento PDV:</strong> <em>Bom</em></li>
+                            <li><strong>Feedback Treinamento PDV:</strong> <em>Os integrantes demonstraram muito interesse e tiraram diversas dúvidas durante o treinamento.</em></li>
+                            <li><strong>Avaliação Treinamento Veterinário:</strong> <em>Médio</em></li>
+                            <li><strong>Feedback Treinamento Veterinário:</strong> <em>O veterinário não apresentou conhecimentos sobre os produtos, porém demonstrou interesse em aprender.</em></li>
+                        </ul>
+                    </li>
+                    <li>Quando terminar, marque a visita como <strong>"Realizada"</strong> e clique em <strong>Salvar</strong>.</li>
+                </ol>
+                <img src="img/rede-visita.jpg" alt="Tela de preenchimento da avaliação da visita de Redes" class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/ffffff?text=Imagem+Indisponível';">
+                <p class="image-caption">Preencha as avaliações e feedbacks dos treinamentos.</p>
+            </section>
+             <section class="step-card">
+                <h3>Perguntas Frequentes</h3>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Esses campos de avaliação aparecem para todas as visitas?</span>
+                        <i class="bi bi-chevron-right faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Não, os campos de "Rede PDV" e "Rede Veterinário" só aparecem quando você marca o checkbox "Redes? ✅" ao criar a visita. O sistema mostra apenas os campos relevantes para cada tipo de visita.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
 
             <div id="tutorial-visita-training" class="tutorial-section">
                  <div class="tutorial-header">
@@ -1559,10 +1757,7 @@
                     <section class="step-card">
                         <h3>Vídeo Tutorial AGD</h3>
                         <p>Para assistir o vídeo tutorial de <strong>Como Criar uma AGD (Novo método)</strong>, basta clicar no botão abaixo.</p>
-                        <a href="https://escola.organnact.com.br/video/683498ee452ef887a315e08d/6891157d1609a127e007f5b8?t=6" alt="Assistir ao vídeo tutorial no VídeoHub." title="Assistir ao vídeo tutorial no VídeoHub." target="_blank" class="community-card">
-                            <div class="icon"><i class="bi bi-play-btn"></i></div>
-                            <h3 style="color: #ffffff; border-bottom:none; align-items:center;" >Tutorial no VídeoHub</h3>
-                        </a>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/nrcljxdG1Z4?si=trwaq3bDIYgozRlC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         <p class="image-caption">Você será redirecionado(a) para a plataforma VideoHub.</p>
                     </section>
                 </div>
@@ -1589,9 +1784,9 @@
         <p>Para começar a criar uma AGD como propagandista, ela precisa ser iniciada a partir de uma Visita Organnact. Vamos lá!</p>
         <ol>
             <li>Primeiro, vá na página da <strong>Conta</strong> que deseja fazer a AGD. (Ex: <em>Clínica Pet Center</em>).</li>
-            <li>Clique no botão <strong>"⚡Visita Organnact"</strong> no canto superior direito.</li>
+            <li>Clique no botão <strong>"Visita Organnact"</strong> no canto superior da tela.</li>
             <li>Na janela que abrir, marque a opção <strong>"Propagandista?" ✓</strong>.</li>
-            <li>Na janela que abrir, marque a opção <strong>"AGD?" ✓</strong>.</li>
+            <li>E marque também a opção <strong>"AGD?" ✓</strong>.</li>
         </ol>
     </section>
 
