@@ -790,6 +790,268 @@
             cursor: pointer;
         }
 
+        /* --- Painel Admin --- */
+        .admin-button {
+            background-color: rgba(255, 255, 255, 0.12);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.2s;
+        }
+        .admin-button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .admin-panel {
+            position: fixed;
+            inset: 0;
+            background: rgba(9, 20, 35, 0.65);
+            display: none;
+            z-index: 3000;
+            padding: 30px 20px;
+            box-sizing: border-box;
+        }
+        .admin-panel.active {
+            display: block;
+        }
+        .admin-panel-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            background-color: var(--card-background);
+            border-radius: 18px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+            padding: 30px;
+            height: calc(100% - 60px);
+            overflow: auto;
+        }
+        .admin-panel-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .admin-panel-header h2 {
+            margin: 0;
+            color: var(--header-bg);
+        }
+        .admin-panel-header p {
+            margin: 6px 0 0 0;
+            color: var(--light-text-color);
+        }
+        .icon-button {
+            border: none;
+            background: #f2f4f7;
+            color: var(--text-color);
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .icon-button:hover {
+            background: #e9ecef;
+        }
+        .admin-tabs {
+            display: flex;
+            gap: 6px;
+            padding: 6px;
+            background: #f2f4f7;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        .admin-tab {
+            flex: 1;
+            border: none;
+            background: none;
+            padding: 12px 14px;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            color: var(--light-text-color);
+        }
+        .admin-tab.active {
+            background: white;
+            color: var(--text-color);
+            box-shadow: var(--shadow);
+        }
+        .admin-tab-content {
+            display: none;
+        }
+        .admin-tab-content.active {
+            display: block;
+        }
+        .admin-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+            gap: 20px;
+        }
+        .admin-card {
+            background: #fbfcfe;
+            border: 1px solid #e9ecef;
+            border-radius: 14px;
+            padding: 20px;
+        }
+        .admin-card h3 {
+            margin: 0 0 15px 0;
+            color: var(--header-bg);
+        }
+        .admin-field {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 14px;
+        }
+        .admin-field label {
+            font-weight: 500;
+        }
+        .admin-field input,
+        .admin-field textarea,
+        .admin-field select {
+            border: 1px solid #ced4da;
+            border-radius: 10px;
+            padding: 10px 12px;
+            font-size: 0.95em;
+            font-family: 'Roboto', sans-serif;
+        }
+        .admin-field textarea {
+            min-height: 90px;
+            resize: vertical;
+        }
+        .admin-hint {
+            font-size: 0.85em;
+            color: var(--light-text-color);
+            margin-top: 4px;
+        }
+        .admin-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .admin-primary {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 16px;
+            border-radius: 10px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        .admin-primary:hover {
+            background: var(--secondary-color);
+        }
+        .admin-secondary {
+            background: #f2f4f7;
+            color: var(--text-color);
+            border: 1px solid #d6dae0;
+            padding: 12px 16px;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .admin-secondary:hover {
+            background: #e9ecef;
+        }
+        .tutorial-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .tutorial-item {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 12px;
+            padding: 14px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 10px;
+            align-items: center;
+        }
+        .tutorial-item h4 {
+            margin: 0 0 6px 0;
+            font-size: 1em;
+        }
+        .tutorial-item p {
+            margin: 0;
+            color: var(--light-text-color);
+            font-size: 0.9em;
+        }
+        .tutorial-item-actions {
+            display: flex;
+            gap: 8px;
+        }
+        .mini-button {
+            border: 1px solid #d6dae0;
+            background: #f8f9fb;
+            padding: 6px 10px;
+            border-radius: 8px;
+            font-size: 0.85em;
+            cursor: pointer;
+        }
+        .mini-button:hover {
+            background: #eef1f5;
+        }
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.78em;
+            font-weight: 600;
+            padding: 4px 8px;
+            border-radius: 999px;
+            background: #f0f2f5;
+            color: #5f6368;
+        }
+        .status-pill.published {
+            background: #e7f7ed;
+            color: #1f7a3a;
+        }
+        .admin-empty {
+            text-align: center;
+            color: var(--light-text-color);
+            padding: 20px 10px;
+        }
+        .card-editor {
+            border: 1px dashed #d0d7de;
+            border-radius: 12px;
+            padding: 14px;
+            margin-bottom: 10px;
+            background: #ffffff;
+        }
+        .card-editor-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .card-editor-header h4 {
+            margin: 0;
+            font-size: 0.95em;
+            color: var(--text-color);
+        }
+        .admin-search {
+            width: 100%;
+        }
+        .dynamic-section {
+            margin-top: 20px;
+        }
+        .dynamic-empty {
+            background: #fff8e1;
+            border-radius: 12px;
+            padding: 18px;
+            color: #59470a;
+            border-left: 4px solid var(--primary-color);
+        }
+
         /* --- Estilos para Telas Menores (Responsividade) --- */
         @media (max-width: 768px) {
             .container {
@@ -804,6 +1066,16 @@
             }
             .step-card h3 {
                 font-size: 1.4em;
+            }
+            .admin-grid {
+                grid-template-columns: 1fr;
+            }
+            .admin-panel {
+                padding: 20px 15px;
+            }
+            .admin-panel-content {
+                height: calc(100% - 40px);
+                padding: 20px;
             }
         }
 
@@ -909,6 +1181,7 @@
                 <header>
                     <div class="header-top-bar">
                         <span id="user-email"></span>
+                        <button id="admin-button" class="admin-button hidden"><i class="bi bi-gear"></i> Configurações</button>
                         <button id="logout-button"><i class="bi bi-box-arrow-right"></i> Sair</button>
                     </div>
                     <div class="header-logos">
@@ -985,7 +1258,8 @@
                             <div class="category-dropdown-container">
                                 <div class="category-card stacked-card" id="agd-trigger">
                                     <div>
-                                        <span class="new-tag" >Novo</span><div class="icon"><i class="bi bi-bullseye"></i></div>
+                                        <span class="new-tag" >Atualizado</span>
+                                        <div class="icon"><i class="bi bi-bullseye"></i></div>
                                         <h3>Ação Geradora de Demanda (AGD)</h3>
                                         <p>Descubra como registrar e acompanhar as ações que geram novas oportunidades.</p>
                                     </div>
@@ -1003,6 +1277,12 @@
                                 <p>Passo a passo para enviar o seu vídeo de avaliação de pitch de vendas.</p>
                             </div>
                         </div>
+                    </section>
+
+                    <section id="dynamic-section" class="dynamic-section hidden">
+                        <h2 class="section-title">Conteudos adicionados</h2>
+                        <div id="dynamic-grid" class="category-grid"></div>
+                        <div id="dynamic-empty" class="dynamic-empty hidden">Nenhum tutorial publicado ainda.</div>
                     </section>
 
                     <section>
@@ -1055,6 +1335,7 @@
             </div>
 
             <div id="search-results" class="hidden"></div>
+            <div id="dynamic-tutorials-container"></div>
 
             <div id="reports-propagandistas" class="tutorial-section">
     
@@ -1583,87 +1864,74 @@
                     <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
                 </div>
                 <section class="step-card">
-                    <h3>Clone uma Campanha Existente</h3>
-                    <p>A maneira mais fácil e rápida de criar sua campanha "Café com VET" é clonando nosso modelo. Isso já traz todas as configurações que você precisa!</p>
+                    <h3>Criando um Cafe com VET (no tablet)</h3>
+                    <p>Este tutorial e feito no aplicativo do Salesforce no tablet.</p>
                     <ol>
-                        <li>No menu superior, vá para a aba <strong>"Campanhas"</strong>.</li>
-                        <li>Na visualização de lista, selecione o filtro <strong>"Café com VET - Exemplo"</strong> para encontrar o modelo facilmente.</li>
-                        <li>Clique no nome da campanha <strong>"Café com VET - Exemplo"</strong> para abri-la.
-                            <img src="img/cafe-com-vet-1.jpg" alt="Lista de Campanhas com o modelo 'Café com VET - Exemplo' destacado." class="tutorial-image" width="400" onerror="this.onerror=null;this.src='https://placehold.co/400x150/cccccc/ffffff?text=Imagem+Indisponível';">
-                            <p class="image-caption">Localize a campanha modelo para iniciar a clonagem.</p>
-                        </li>
-                        <li>Dentro da página da campanha, clique na setinha para baixo (▼) no canto superior direito e selecione a opção <strong>"Clonar com relacionado"</strong>.
-                            <img src="img/cafe-com-vet-2.jpg" alt="Menu de opções da campanha mostrando a opção 'Clonar com relacionado'." class="tutorial-image" width="400" onerror="this.onerror=null;this.src='https://placehold.co/400x200/cccccc/ffffff?text=Imagem+Indisponível';">
-                            <p class="image-caption">Use a opção "Clonar com relacionado" para copiar a campanha.</p>
-                        </li>
-                        <li>Na tela seguinte, marque a caixinha <strong>"Status do membro da campanha"</strong> e clique em <strong>Avançar</strong>.</li>
+                        <li>No aplicativo, clique em <strong>Menu</strong> (canto inferior direito).</li>
+                        <li>Selecione a opcao <strong>"Eventos Organnact"</strong>.</li>
+                        <li>Na tela de Eventos Organnact, clique em <strong>Novo</strong> (canto superior direito).</li>
+                    </ol>
+                    <img src="img/Menu café com vet.png" alt="Menu Salesforce mobile" class="tutorial-image" width="400" onerror="this.onerror=null;this.src='https://placehold.co/400x220/cccccc/ffffff?text=Imagem+Indisponível';">
+                     <p class="image-caption">Opção "Eventos Organnact" localizado no Menu.</p>
+                </section>
+                <section class="step-card">
+                    <h3>Preenchendo os campos do evento</h3>
+                    <p>Preencha as informacoes conforme o print. Use o exemplo abaixo como guia.</p>
+                    <ol>
+                        <li><strong>Status Evento Organnact:</strong> por padrao inicia como <strong>Planejando</strong>.</li>
+                        <li><strong>Nome do Evento:</strong> exemplo: <em>Cafe com VET - Curitiba - Ana</em>.</li>
+                        <li><strong>Descricao Evento Organnact:</strong> resumo do objetivo do encontro.</li>
+                        <li><strong>Tipo da Metrica:</strong> selecione <em>Prescricoes</em>.</li>
+                        <li><strong>Data Inicio Evento</strong>, <strong>Hora Inicio</strong> e <strong>Hora Final</strong>.</li>
+                        <li><strong>Propagandista Participante</strong> e <strong>Cidade Evento Organnact</strong>.</li>
+                        <li><strong>Data Inicio Campanha</strong> e <strong>Data Final Campanha</strong>.</li>
+                    </ol>
+                    <p>Quando finalizar o preenchimento, clique em <strong>Salvar</strong>. Ao aparecer a mensagem <strong>Criacao Concluida</strong>, voce sera redirecionado para a pagina de detalhes do evento.</p>
+                </section>
+                <section class="step-card">
+                    <h3>Incluir pessoas do evento</h3>
+                    <p>Agora precisamos incluir os participantes do Cafe com VET.</p>
+                    <ol>
+                        <li>Na pagina do evento, clique no botao <strong>"Inclui Pessoa do Evento"</strong> (canto superior esquerdo).</li>
+                        <li>Pesquise pelas contas dos veterinarios que vao participar.</li>
+                        <li>Se a conta nao existir, <button class="link-button" data-target="tutorial-contas">crie a conta do veterinario</button> antes de incluir.</li>
                     </ol>
                 </section>
                 <section class="step-card">
-                    <h3>Personalize sua Campanha</h3>
-                    <p>Agora é só ajustar os detalhes para que a campanha seja sua!</p>
+                    <h3>Pos Cafe com VET</h3>
+                    <p>Depois do encontro, atualize o status do evento.</p>
                     <ol>
-                        <li>Altere o <strong>Nome da Campanha</strong> para um formato claro, como por exemplo: "Café com VET - Seu Nome / Cidade".</li>
-                        <li>Preencha todas as outras informações importantes, como datas, orçamentos e metas.</li>
-                        <li>Clique em <strong>Salvar</strong>.</li>
-                    </ol>
-                    <p>Prontinho! Sua campanha está criada.</p>
-                </section>
-                <section class="step-card">
-                    <h3>Adicionando os Convidados</h3>
-                    <p>Com a campanha criada, o próximo passo é convidar os veterinários. Você fará isso adicionando as contas deles como membros da campanha.</p>
-                    <ol>
-                        <li>Dentro da sua nova campanha, vá para a aba <strong>"Relacionado"</strong>.</li>
-                        <li>Encontre a seção <strong>"Membros da campanha"</strong> e clique no botão <strong>"Adicionar contas"</strong>.</li>
-                        <img src="img/adicionando-convidado-cafe.jpg" alt="Botão para adicionar contas como membros da campanha." class="tutorial-image" width="600" onerror="this.onerror=null;this.src='https://placehold.co/400x200/cccccc/ffffff?text=Imagem+Indisponível';">
-                        <p class="image-caption">Adicione os veterinários que serão convidados para o evento.</p>
-                        <li>Pesquise e selecione as contas dos veterinários que deseja convidar. Se uma conta não existir, você precisará <button class="link-button" data-target="tutorial-contas">criá-la primeiro</button>.</li>
-                        <li>Depois de adicionar, você pode clicar em cada membro para atualizar o <strong>Status</strong> dele, como "Convidado", "Confirmado", "Compareceu", etc.</li>
+                        <li>Entre no evento Cafe com VET criado.</li>
+                        <li>Clique em <strong>Editar</strong>.</li>
+                        <li>Altere o <strong>Status Evento Organnact</strong> para <strong>Em Progresso</strong> e salve.</li>
                     </ol>
                 </section>
-                 <section class="step-card">
-                    <h3>📊 Atualizando o Status da Campanha (Muito Importante!)</h3>
-                    <p>Manter o status da sua campanha atualizado é essencial para a organização e para os relatórios. Pense no status como a "fase" em que o seu evento se encontra. Não se esqueça de o alterar à medida que a campanha avança!</p>
-                    <p>Para alterar o status, basta entrar na sua campanha e clicar em <strong>Editar</strong>.</p>
-                    <ul>
-                        <li><strong>Planejando:</strong> 🗓️ É a fase inicial. Você está a organizar o local, a data e a lista de convidados.</li>
-                        <li><strong>Em Progresso:</strong> 🚀 A campanha está a acontecer! Use este status durante o período do evento.</li>
-                        <li><strong>Finalizada:</strong> ✅ O evento já terminou. Este é o passo mais importante! Marcar como "Finalizada" garante que os seus resultados são contabilizados corretamente nos seus KPIs.</li>
-                        <li><strong>Abortada:</strong> ❌ Imprevistos acontecem. Se a campanha foi cancelada, use este status.</li>
-                    </ul>
-                    <div class="tip-box">
-                        <p><strong>Atenção:</strong> Nunca se esqueça de marcar a sua campanha como <strong>Finalizada</strong> assim que ela terminar. É fundamental para que o seu trabalho seja registado nos relatórios!</p>
-                    </div>
+                <section class="step-card">
+                    <h3>Definir status dos convidados</h3>
+                    <p>Agora vamos marcar quem participou do Cafe com VET.</p>
+                    <ol>
+                        <li>Na pagina do evento, role ate a secao <strong>Pessoas do Evento</strong> e clique em <strong>Exibir Tudo</strong>.</li>
+                        <li>Abra cada registro pelo codigo (ex: <em>PE-00000049</em>).</li>
+                        <li>Clique em <strong>Mais</strong> &gt; <strong>Editar</strong> e atualize o <strong>Status</strong> do convidado.</li>
+                    </ol>
                 </section>
                 <section class="step-card">
-                    <h3>Vídeo Tutorial</h3>
-                    <p>Para assistir o vídeo tutorial de <strong>Campanhas - Como criar um Café com VET (do início ao fim)</strong>, basta clicar no botão abaixo.</p>
-                    <a href="https://escola.organnact.com.br/video/683498ee452ef887a315e08d/688bbf39c217074a6c061077?t=5" alt="Assistir ao vídeo tutorial no VídeoHub." title="Assistir ao vídeo tutorial no VídeoHub." target="_blank" class="community-card">
-                        <div class="icon"><i class="bi bi-play-btn"></i></div>
-                        <h3 style="color: #ffffff; border-bottom:none; align-items:center;" >Tutorial no VídeoHub</h3>
-                    </a>
-                    <p class="image-caption">Você será redirecionado(a) para a plataforma VideoHub.</p>
+                    <h3>Informar valor do investimento</h3>
+                    <p>Por fim, registre o valor investido no evento.</p>
+                    <ol>
+                        <li>Na pagina do Cafe com VET, clique em <strong>Editar</strong>.</li>
+                        <li>Preencha o campo <strong>Valor Investimento</strong> e salve.</li>
+                    </ol>
                 </section>
-                 <section class="step-card">
-                    <h3>Perguntas Frequentes</h3>
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Por que registrar como "Evento" e não como "Visita"?</span>
-                            <i class="bi bi-chevron-right faq-icon"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Registrar como "Evento" bloqueia um tempo maior no seu calendário e sinaliza que foi uma interação mais profunda e focada em relacionamento e educação, e não apenas uma visita de propaganda rápida.</p>
-                        </div>
-                    </div>
-                     <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Posso adicionar os veterinários convidados depois?</span>
-                            <i class="bi bi-chevron-right faq-icon"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Sim! Depois de criar a campanha, você pode entrar nela a qualquer momento e ir na seção "Membros da Campanha" para adicionar ou remover os contatos (veterinários) que participarão do evento.</p>
-                        </div>
-                    </div>
+                <section class="step-card">
+                    <h3>Acompanhamento de prescricoes</h3>
+                    <p>Conforme o andamento da campanha, atualize a quantidade de prescricoes realizadas.</p>
+                    <ol>
+                        <li>Na pagina do Cafe com VET (ex: <em>EO-0000018</em>), clique em <strong>Inclui Metricas</strong> (canto superior direito).</li>
+                        <li>Selecione a pessoa do evento que deseja atualizar e clique em <strong>Avancar</strong>.</li>
+                        <li>Preencha a <strong>Data</strong> e a <strong>Quantidade de Prescricoes</strong> e clique em <strong>Avancar</strong>.</li>
+                        <li>Repita para todos os veterinarios que fizeram prescricoes.</li>
+                    </ol>
                 </section>
             </div>
 
@@ -2015,6 +2283,97 @@
 
         <button id="scrollTopBtn" title="Voltar ao topo"><i class="bi bi-arrow-up"></i></button>
 
+        <div id="admin-panel" class="admin-panel" aria-hidden="true">
+            <div class="admin-panel-content">
+                <div class="admin-panel-header">
+                    <div>
+                        <h2>Configuracoes de Conteudo</h2>
+                        <p>Crie, edite e publique tutoriais com qualidade e seguranca.</p>
+                    </div>
+                    <button id="admin-close" class="icon-button" aria-label="Fechar"><i class="bi bi-x-lg"></i></button>
+                </div>
+                <div class="admin-tabs">
+                    <button class="admin-tab active" data-target="admin-tab-tutorials">Tutoriais</button>
+                    <button class="admin-tab" data-target="admin-tab-security">Seguranca</button>
+                </div>
+                <div id="admin-tab-tutorials" class="admin-tab-content active">
+                    <div class="admin-grid">
+                        <div class="admin-card">
+                            <h3>Novo tutorial</h3>
+                            <form id="tutorial-form">
+                                <input type="hidden" id="tutorial-id">
+                                <div class="admin-field">
+                                    <label for="tutorial-title">Titulo</label>
+                                    <input id="tutorial-title" type="text" required>
+                                </div>
+                                <div class="admin-field">
+                                    <label for="tutorial-description">Descricao curta</label>
+                                    <input id="tutorial-description" type="text" maxlength="140" required>
+                                </div>
+                                <div class="admin-field">
+                                    <label for="tutorial-icon">Icone (Bootstrap Icons)</label>
+                                    <input id="tutorial-icon" type="text" placeholder="bi bi-lightning-charge">
+                                    <div class="admin-hint">Use nomes como "bi bi-lightning-charge".</div>
+                                </div>
+                                <div class="admin-field">
+                                    <label for="tutorial-status">Status</label>
+                                    <select id="tutorial-status">
+                                        <option value="published">Publicado</option>
+                                        <option value="draft">Rascunho</option>
+                                    </select>
+                                </div>
+                                <div class="admin-field">
+                                    <label>Cards do tutorial</label>
+                                    <div id="card-list"></div>
+                                    <button type="button" id="add-card" class="admin-secondary">Adicionar card</button>
+                                    <div class="admin-hint">HTML permitido no conteudo: p, br, strong, em, ul, ol, li, a, img.</div>
+                                </div>
+                                <div class="admin-actions">
+                                    <button type="submit" class="admin-primary">Salvar</button>
+                                    <button type="button" id="tutorial-cancel" class="admin-secondary">Cancelar edicao</button>
+                                </div>
+                                <p id="tutorial-form-message" class="admin-hint"></p>
+                            </form>
+                        </div>
+                        <div class="admin-card">
+                            <h3>Gerenciar tutoriais</h3>
+                            <div class="admin-field">
+                                <label for="tutorial-search">Buscar</label>
+                                <input id="tutorial-search" class="admin-search" type="text" placeholder="Digite para filtrar">
+                            </div>
+                            <div id="tutorial-list" class="tutorial-list"></div>
+                            <div id="tutorial-empty" class="admin-empty hidden">Nenhum tutorial encontrado.</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="admin-tab-security" class="admin-tab-content">
+                    <div class="admin-card">
+                        <h3>Checklist de seguranca</h3>
+                        <p>Configure regras no Firestore para garantir que apenas administradores possam criar, editar ou excluir.</p>
+                        <pre>
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /tutorials/{doc} {
+      allow read: if resource.data.published == true;
+      allow write: if isAdmin();
+    }
+    match /admins/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow write: if false;
+    }
+    function isAdmin() {
+      return request.auth != null &&
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+  }
+}
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div id="lightbox-overlay" class="lightbox-overlay">
             <span id="lightbox-close" class="lightbox-close">&times;</span>
             <img id="lightbox-image" class="lightbox-image" src="" alt="Imagem ampliada">
@@ -2025,6 +2384,7 @@
     // Importar funções do Firebase
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
     import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+    import { getFirestore, collection, doc, getDoc, getDocs, addDoc, updateDoc, deleteDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
     // =================================================================
     // CONFIGURAÇÃO DO FIREBASE
@@ -2049,6 +2409,7 @@
     // Inicializar Firebase
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
+    const db = getFirestore(app);
 
     // Elementos da página
     const loginPage = document.getElementById('login-page');
@@ -2065,6 +2426,168 @@
     const resetMessage = document.getElementById('reset-message');
     const forgotPasswordLink = document.getElementById('forgot-password-link');
     const backToLoginLink = document.getElementById('back-to-login-link');
+    const adminButton = document.getElementById('admin-button');
+    const adminPanel = document.getElementById('admin-panel');
+    const adminClose = document.getElementById('admin-close');
+    const adminTabs = document.querySelectorAll('.admin-tab');
+    const adminTabContents = document.querySelectorAll('.admin-tab-content');
+    const tutorialForm = document.getElementById('tutorial-form');
+    const tutorialIdInput = document.getElementById('tutorial-id');
+    const tutorialTitleInput = document.getElementById('tutorial-title');
+    const tutorialDescriptionInput = document.getElementById('tutorial-description');
+    const tutorialIconInput = document.getElementById('tutorial-icon');
+    const tutorialStatusInput = document.getElementById('tutorial-status');
+    const tutorialFormMessage = document.getElementById('tutorial-form-message');
+    const tutorialList = document.getElementById('tutorial-list');
+    const tutorialSearchInput = document.getElementById('tutorial-search');
+    const tutorialEmpty = document.getElementById('tutorial-empty');
+    const addCardButton = document.getElementById('add-card');
+    const cardList = document.getElementById('card-list');
+    const tutorialCancelButton = document.getElementById('tutorial-cancel');
+    const dynamicSection = document.getElementById('dynamic-section');
+    const dynamicGrid = document.getElementById('dynamic-grid');
+    const dynamicEmpty = document.getElementById('dynamic-empty');
+    const dynamicTutorialsContainer = document.getElementById('dynamic-tutorials-container');
+
+    let currentUser = null;
+    let isAdminUser = false;
+    let tutorialsCache = [];
+    let tutorialsInitialized = false;
+    let refreshTutorials = null;
+
+    const setAdminAccess = (allowed) => {
+        if (!adminButton) return;
+        adminButton.classList.toggle('hidden', !allowed);
+        if (!allowed && adminPanel) {
+            adminPanel.classList.remove('active');
+            adminPanel.setAttribute('aria-hidden', 'true');
+        }
+    };
+
+    const openAdminPanel = () => {
+        if (!adminPanel) return;
+        adminPanel.classList.add('active');
+        adminPanel.setAttribute('aria-hidden', 'false');
+    };
+
+    const closeAdminPanel = () => {
+        if (!adminPanel) return;
+        adminPanel.classList.remove('active');
+        adminPanel.setAttribute('aria-hidden', 'true');
+        if (tutorialFormMessage) {
+            tutorialFormMessage.textContent = '';
+        }
+    };
+
+    const checkAdmin = async (user) => {
+        if (!user) return false;
+        try {
+            const adminDoc = await getDoc(doc(db, 'admins', user.uid));
+            if (!adminDoc.exists()) return false;
+            const data = adminDoc.data() || {};
+            return data.active !== false;
+        } catch (error) {
+            console.error('Erro ao validar admin:', error);
+            return false;
+        }
+    };
+
+    const sanitizeHtml = (rawHtml) => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(`<div>${rawHtml || ''}</div>`, 'text/html');
+        const container = doc.body.firstChild;
+        const allowedTags = new Set(['p', 'br', 'strong', 'em', 'ul', 'ol', 'li', 'a', 'img', 'h4', 'h5', 'h6', 'blockquote', 'code', 'pre']);
+        const allowedAttrs = {
+            a: ['href', 'title', 'target'],
+            img: ['src', 'alt', 'title']
+        };
+
+        const cleanNode = (node) => {
+            Array.from(node.childNodes).forEach((child) => {
+                if (child.nodeType === Node.ELEMENT_NODE) {
+                    const tagName = child.tagName.toLowerCase();
+                    if (!allowedTags.has(tagName)) {
+                        const textNode = doc.createTextNode(child.textContent || '');
+                        child.replaceWith(textNode);
+                        return;
+                    }
+
+                    Array.from(child.attributes).forEach((attr) => {
+                        const allowed = (allowedAttrs[tagName] || []).includes(attr.name.toLowerCase());
+                        if (!allowed) {
+                            child.removeAttribute(attr.name);
+                        }
+                    });
+
+                    if (tagName === 'a') {
+                        const href = child.getAttribute('href') || '';
+                        if (!/^https?:\/\//i.test(href) && !/^mailto:/i.test(href)) {
+                            child.removeAttribute('href');
+                        }
+                        child.setAttribute('target', '_blank');
+                        child.setAttribute('rel', 'noopener noreferrer');
+                    }
+
+                    if (tagName === 'img') {
+                        const src = child.getAttribute('src') || '';
+                        if (!/^https?:\/\//i.test(src)) {
+                            child.remove();
+                            return;
+                        }
+                        child.classList.add('tutorial-image');
+                        child.setAttribute('loading', 'lazy');
+                    }
+
+                    cleanNode(child);
+                } else if (child.nodeType === Node.COMMENT_NODE) {
+                    child.remove();
+                }
+            });
+        };
+
+        cleanNode(container);
+        return container.innerHTML;
+    };
+
+    if (adminButton) {
+        adminButton.addEventListener('click', () => {
+            if (!isAdminUser) return;
+            openAdminPanel();
+        });
+    }
+
+    if (adminClose) {
+        adminClose.addEventListener('click', closeAdminPanel);
+    }
+
+    if (adminPanel) {
+        adminPanel.addEventListener('click', (event) => {
+            if (event.target === adminPanel) {
+                closeAdminPanel();
+            }
+        });
+    }
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            closeAdminPanel();
+        }
+    });
+
+    if (adminTabs.length) {
+        adminTabs.forEach((tab) => {
+            tab.addEventListener('click', () => {
+                adminTabs.forEach((btn) => btn.classList.remove('active'));
+                adminTabContents.forEach((content) => content.classList.remove('active'));
+                tab.classList.add('active');
+                const targetId = tab.dataset.target;
+                const targetContent = document.getElementById(targetId);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            });
+        });
+    }
 
 
     // --- LÓGICA DE AUTENTICAÇÃO ---
@@ -2085,22 +2608,29 @@
         loginPage.classList.add('hidden');
         appContent.classList.remove('hidden');
         headerTopBar.classList.add('hidden'); // Oculta a barra com email/botão de sair
-        initializeTutorials();
+        setAdminAccess(false);
+        initializeTutorials(null);
     } else {
     // =========================================================
     // ✨ FIM DA ALTERAÇÃO ✨
     // =========================================================
         // Se não veio de uma fonte autorizada, executa o fluxo normal de login com Firebase
-        onAuthStateChanged(auth, (user) => {
+        onAuthStateChanged(auth, async (user) => {
             if (user) {
+                currentUser = user;
                 loginPage.classList.add('hidden');
                 appContent.classList.remove('hidden');
                 if(user.email) {
                     userEmailSpan.textContent = user.email;
                 }
-                headerTopBar.style.display = 'flex'; // Garante que a barra de logout apareça
-                initializeTutorials();
+                headerTopBar.style.display = 'flex'; // Garante que a barra de logout apare?a
+                isAdminUser = await checkAdmin(user);
+                setAdminAccess(isAdminUser);
+                initializeTutorials(user);
             } else {
+                currentUser = null;
+                isAdminUser = false;
+                setAdminAccess(false);
                 loginPage.classList.remove('hidden');
                 appContent.classList.add('hidden');
             }
@@ -2175,10 +2705,19 @@
     }
 
     // --- LÓGICA DOS TUTORIAIS (só inicia após login ou acesso direto) ---
-    function initializeTutorials() {
+    function initializeTutorials(user) {
+        currentUser = user || null;
+        if (tutorialsInitialized) {
+            if (typeof refreshTutorials === 'function') {
+                refreshTutorials();
+            }
+            return;
+        }
+        tutorialsInitialized = true;
+
         const homePage = document.getElementById('home-page');
-        const tutorialSections = document.querySelectorAll('.tutorial-section');
-        const categoryCards = document.querySelectorAll('.category-card:not(.stacked-card)');
+        let tutorialSections = Array.from(document.querySelectorAll('.tutorial-section'));
+        let categoryCards = Array.from(document.querySelectorAll('.category-card:not(.stacked-card)'));
         const backButtons = document.querySelectorAll('.back-button');
         const scrollTopBtn = document.getElementById('scrollTopBtn');
         const faqQuestions = document.querySelectorAll('.faq-question');
@@ -2188,12 +2727,32 @@
         const searchInput = document.getElementById('search-input');
         const searchResultsContainer = document.getElementById('search-results');
         const mainContent = document.querySelector('#home-page main');
-        const tutorialImages = document.querySelectorAll('.tutorial-image');
+        let tutorialImages = document.querySelectorAll('.tutorial-image');
         const lightboxOverlay = document.getElementById('lightbox-overlay');
         const lightboxImage = document.getElementById('lightbox-image');
         const lightboxClose = document.getElementById('lightbox-close');
 
         let searchableContent = [];
+
+        const refreshTutorialSections = () => {
+            tutorialSections = Array.from(document.querySelectorAll('.tutorial-section'));
+        };
+
+        const refreshCategoryCards = () => {
+            categoryCards = Array.from(document.querySelectorAll('.category-card:not(.stacked-card)'));
+        };
+
+        const attachLightboxHandlers = () => {
+            tutorialImages = document.querySelectorAll('.tutorial-image');
+            tutorialImages.forEach((image) => {
+                if (image.dataset.lightboxBound) return;
+                image.dataset.lightboxBound = 'true';
+                image.addEventListener('click', () => {
+                    lightboxOverlay.style.display = 'flex';
+                    lightboxImage.src = image.src;
+                });
+            });
+        };
 
         // =============================================================
         // ✨ INÍCIO DA ALTERAÇÃO 2: LÓGICA DE RASTREAMENTO DO GA ✨
@@ -2226,12 +2785,16 @@
         };
 
         // Adiciona o rastreamento aos elementos clicáveis estáticos (cards, dropdowns, links internos)
-        const trackableElements = document.querySelectorAll('.category-card[data-target], .dropdown-item[data-target], .link-button[data-target]');
-        trackableElements.forEach(element => {
-            element.addEventListener('click', () => {
-                trackTutorialView(element.dataset.target);
+        const attachTrackingHandlers = () => {
+            const trackableElements = document.querySelectorAll('.category-card[data-target], .dropdown-item[data-target], .link-button[data-target]');
+            trackableElements.forEach(element => {
+                if (element.dataset.tracked) return;
+                element.dataset.tracked = 'true';
+                element.addEventListener('click', () => {
+                    trackTutorialView(element.dataset.target);
+                });
             });
-        });
+        };
 
         // =============================================================
         // ✨ FIM DA ALTERAÇÃO 2 ✨
@@ -2242,6 +2805,7 @@
             searchResultsContainer.classList.add('hidden');
             mainContent.style.display = 'block';
 
+            refreshTutorialSections();
             tutorialSections.forEach(section => {
                 section.style.display = 'none';
             });
@@ -2256,6 +2820,7 @@
             homePage.style.display = 'block';
             searchResultsContainer.classList.add('hidden');
             mainContent.style.display = 'block';
+            refreshTutorialSections();
             tutorialSections.forEach(section => {
                 section.style.display = 'none';
             });
@@ -2263,6 +2828,8 @@
         };
 
         const buildSearchIndex = () => {
+            searchableContent = [];
+            refreshTutorialSections();
             tutorialSections.forEach(section => {
                 const titleElement = section.querySelector('h2');
                 if (titleElement) {
@@ -2346,9 +2913,283 @@
             }
         };
 
-        categoryCards.forEach(card => {
-            card.addEventListener('click', () => showSection(card.dataset.target));
-        });
+        const buildTutorialSection = (tutorial) => {
+            const sectionId = `dynamic-${tutorial.id}`;
+            const section = document.createElement('div');
+            section.className = 'tutorial-section';
+            section.id = sectionId;
+
+            const header = document.createElement('div');
+            header.className = 'tutorial-header';
+            const title = document.createElement('h2');
+            const iconClass = tutorial.icon ? tutorial.icon : 'bi bi-journal-text';
+            title.innerHTML = `<i class="${iconClass}"></i> ${tutorial.title || 'Tutorial'}`;
+            const backButton = document.createElement('button');
+            backButton.className = 'back-button';
+            backButton.innerHTML = '<i class="bi bi-arrow-left"></i> Voltar';
+            header.appendChild(title);
+            header.appendChild(backButton);
+            section.appendChild(header);
+
+            const cards = Array.isArray(tutorial.cards) ? tutorial.cards : [];
+            if (cards.length === 0) {
+                const emptyCard = document.createElement('section');
+                emptyCard.className = 'step-card';
+                emptyCard.innerHTML = '<p>Conteudo indisponivel.</p>';
+                section.appendChild(emptyCard);
+            } else {
+                cards.forEach((card) => {
+                    const cardSection = document.createElement('section');
+                    cardSection.className = 'step-card';
+                    const cardTitle = document.createElement('h3');
+                    cardTitle.textContent = card.title || 'Etapa';
+                    const cardBody = document.createElement('div');
+                    cardBody.innerHTML = sanitizeHtml(card.body || '');
+                    cardSection.appendChild(cardTitle);
+                    cardSection.appendChild(cardBody);
+                    section.appendChild(cardSection);
+                });
+            }
+
+            backButton.addEventListener('click', showHomePage);
+            return section;
+        };
+
+        const renderDynamicTutorials = () => {
+            if (!dynamicSection || !dynamicGrid || !dynamicTutorialsContainer) return;
+
+            dynamicGrid.innerHTML = '';
+            dynamicTutorialsContainer.innerHTML = '';
+
+            const published = tutorialsCache.filter((item) => item.published === true);
+            if (published.length === 0) {
+                dynamicSection.classList.add('hidden');
+                if (dynamicEmpty) dynamicEmpty.classList.remove('hidden');
+                return;
+            }
+
+            dynamicSection.classList.remove('hidden');
+            if (dynamicEmpty) dynamicEmpty.classList.add('hidden');
+
+            published.forEach((tutorial) => {
+                const sectionId = `dynamic-${tutorial.id}`;
+                const card = document.createElement('div');
+                card.className = 'category-card';
+                card.dataset.target = sectionId;
+
+                const icon = document.createElement('div');
+                icon.className = 'icon';
+                const iconElement = document.createElement('i');
+                iconElement.className = tutorial.icon ? tutorial.icon : 'bi bi-journal-text';
+                icon.appendChild(iconElement);
+
+                const title = document.createElement('h3');
+                title.textContent = tutorial.title || 'Tutorial';
+                const description = document.createElement('p');
+                description.textContent = tutorial.description || 'Novo conteudo';
+
+                card.appendChild(icon);
+                card.appendChild(title);
+                card.appendChild(description);
+                dynamicGrid.appendChild(card);
+
+                const section = buildTutorialSection(tutorial);
+                dynamicTutorialsContainer.appendChild(section);
+
+                card.addEventListener('click', () => {
+                    trackTutorialView(sectionId);
+                    showSection(sectionId);
+                });
+            });
+
+            refreshTutorialSections();
+            bindCategoryCards();
+            attachTrackingHandlers();
+            attachLightboxHandlers();
+            buildSearchIndex();
+        };
+
+        const renderTutorialList = () => {
+            if (!tutorialList) return;
+            const term = (tutorialSearchInput ? tutorialSearchInput.value : '').toLowerCase().trim();
+            const items = tutorialsCache.filter((tutorial) => {
+                const text = `${tutorial.title || ''} ${tutorial.description || ''}`.toLowerCase();
+                return term.length === 0 || text.includes(term);
+            });
+
+            tutorialList.innerHTML = '';
+            if (tutorialEmpty) tutorialEmpty.classList.add('hidden');
+
+            if (items.length === 0) {
+                if (tutorialEmpty) tutorialEmpty.classList.remove('hidden');
+                return;
+            }
+
+            items.forEach((tutorial) => {
+                const item = document.createElement('div');
+                item.className = 'tutorial-item';
+
+                const info = document.createElement('div');
+                const title = document.createElement('h4');
+                title.textContent = tutorial.title || 'Sem titulo';
+                const desc = document.createElement('p');
+                desc.textContent = tutorial.description || 'Sem descricao';
+                const status = document.createElement('span');
+                status.className = `status-pill ${tutorial.published ? 'published' : ''}`;
+                status.textContent = tutorial.published ? 'Publicado' : 'Rascunho';
+                info.appendChild(title);
+                info.appendChild(desc);
+                info.appendChild(status);
+
+                const actions = document.createElement('div');
+                actions.className = 'tutorial-item-actions';
+                const editButton = document.createElement('button');
+                editButton.type = 'button';
+                editButton.className = 'mini-button';
+                editButton.textContent = 'Editar';
+                const deleteButton = document.createElement('button');
+                deleteButton.type = 'button';
+                deleteButton.className = 'mini-button';
+                deleteButton.textContent = 'Excluir';
+
+                editButton.addEventListener('click', () => {
+                    tutorialIdInput.value = tutorial.id;
+                    tutorialTitleInput.value = tutorial.title || '';
+                    tutorialDescriptionInput.value = tutorial.description || '';
+                    tutorialIconInput.value = tutorial.icon || '';
+                    tutorialStatusInput.value = tutorial.published ? 'published' : 'draft';
+                    cardList.innerHTML = '';
+                    const cards = Array.isArray(tutorial.cards) ? tutorial.cards : [];
+                    if (cards.length === 0) {
+                        cardList.appendChild(createCardEditor());
+                    } else {
+                        cards.forEach((card) => {
+                            cardList.appendChild(createCardEditor(card));
+                        });
+                    }
+                    if (tutorialFormMessage) {
+                        tutorialFormMessage.textContent = 'Editando tutorial existente.';
+                    }
+                    openAdminPanel();
+                });
+
+                deleteButton.addEventListener('click', async () => {
+                    if (!isAdminUser) return;
+                    const confirmed = confirm('Deseja excluir este tutorial? Esta acao nao pode ser desfeita.');
+                    if (!confirmed) return;
+                    try {
+                        await deleteDoc(doc(db, 'tutorials', tutorial.id));
+                        await refreshTutorials();
+                    } catch (error) {
+                        console.error('Erro ao excluir tutorial:', error);
+                    }
+                });
+
+                actions.appendChild(editButton);
+                actions.appendChild(deleteButton);
+
+                item.appendChild(info);
+                item.appendChild(actions);
+                tutorialList.appendChild(item);
+            });
+        };
+
+        const createCardEditor = (card = {}) => {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'card-editor';
+
+            const header = document.createElement('div');
+            header.className = 'card-editor-header';
+            const title = document.createElement('h4');
+            title.textContent = 'Card';
+            const removeButton = document.createElement('button');
+            removeButton.type = 'button';
+            removeButton.className = 'mini-button';
+            removeButton.textContent = 'Remover';
+            header.appendChild(title);
+            header.appendChild(removeButton);
+
+            const titleField = document.createElement('div');
+            titleField.className = 'admin-field';
+            const titleLabel = document.createElement('label');
+            titleLabel.textContent = 'Titulo do card';
+            const titleInput = document.createElement('input');
+            titleInput.type = 'text';
+            titleInput.dataset.field = 'card-title';
+            titleInput.value = card.title || '';
+            titleField.appendChild(titleLabel);
+            titleField.appendChild(titleInput);
+
+            const bodyField = document.createElement('div');
+            bodyField.className = 'admin-field';
+            const bodyLabel = document.createElement('label');
+            bodyLabel.textContent = 'Conteudo (HTML)';
+            const bodyInput = document.createElement('textarea');
+            bodyInput.dataset.field = 'card-body';
+            bodyInput.value = card.body || '';
+            bodyField.appendChild(bodyLabel);
+            bodyField.appendChild(bodyInput);
+
+            removeButton.addEventListener('click', () => {
+                wrapper.remove();
+            });
+
+            wrapper.appendChild(header);
+            wrapper.appendChild(titleField);
+            wrapper.appendChild(bodyField);
+            return wrapper;
+        };
+
+        const resetTutorialForm = () => {
+            if (!tutorialForm) return;
+            tutorialIdInput.value = '';
+            tutorialTitleInput.value = '';
+            tutorialDescriptionInput.value = '';
+            tutorialIconInput.value = '';
+            tutorialStatusInput.value = 'published';
+            cardList.innerHTML = '';
+            cardList.appendChild(createCardEditor());
+            if (tutorialFormMessage) {
+                tutorialFormMessage.textContent = '';
+            }
+        };
+
+        const loadTutorials = async () => {
+            try {
+                const snapshot = await getDocs(collection(db, 'tutorials'));
+                tutorialsCache = snapshot.docs.map((docSnap) => {
+                    const data = docSnap.data() || {};
+                    return {
+                        id: docSnap.id,
+                        title: data.title || '',
+                        description: data.description || '',
+                        icon: data.icon || '',
+                        published: data.published === true,
+                        cards: Array.isArray(data.cards) ? data.cards : []
+                    };
+                });
+            } catch (error) {
+                console.error('Erro ao carregar tutoriais:', error);
+                tutorialsCache = [];
+            }
+        };
+
+        refreshTutorials = async () => {
+            await loadTutorials();
+            renderDynamicTutorials();
+            if (isAdminUser) {
+                renderTutorialList();
+            }
+        };
+
+        const bindCategoryCards = () => {
+            refreshCategoryCards();
+            categoryCards.forEach(card => {
+                if (card.dataset.bound) return;
+                card.dataset.bound = 'true';
+                card.addEventListener('click', () => showSection(card.dataset.target));
+            });
+        };
 
         dropdownContainers.forEach(container => {
             const trigger = container.querySelector('.stacked-card');
@@ -2459,6 +3300,10 @@
                 closeLightbox();
             }
         });
+
+        // Bind card clicks and tracking for static content on first load.
+        bindCategoryCards();
+        attachTrackingHandlers();
 
         buildSearchIndex();
         searchInput.addEventListener('input', handleSearch);
