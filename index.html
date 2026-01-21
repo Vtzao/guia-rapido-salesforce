@@ -455,6 +455,20 @@
             z-index: 10;
         }
 
+        .atual-tag {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background-color: #0e7be9;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 50px; /* Formato de pílula */
+            font-size: 0.75em;
+            font-weight: 700;
+            text-transform: uppercase;
+            z-index: 10;
+        }
+
         .step-card {
             background-color: var(--card-background);
             border-radius: 12px;
@@ -1215,6 +1229,20 @@
                                 </div>
                             </div>
                             <div class="category-dropdown-container">
+                                <div class="category-card stacked-card" id="painel-explicacao">
+                                    <div>
+                                        <span class="new-tag" >Novo</span>
+                                        <div class="icon"><i class="bi bi-speedometer2"></i></div>
+                                        <h3>Explicacao Paineis</h3>
+                                        <p>Guia simples para entender os dashboards individuais do mes atual.</p>
+                                    </div>
+                                    <i class="bi bi-chevron-down dropdown-icon"></i>
+                                </div>
+                                <div class="dropdown-content">
+                                    <a class="dropdown-item" data-target="painel-propagandista-pet">Propagandista Pet</a>
+                                </div>
+                            </div>
+                            <div class="category-dropdown-container">
                                 <div class="category-card stacked-card" id="visitas-trigger">
                                     <div>
                                         <div class="icon"><i class="bi bi-stack"></i></div>
@@ -1241,6 +1269,7 @@
                                 <p>Saiba como adicionar e organizar os contatos de cada conta.</p>
                             </div>
                              <div class="category-card" data-target="tutorial-cafe-vet">
+                                <span class="atual-tag" >Atualizado</span>
                                 <div class="icon"><i class="bi bi-cup-hot"></i></div>
                                 <h3>Café com VET</h3>
                                 <p>Aprenda a registrar eventos de relacionamento com veterinários.</p>
@@ -1258,7 +1287,7 @@
                             <div class="category-dropdown-container">
                                 <div class="category-card stacked-card" id="agd-trigger">
                                     <div>
-                                        <span class="new-tag" >Atualizado</span>
+                                        <span class="atual-tag" >Atualizado</span>
                                         <div class="icon"><i class="bi bi-bullseye"></i></div>
                                         <h3>Ação Geradora de Demanda (AGD)</h3>
                                         <p>Descubra como registrar e acompanhar as ações que geram novas oportunidades.</p>
@@ -1391,6 +1420,51 @@
                 </div>
                 <section class="step-card">
                     <h3>EM BREVE...</h3>
+                </section>
+            </div>
+
+            <div id="painel-propagandista-pet" class="tutorial-section">
+                <div class="tutorial-header">
+                    <h2><i class="bi bi-speedometer2"></i> Explicacao Paineis</h2>
+                    <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
+                </div>
+
+                <section class="step-card">
+                    <h3>Propagandista Pet (dashboard individual)</h3>
+                    <p>Este painel mostra o desempenho do propagandista no mes atual. Use para acompanhar metas e ajustar a rotina da semana. Todos os numeros sao referentes ao mes atual.</p>
+                    <div class="tip-box">
+                        <p><strong>Metas do mes atual:</strong></p>
+                        <ul>
+                            <li>Meta visita a veterinarios: 120</li>
+                            <li>Meta visita a PDV: 30</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="step-card">
+                    <h3>Como ler cada grafico</h3>
+                    <p><strong>Visitas Propagandista PET - R01:</strong> total de visitas por mes; foque no mes atual.</p>
+                    <img src="img/Painel PropPet 1.png" alt="Visitas Propagandista PET - R01" class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/ffffff?text=Imagem+Indisponivel';">
+                    <br>
+                    <p><strong>Visitas - Performance - Veterinario:</strong> mostra o percentual de cumprimento da meta de visitas a veterinarios no mes atual.</p>
+                    <img src="img/Painel PropPet 2.png" alt="Visitas - Performance - Veterinario" class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/ffffff?text=Imagem+Indisponivel';">
+                    <br>
+
+                    <p><strong>Visitas - Performance - PDV:</strong> mostra o percentual de cumprimento da meta de visitas a PDV no mes atual.</p>
+                    <img src="img/Painel PropPet 3.png" alt="Visitas - Performance - PDV" class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/ffffff?text=Imagem+Indisponivel';">
+                    <br>
+
+                    <p><strong>Analise Pessoas Visitadas Mensal:</strong> comparativo de pessoas visitadas por mes.</p>
+                    <img src="img/Painel PropPet 4.png" alt="Analise Pessoas Visitadas Mensal" class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/ffffff?text=Imagem+Indisponivel';">
+                    <br>
+
+                    <p><strong>Visitas VET (Esperado - Realizado):</strong> compara o esperado por dia util com o realizado. O sistema divide a meta do mes pelo total de dias uteis e cria a media diaria esperada; este painel mostra a diferenca entre essa media e o que foi feito. Se ficar negativo, voce fez menos do que o esperado ate agora. Se ficar positivo, voce fez mais do que o esperado ate agora.</p>
+                    <img src="img/Painel PropPet 5.png" alt="Visitas VET (Esperado - Realizado)" class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/ffffff?text=Imagem+Indisponivel';">
+                    <br>
+
+                    <p><strong>Visitas PDV (Esperado - Realizado):</strong> compara o esperado por dia util com o realizado. O sistema divide a meta do mes pelo total de dias uteis e cria a media diaria esperada; este painel mostra a diferenca entre essa media e o que foi feito. Se ficar negativo, voce fez menos do que o esperado ate agora. Se ficar positivo, voce fez mais do que o esperado ate agora.</p>
+                    <img src="img/Painel PropPet 6.png" alt="Visitas PDV (Esperado - Realizado)" class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/800x450/cccccc/ffffff?text=Imagem+Indisponivel';">
+                    
                 </section>
             </div>
 
