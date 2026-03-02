@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <!-- Google tag (gtag.js) -->
@@ -1229,7 +1229,6 @@
                             <div class="category-dropdown-container">
                                 <div class="category-card stacked-card" id="painel-explicacao">
                                     <div>
-                                        <span class="new-tag" >Novo</span>
                                         <div class="icon"><i class="bi bi-speedometer2"></i></div>
                                         <h3>Explicacao Paineis</h3>
                                         <p>Guia simples para entender os dashboards individuais do mes atual.</p>
@@ -1267,7 +1266,6 @@
                                 <p>Saiba como adicionar e organizar os contatos de cada conta.</p>
                             </div>
                              <div class="category-card" data-target="tutorial-cafe-vet">
-                                <span class="atual-tag" >Atualizado</span>
                                 <div class="icon"><i class="bi bi-cup-hot"></i></div>
                                 <h3>Café com VET</h3>
                                 <p>Aprenda a registrar eventos de relacionamento com veterinários.</p>
@@ -1277,8 +1275,13 @@
                                 <h3>Reuniões</h3>
                                 <p>Aprenda a registrar atas de reunião e a notificar os participantes.</p>
                             </div>
+                            <div class="category-card" data-target="tutorial-evento-grupo">
+                                <span class="new-tag" >Novo</span>
+                                <div class="icon"><i class="bi bi-people-fill"></i></div>
+                                <h3>Evento em Grupo</h3>
+                                <p>Passo a passo para encontrar a aba e criar um compromisso com varios participantes.</p>
+                            </div>
                             <div class="category-card" data-target="tutorial-conexao-outlook">
-                                <span class="new-tag">Novo</span>
                                 <div class="icon"><i class="bi bi-envelope-check"></i></div>
                                 <h3>Sincronizar Salesforce + E-mail</h3>
                                 <p>Conecte o Salesforce com o seu e-mail. Sincronizando a agenda e contatos.</p>
@@ -1291,7 +1294,6 @@
                             <div class="category-dropdown-container">
                                 <div class="category-card stacked-card" id="agd-trigger">
                                     <div>
-                                        <span class="atual-tag" >Atualizado</span>
                                         <div class="icon"><i class="bi bi-bullseye"></i></div>
                                         <h3>Ação Geradora de Demanda (AGD)</h3>
                                         <p>Descubra como registrar e acompanhar as ações que geram novas oportunidades.</p>
@@ -1370,7 +1372,7 @@
             <div id="search-results" class="hidden"></div>
             <div id="dynamic-tutorials-container"></div>
 
-            <div id="reports-propagandistas" class="tutorial-section">
+            <div id="reports-coordenadores" class="tutorial-section">
     
                 <div class="tutorial-header">
                     <h2><i class="bi bi-clipboard-data-fill"></i> Relatórios: Propagandistas</h2>
@@ -1397,9 +1399,19 @@
                     <h3>Relatórios Principais</h3>
                     <p style="margin-bottom: 25px;">Veja relatórios detalhados para análises mais profundas.</p>
 
-                    <a href="URL_DO_SEU_RELATORIO_CAFE_STATUS" target="_blank" class="community-card">
+                    <a href="https://organnact-crm.lightning.force.com/lightning/r/Report/00ObJ00000eRP89UAG/view" target="_blank" class="community-card">
                         <div class="icon"><i class="bi bi-filter-circle"></i></div>
-                        <h3 style="color: #ffffff; border-bottom: none; margin: 0;">Café com VET - por Status</h3>
+                        <h3 style="color: #ffffff; border-bottom: none; margin: 0;">Conferência de Visitas - CT</h3>
+                    </a>
+
+                    <a href="https://organnact-crm.lightning.force.com/lightning/r/Report/00ObJ00000hhnHhUAI/view?queryScope=userFolders" target="_blank" class="community-card">
+                        <div class="icon"><i class="bi bi-cup-hot"></i></div>
+                        <h3 style="color: #ffffff; border-bottom: none; margin: 0;">Café com VET - Propagandista - CT</h3>
+                    </a>
+
+                    <a href="https://organnact-crm.lightning.force.com/lightning/r/Report/00ObJ00000elQUfUAM/view" target="_blank" class="community-card">
+                        <div class="icon"><i class="bi bi-filter-circle"></i></div>
+                        <h3 style="color: #ffffff; border-bottom: none; margin: 0;">Contas não visitadas a mais de 60 dias - CT</h3>
                     </a>
                     
                     <p class="image-caption" style="margin-top: 20px;">
@@ -1408,14 +1420,40 @@
 
                     </section>
             </div>
-            <div id="reports-coordenadores" class="tutorial-section">
+            <div id="reports-propagandistas" class="tutorial-section">
                 <div class="tutorial-header">
                     <h2>Principais Relatórios para Coordenadores</h2>
                     <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
                 </div>
                 <section class="step-card">
-                    <h3>EM BREVE...</h3>
-                </section>
+                    <h3>Relatórios Principais</h3>
+                    <p style="margin-bottom: 25px;">Veja relatórios detalhados para análises mais profundas.</p>
+
+                    <a href="https://organnact-crm.lightning.force.com/lightning/r/Report/00ObJ00000eRSAsUAO/view" target="_blank" class="community-card">
+                        <div class="icon"><i class="bi bi-filter-circle"></i></div>
+                        <h3 style="color: #ffffff; border-bottom: none; margin: 0;">Conferência de Visitas</h3>
+                    </a>
+
+                    <a href="https://organnact-crm.lightning.force.com/lightning/r/Report/00ObJ00000Fo7LZUAZ/view" target="_blank" class="community-card">
+                        <div class="icon"><i class="bi bi-cup-hot"></i></div>
+                        <h3 style="color: #ffffff; border-bottom: none; margin: 0;">Café com VET - por Status</h3>
+                    </a>
+
+                    <a href="https://organnact-crm.lightning.force.com/lightning/r/Report/00ObJ00000hiNOMUA2/view" target="_blank" class="community-card">
+                        <div class="icon"><i class="bi bi-cup-hot"></i></div>
+                        <h3 style="color: #ffffff; border-bottom: none; margin: 0;">Café com VET - Propagandista</h3>
+                    </a>
+
+                    <a href="https://organnact-crm.lightning.force.com/lightning/r/Report/00ObJ00000jvCP7UAM/view" target="_blank" class="community-card">
+                        <div class="icon"><i class="bi bi-filter-circle"></i></div>
+                        <h3 style="color: #ffffff; border-bottom: none; margin: 0;">Todas Contas do Propagandista Pet</h3>
+                    </a>
+                    
+                    <p class="image-caption" style="margin-top: 20px;">
+                        <strong>Legenda:</strong> Este relatório mostra todos os eventos "Café com VET" e seus status (Planejado, Em Progresso, Finalizado).
+                    </p>
+
+                    </section>
             </div>
             <div id="reports-gestores" class="tutorial-section">
                 <div class="tutorial-header">
@@ -2354,6 +2392,47 @@
                     <p class="image-caption">Selecione os destinatários e anexos para o envio da ata.</p>
                         <li>Clique em <strong>Avançar</strong>. E pronto, a ata foi enviada!</li>
                     </ol>
+                </section>
+            </div>
+
+            <div id="tutorial-evento-grupo" class="tutorial-section">
+                <div class="tutorial-header">
+                    <h2>Tutorial: Evento em Grupo</h2>
+                    <button class="back-button"><i class="bi bi-arrow-left"></i> Voltar</button>
+                </div>
+                <section class="step-card">
+                    <h3>Como encontrar a aba "Evento em grupo"</h3>
+                    <p>Antes de criar o compromisso, primeiro voce precisa acessar a aba correta no menu principal do Salesforce.</p>
+                    <ol>
+                        <li>Olhe a barra principal de abas no topo da tela e procure por <strong>"Evento em grupo"</strong>.</li>
+                        <li>Se a aba nao estiver visivel, clique na <strong>seta para baixo</strong> no final da barra de abas para abrir as opcoes escondidas.</li>
+                        <li>Na lista que abrir, clique em <strong>"Evento em grupo"</strong> para entrar na tela de criacao.</li>
+                    </ol>
+                </section>
+                <section class="step-card">
+                    <h3>Iniciando o evento em grupo</h3>
+                    <p>Com a aba aberta, siga a sequencia abaixo para montar o compromisso e selecionar os participantes.</p>
+                    <ol>
+                        <li>Defina a <strong>data</strong> e a <strong>hora</strong> do compromisso (inicio e fim).</li>
+                        <li>Use os filtros para encontrar quem deseja convidar: <strong>Cargo</strong>, <strong>Atuacao</strong> e <strong>Setor</strong>.</li>
+                        <li>Selecione os colaboradores disponiveis na lista de participantes.</li>
+                    </ol>
+                    <div class="tip-box">
+                        <p><strong>Importante:</strong> Se a foto do colaborador estiver em <strong>vermelho</strong>, ele nao esta disponivel no horario escolhido e nao podera ser selecionado.</p>
+                    </div>
+                    <img src="img/print-eventoemgrupo.png" alt="Tela de selecao de participantes no Evento em Grupo." class="tutorial-image" onerror="this.onerror=null;this.src='https://placehold.co/1000x550/cccccc/ffffff?text=Imagem+Indisponivel';">
+                    <p class="image-caption">Filtre por Cargo, Atuacao e Setor para facilitar a selecao dos participantes.</p>
+                </section>
+                <section class="step-card">
+                    <h3>Finalizando a criacao do compromisso</h3>
+                    <ol>
+                        <li>Depois de escolher os participantes, clique em <strong>"Criar Compromisso"</strong>.</li>
+                        <li>Preencha o <strong>Assunto da reuniao</strong>, o <strong>Local</strong> e a <strong>Observacao</strong>.</li>
+                        <li>Clique em <strong>Salvar</strong>.</li>
+                    </ol>
+                    <div class="tip-box">
+                        <p><strong>Atenção:</strong> Essa funcionalidade foi desenvolvida para ser usada apenas no Salesforce para desktop (Computador ou Notebook).</p>
+                    </div>
                 </section>
             </div>
 
